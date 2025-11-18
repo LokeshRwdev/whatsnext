@@ -22,7 +22,7 @@ export default function SettingsPage() {
 
   useEffect(() => {
     let active = true;
-    supabase.auth.getUser().then((response) => {
+    supabase.auth.getUser().then((response: any) => {
       if (!active) return;
       setUserEmail(response.data.user?.email ?? "");
     });

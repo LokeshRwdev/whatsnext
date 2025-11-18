@@ -1,7 +1,7 @@
-[00:00:02.985] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-[00:00:03.191] Server  LOG      ✓ Ready in 2.2s
-[00:00:17.417] Server  LOG      ○ Compiling / ...
-[00:00:24.453] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:05.057] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:05.366] Server  LOG      ✓ Ready in 5.1s
+[00:01:42.776] Server  LOG      ○ Compiling / ...
+[00:01:47.803] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -35,342 +35,113 @@ It can also happen if the client has a browser extension installed which messes 
                             <head>
                             <body
                               className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_ad0c7253-f7c5-476e-9513-a51936020de6__="true"
+-                             __processed_0c35c8d3-ead8-4b4b-9e40-e399e24b79c9__="true"
                             >
                   ...
 
-[00:00:26.654] Server  ERROR   [driver-state] supabase query failed {}
-[00:00:26.860] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
-[00:00:26.900] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:00:27.408] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:00:27.680] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:00:27.693] Server  ERROR   [recommendations] training fetch failed {}
-[00:00:28.814] Browser WARN    As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
-[00:00:41.791] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:00:42.307] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:00:42.407] Server  ERROR   [recommendations] training fetch failed {}
-[00:00:57.189] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:00:57.817] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:00:57.885] Server  ERROR   [recommendations] training fetch failed {}
-[00:01:12.031] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:01:12.942] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:01:13.159] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:01:13.291] Server  ERROR   [recommendations] training fetch failed {}
-[00:01:27.400] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:01:27.772] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:01:27.860] Server  ERROR   [recommendations] training fetch failed {}
-[00:01:41.933] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:01:42.541] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:01:42.626] Server  ERROR   [recommendations] training fetch failed {}
-[00:01:59.081] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:01:59.548] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:01:59.737] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:01:59.891] Server  ERROR   [recommendations] training fetch failed {}
-[00:02:01.599] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} serverProvidedParams={null}>
-                        <RootLayout params={Promise}>
-                          <html lang="en" suppressHydrationWarning={true}>
-                            <head>
-                            <body
-                              className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_459bca41-5bc1-4d7e-8fb2-74d41321f450__="true"
--                             bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaW..."
-                            >
-                  ...
-
-[00:02:02.065] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
-[00:02:02.414] Server  ERROR   [driver-state] supabase query failed {}
-[00:02:02.547] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:02:02.880] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:02:02.912] Server  ERROR   [recommendations] training fetch failed {}
-[00:02:03.064] Browser WARN    As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
-[00:02:17.828] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:02:18.877] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:02:19.561] Server  ERROR   [recommendations] training fetch failed {}
-[00:02:32.670] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:02:33.233] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:02:33.320] Server  ERROR   [recommendations] training fetch failed {}
-[00:02:48.144] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:02:49.024] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:02:49.308] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:02:49.439] Server  ERROR   [recommendations] training fetch failed {}
-[00:03:03.342] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:03:04.234] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:03:04.390] Server  ERROR   [recommendations] training fetch failed {}
-[00:03:17.750] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:03:18.156] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:03:18.343] Server  ERROR   [recommendations] training fetch failed {}
-[00:03:32.933] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:03:33.335] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:03:33.459] Server  ERROR   [recommendations] training fetch failed {}
-[00:03:48.665] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:03:49.228] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:03:49.460] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:03:49.572] Server  ERROR   [recommendations] training fetch failed {}
-[00:04:03.145] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:04:03.559] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:04:03.726] Server  ERROR   [recommendations] training fetch failed {}
-[00:04:17.993] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:04:18.372] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:04:18.598] Server  ERROR   [recommendations] training fetch failed {}
-[00:04:32.867] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:04:33.565] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:04:33.715] Server  ERROR   [recommendations] training fetch failed {}
-[00:04:47.707] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:04:48.191] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:04:48.204] Server  ERROR   [pings] DB error {}
-[00:04:48.377] Server  ERROR   [recommendations] training fetch failed {}
-[00:04:48.390] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:05:02.746] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:05:03.260] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:05:03.415] Server  ERROR   [recommendations] training fetch failed {}
-[00:05:17.632] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:05:17.992] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:05:18.283] Server  ERROR   [recommendations] training fetch failed {}
-[00:05:33.260] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:05:33.876] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:05:34.099] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:05:34.289] Server  ERROR   [recommendations] training fetch failed {}
-[00:05:47.709] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:05:48.091] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:05:48.184] Server  ERROR   [recommendations] training fetch failed {}
-[00:06:02.754] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:06:03.113] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:06:03.284] Server  ERROR   [recommendations] training fetch failed {}
-[00:06:17.360] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:06:17.783] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:06:17.908] Server  ERROR   [recommendations] training fetch failed {}
-[00:06:32.596] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:06:33.192] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:06:33.435] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:06:33.560] Server  ERROR   [recommendations] training fetch failed {}
-[00:06:47.511] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:06:47.926] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:06:48.049] Server  ERROR   [recommendations] training fetch failed {}
-[00:06:57.888] Server  ERROR   [pings] DB error {}
-[00:07:02.615] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:07:03.137] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:07:03.320] Server  ERROR   [recommendations] training fetch failed {}
-[00:07:18.505] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:07:19.158] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:07:19.367] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:07:19.508] Server  ERROR   [recommendations] training fetch failed {}
-[00:07:32.832] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:07:33.479] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:07:33.570] Server  ERROR   [recommendations] training fetch failed {}
-[00:07:47.563] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:07:48.241] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:07:48.378] Server  ERROR   [recommendations] training fetch failed {}
-[00:08:02.864] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:08:03.239] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:08:03.380] Server  ERROR   [recommendations] training fetch failed {}
-[00:08:17.712] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:08:18.343] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:08:18.560] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:08:18.701] Server  ERROR   [recommendations] training fetch failed {}
-[00:08:32.865] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:08:33.479] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:08:33.624] Server  ERROR   [recommendations] training fetch failed {}
-[00:08:47.714] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:08:48.406] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:08:48.530] Server  ERROR   [recommendations] training fetch failed {}
-[00:09:03.583] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:09:04.080] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:09:04.310] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:09:04.412] Server  ERROR   [recommendations] training fetch failed {}
-[00:09:17.511] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:09:18.122] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:09:18.642] Server  ERROR   [recommendations] training fetch failed {}
-[00:09:32.665] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:09:33.366] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:09:33.483] Server  ERROR   [recommendations] training fetch failed {}
-[00:09:47.833] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:09:48.447] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:09:48.584] Server  ERROR   [recommendations] training fetch failed {}
-[00:10:02.591] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:10:03.295] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:10:03.524] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:10:03.616] Server  ERROR   [recommendations] training fetch failed {}
-[00:10:17.867] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:10:18.297] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:10:18.455] Server  ERROR   [recommendations] training fetch failed {}
-[00:10:33.699] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:10:34.148] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:10:34.322] Server  ERROR   [recommendations] training fetch failed {}
-[00:10:48.955] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:10:49.871] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:10:50.082] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:10:50.196] Server  ERROR   [recommendations] training fetch failed {}
-[00:11:03.182] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:11:03.646] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:11:03.873] Server  ERROR   [recommendations] training fetch failed {}
-[00:11:17.505] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:11:18.025] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:11:18.145] Server  ERROR   [recommendations] training fetch failed {}
-[00:11:32.525] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:11:33.063] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:11:33.160] Server  ERROR   [recommendations] training fetch failed {}
-[00:11:47.623] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:11:48.292] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:11:48.508] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:11:48.631] Server  ERROR   [recommendations] training fetch failed {}
-[00:12:02.591] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:12:02.971] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:12:03.062] Server  ERROR   [recommendations] training fetch failed {}
-[00:12:17.735] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:12:18.177] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:12:18.301] Server  ERROR   [recommendations] training fetch failed {}
-[00:12:33.862] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:12:34.338] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:12:34.672] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:12:34.773] Server  ERROR   [recommendations] training fetch failed {}
-[00:12:47.742] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:12:48.566] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:12:48.775] Server  ERROR   [recommendations] training fetch failed {}
-[00:13:02.790] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:13:03.330] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:13:03.368] Server  ERROR   [recommendations] training fetch failed {}
-[00:13:17.535] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:13:18.016] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:13:18.191] Server  ERROR   [recommendations] training fetch failed {}
-[00:13:32.514] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:13:33.179] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:13:33.396] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:13:33.579] Server  ERROR   [recommendations] training fetch failed {}
-[00:13:47.643] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:13:48.084] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:13:48.174] Server  ERROR   [recommendations] training fetch failed {}
-[00:14:02.755] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:14:03.246] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:14:03.338] Server  ERROR   [recommendations] training fetch failed {}
-[00:14:17.959] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:14:18.776] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:14:19.011] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:14:19.146] Server  ERROR   [recommendations] training fetch failed {}
-[00:14:32.613] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:14:33.034] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:14:33.114] Server  ERROR   [recommendations] training fetch failed {}
-[00:14:47.706] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:14:48.229] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:14:48.430] Server  ERROR   [recommendations] training fetch failed {}
-[00:15:02.948] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:15:03.338] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:15:03.481] Server  ERROR   [recommendations] training fetch failed {}
-[00:15:17.661] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:15:18.314] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:15:18.612] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:15:18.723] Server  ERROR   [recommendations] training fetch failed {}
-[00:15:32.679] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:15:33.323] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:15:33.405] Server  ERROR   [recommendations] training fetch failed {}
-[00:15:47.593] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:15:48.166] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:15:48.274] Server  ERROR   [recommendations] training fetch failed {}
-[00:16:03.360] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:16:03.934] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:16:04.144] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:16:04.301] Server  ERROR   [recommendations] training fetch failed {}
-[00:16:17.529] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:16:17.908] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:16:18.048] Server  ERROR   [recommendations] training fetch failed {}
-[00:38:43.945] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} serverProvidedParams={null}>
-                        <RootLayout params={Promise}>
-                          <html lang="en" suppressHydrationWarning={true}>
-                            <head>
-                            <body
-                              className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_44e4d3b4-4602-479b-9d49-4f8c7635a76a__="true"
-                            >
-                  ...
-
-[00:38:44.491] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
-[00:38:44.745] Server  ERROR   [driver-state] supabase query failed {}
-[00:38:45.229] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:38:45.701] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:38:45.884] Server  ERROR   [recommendations] training fetch failed {}
-[00:38:45.889] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:38:46.077] Browser WARN    As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
-[00:39:00.375] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:39:00.930] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:39:00.991] Server  ERROR   [recommendations] training fetch failed {}
-[00:39:15.104] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:39:15.644] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:39:16.071] Server  ERROR   [recommendations] training fetch failed {}
-[00:39:30.617] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:39:31.014] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:39:31.211] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:39:31.319] Server  ERROR   [recommendations] training fetch failed {}
-[00:39:45.986] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:39:46.474] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:39:46.578] Server  ERROR   [recommendations] training fetch failed {}
-[00:40:00.661] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:40:01.018] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:40:01.133] Server  ERROR   [recommendations] training fetch failed {}
-[00:48:40.184] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
-[00:48:40.622] Server  ERROR   [driver-state] DB error {}
-[00:48:40.796] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:48:41.300] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:48:41.520] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:48:41.534] Server  ERROR   [recommendations] training fetch failed {}
-[00:48:41.720] Browser WARN    As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
-[00:48:57.155] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:48:57.956] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:48:57.959] Server  ERROR   [recommendations] training fetch failed {}
-[00:49:11.012] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:49:11.438] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:49:11.834] Server  ERROR   [recommendations] training fetch failed {}
+[00:01:48.420] Server  ERROR   [driver-state] DB error {}
+[00:01:48.713] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[00:01:49.082] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:01:49.426] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
+[00:01:49.603] Server  ERROR   [recommendations] training fetch failed {}
+[00:01:49.627] Server  ERROR   [recommendations] trip fare fetch failed {}
+[00:01:49.896] Browser WARN    As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
+[00:02:03.595] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:02:04.239] Server  ERROR   [recommendations] trip fare fetch failed {}
+[00:02:04.242] Server  ERROR   [recommendations] training fetch failed {}
+[00:02:19.593] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:02:20.323] Server  ERROR   [recommendations] trip fare fetch failed {}
+[00:02:20.467] Server  ERROR   [recommendations] training fetch failed {}
+[00:02:35.578] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:02:36.067] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
+[00:02:36.436] Server  ERROR   [recommendations] trip fare fetch failed {}
+[00:02:36.578] Server  ERROR   [recommendations] training fetch failed {}
+[00:02:49.932] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:02:51.347] Server  ERROR   [recommendations] trip fare fetch failed {}
+[00:02:51.348] Server  ERROR   [recommendations] training fetch failed {}
+[00:03:25.839] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:03:26.330] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
+[00:03:26.340] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:03:26.501] Server  ERROR   [recommendations] trip fare fetch failed {}
+[00:03:26.651] Server  ERROR   [recommendations] training fetch failed {}
+[00:03:26.674] Server  ERROR   [recommendations] trip fare fetch failed {}
+[00:03:26.916] Server  ERROR   [recommendations] training fetch failed {}
+[00:03:34.702] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:03:35.061] Server  ERROR   [recommendations] trip fare fetch failed {}
+[00:03:35.178] Server  ERROR   [recommendations] training fetch failed {}
+[00:04:34.553] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:04:35.302] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
+[00:04:35.489] Server  ERROR   [recommendations] trip fare fetch failed {}
+[00:04:35.618] Server  ERROR   [recommendations] training fetch failed {}
+[00:05:34.867] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:05:35.332] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
+[00:05:35.534] Server  ERROR   [recommendations] trip fare fetch failed {}
+[00:05:35.664] Server  ERROR   [recommendations] training fetch failed {}
+[00:06:34.483] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:06:34.821] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
+[00:06:35.023] Server  ERROR   [recommendations] trip fare fetch failed {}
+[00:06:35.194] Server  ERROR   [recommendations] training fetch failed {}
+[00:07:34.967] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:07:35.372] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
+[00:07:35.536] Server  ERROR   [recommendations] trip fare fetch failed {}
+[00:07:35.654] Server  ERROR   [recommendations] training fetch failed {}
+[00:08:34.645] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:08:35.049] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
+[00:08:35.294] Server  ERROR   [recommendations] trip fare fetch failed {}
+[00:08:35.396] Server  ERROR   [recommendations] training fetch failed {}
+[00:09:35.163] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:09:35.736] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
+[00:09:35.976] Server  ERROR   [recommendations] trip fare fetch failed {}
+[00:09:36.211] Server  ERROR   [recommendations] training fetch failed {}
+[00:10:34.526] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:10:34.874] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
+[00:10:35.099] Server  ERROR   [recommendations] trip fare fetch failed {}
+[00:10:35.147] Server  ERROR   [recommendations] training fetch failed {}
+[00:11:35.069] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:11:35.813] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
+[00:11:35.980] Server  ERROR   [recommendations] trip fare fetch failed {}
+[00:11:36.130] Server  ERROR   [recommendations] training fetch failed {}
+[00:12:34.551] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:12:34.886] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
+[00:12:35.101] Server  ERROR   [recommendations] trip fare fetch failed {}
+[00:12:35.660] Server  ERROR   [recommendations] training fetch failed {}
+[00:13:35.062] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:13:35.824] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
+[00:13:36.017] Server  ERROR   [recommendations] trip fare fetch failed {}
+[00:13:36.145] Server  ERROR   [recommendations] training fetch failed {}
+[00:14:34.640] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:14:35.089] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
+[00:14:35.283] Server  ERROR   [recommendations] trip fare fetch failed {}
+[00:14:35.419] Server  ERROR   [recommendations] training fetch failed {}
+[00:15:35.043] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:15:35.365] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
+[00:15:35.547] Server  ERROR   [recommendations] trip fare fetch failed {}
+[00:15:35.714] Server  ERROR   [recommendations] training fetch failed {}
+[00:16:35.173] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:16:35.697] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
+[00:16:35.986] Server  ERROR   [recommendations] trip fare fetch failed {}
+[00:16:36.368] Server  ERROR   [recommendations] training fetch failed {}
+[00:17:35.395] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:17:35.852] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
+[00:17:36.115] Server  ERROR   [recommendations] trip fare fetch failed {}
+[00:17:36.152] Server  ERROR   [recommendations] training fetch failed {}
+[00:18:34.840] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:18:35.151] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
+[00:18:35.350] Server  ERROR   [recommendations] trip fare fetch failed {}
+[00:18:35.470] Server  ERROR   [recommendations] training fetch failed {}
+[00:19:34.802] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:19:35.125] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
+[00:19:35.319] Server  ERROR   [recommendations] trip fare fetch failed {}
+[00:19:35.445] Server  ERROR   [recommendations] training fetch failed {}
+[00:20:34.634] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:20:35.047] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
+[00:20:35.257] Server  ERROR   [recommendations] trip fare fetch failed {}
+[00:20:35.339] Server  ERROR   [recommendations] training fetch failed {}
+[00:21:35.038] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:21:35.334] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
+[00:21:35.537] Server  ERROR   [recommendations] trip fare fetch failed {}
+[00:21:35.736] Server  ERROR   [recommendations] training fetch failed {}
+[00:22:34.536] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:22:34.852] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
+[00:22:35.029] Server  ERROR   [recommendations] trip fare fetch failed {}
+[00:22:35.237] Server  ERROR   [recommendations] training fetch failed {}

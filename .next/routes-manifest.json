@@ -126,6 +126,12 @@
       "namedRegex": "^/api/docs(?:/)?$"
     },
     {
+      "page": "/api/driver-state",
+      "regex": "^/api/driver\\-state(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/driver\\-state(?:/)?$"
+    },
+    {
       "page": "/api/health",
       "regex": "^/api/health(?:/)?$",
       "routeKeys": {},
@@ -136,6 +142,12 @@
       "regex": "^/api/openapi(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/api/openapi(?:/)?$"
+    },
+    {
+      "page": "/api/ops-daily/upsert",
+      "regex": "^/api/ops\\-daily/upsert(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/ops\\-daily/upsert(?:/)?$"
     },
     {
       "page": "/api/pings",
@@ -156,10 +168,22 @@
       "namedRegex": "^/api/ride\\-events(?:/)?$"
     },
     {
+      "page": "/api/ride-events/ingest",
+      "regex": "^/api/ride\\-events/ingest(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/ride\\-events/ingest(?:/)?$"
+    },
+    {
       "page": "/api/sw",
       "regex": "^/api/sw(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/api/sw(?:/)?$"
+    },
+    {
+      "page": "/api/trips/sync",
+      "regex": "^/api/trips/sync(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/trips/sync(?:/)?$"
     },
     {
       "page": "/api/zone-visits",
@@ -172,6 +196,12 @@
       "regex": "^/api/zones(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/api/zones(?:/)?$"
+    },
+    {
+      "page": "/daily",
+      "regex": "^/daily(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/daily(?:/)?$"
     },
     {
       "page": "/history",
@@ -202,6 +232,18 @@
       "regex": "^/settings(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/settings(?:/)?$"
+    },
+    {
+      "page": "/signup",
+      "regex": "^/signup(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/signup(?:/)?$"
+    },
+    {
+      "page": "/trips",
+      "regex": "^/trips(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/trips(?:/)?$"
     }
   ],
   "dataRoutes": [],

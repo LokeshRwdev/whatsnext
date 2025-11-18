@@ -1,0 +1,3 @@
+module.exports=[12498,a=>{"use strict";var b=a.i(7997);function c({children:a}){return(0,b.jsx)("div",{className:"flex min-h-screen flex-col items-center justify-center bg-muted px-4 py-12",children:(0,b.jsxs)("div",{className:"w-full max-w-md space-y-6 rounded-3xl border bg-background p-8 shadow-xl",children:[(0,b.jsxs)("div",{children:[(0,b.jsx)("p",{className:"text-sm font-semibold uppercase tracking-wide text-primary",children:"Patna EV Co-Pilot"}),(0,b.jsx)("h1",{className:"text-2xl font-bold text-foreground",children:"Driver access"}),(0,b.jsx)("p",{className:"text-sm text-muted-foreground",children:"Manage your driver account securely with Supabase Auth."})]}),a]})})}a.s(["default",()=>c])}];
+
+//# sourceMappingURL=app_%28auth%29_layout_tsx_2ffca1fc._.js.map

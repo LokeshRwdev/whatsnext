@@ -1,0 +1,18 @@
+{
+  "status": 200,
+  "headers": {
+    "link": "</_next/static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\"",
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/(driver)/layout,_N_T_/(driver)/daily/layout,_N_T_/(driver)/daily/page,_N_T_/daily"
+  },
+  "postponed": "2327:[1,{\"nextSegmentId\":1,\"rootFormatContext\":{\"insertionMode\":0,\"selectedValue\":null,\"tagScope\":0,\"viewTransition\":null},\"progressiveChunkSize\":12800,\"resumableState\":{\"idPrefix\":\"\",\"nextFormID\":0,\"streamingFormat\":0,\"instructions\":96,\"hasBody\":true,\"hasHtml\":true,\"unknownResources\":{\"font\":{\"/_next/static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2\":[]}},\"dnsResources\":{},\"connectResources\":{\"default\":{},\"anonymous\":{},\"credentials\":{}},\"imageResources\":{},\"styleResources\":{\"/_next/static/chunks/5dffe31e1abbd7ac.css\":null},\"scriptResources\":{\"/_next/static/chunks/c73790c7510248ac.js\":null,\"/_next/static/chunks/c4769791a2c00b9f.js\":null,\"/_next/static/chunks/9f4008469d0c7cdf.js\":null,\"/_next/static/chunks/e5819a9956ad0ba3.js\":null,\"/_next/static/chunks/b48366520360162a.js\":null,\"/_next/static/chunks/turbopack-ff0838327d049318.js\":null,\"/_next/static/chunks/ff1a16fafef87110.js\":null,\"/_next/static/chunks/a657a92f586022e9.js\":null,\"/_next/static/chunks/40827791bdb5b2b1.js\":null,\"/_next/static/chunks/072219532078fb07.js\":null,\"/_next/static/chunks/7e46132598867660.js\":null,\"/_next/static/chunks/719ce66abb6589f0.js\":null,\"/_next/static/chunks/67da136fc533c60e.js\":null},\"moduleUnknownResources\":{},\"moduleScriptResources\":{\"/_next/static/chunks/c73790c7510248ac.js\":null}},\"replayNodes\":[[\"iQ\",0,[[\"Context\",0,[[\"Context\",0,[[\"ServerInsertedHTMLProvider\",0,[[\"Context\",0,[[\"n3\",0,[[\"nV\",0,[[\"nG\",0,[[\"nW\",0,[[\"n4\",0,[[\"Fragment\",0,[[\"Context\",2,[[\"Context\",0,[[\"Context\",0,[[\"Context\",0,[[\"Context\",0,[[\"Context\",0,[[\"Context\",0,[[\"nV\",0,[[\"nG\",0,[[\"nW\",0,[[\"nT\",0,[[\"nP\",0,[[\"__next_root_layout_boundary__\",1,[[\"Fragment\",\"c\",[[\"f\",1,[[\"h\",0,[[\"html\",0,[[\"body\",1,[[\"g\",0,[[\"Fragment\",0,[[\"V\",0,[[\"Activity\",\"(driver)\",[[\"Context\",\"(driver)\",[[\"e\",2,[[\"Fragment\",0,[[\"S\",0,[[\"R\",0,[[\"C\",0,[[\"Fragment\",0,[[\"U\",0,[[\"Fragment\",0,[[\"j\",0,[[\"i\",0,[[\"L\",0,[[\"K\",0,[[\"T\",0,[[\"Context\",0,[[\"Fragment\",\"c\",[[\"Suspense\",1,[],0,[\"Suspense Fallback\",1,[],null],0]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],\"replaySlots\":null}]null",
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/!KGRyaXZlcik/daily/__PAGE__",
+    "/!KGRyaXZlcik/daily",
+    "/!KGRyaXZlcik",
+    "/_index"
+  ]
+}

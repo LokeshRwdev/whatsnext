@@ -1,0 +1,3 @@
+{
+  "/api/ride-events/ingest/route": "app/api/ride-events/ingest/route.js"
+}

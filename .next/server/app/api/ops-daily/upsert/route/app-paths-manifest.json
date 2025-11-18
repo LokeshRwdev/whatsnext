@@ -1,0 +1,3 @@
+{
+  "/api/ops-daily/upsert/route": "app/api/ops-daily/upsert/route.js"
+}
