@@ -1,0 +1,48 @@
+{
+  "name": "patna-ev-copilot",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "db:apply": "psql $DATABASE_URL -f supabase/schema.sql && psql $DATABASE_URL -f supabase/seeds/zones.patna.sql",
+    "functions:deploy": "supabase functions deploy ingest_ride_event",
+    "openapi:emit": "node scripts/emit-openapi.mjs"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.2.4",
+    "@supabase/ssr": "^0.7.0",
+    "@supabase/supabase-js": "^2.80.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
+    "idb": "^8.0.3",
+    "jose": "^5.9.6",
+    "lucide-react": "^0.553.0",
+    "next": "16.x",
+    "react": "18.x",
+    "react-dom": "18.x",
+    "sonner": "^2.0.7",
+    "swagger-ui-react": "^5.18.2",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss": "^3.4.13",
+    "zod": "^3.23.8",
+    "@asteasolutions/zod-to-openapi": "^7.3.4",
+    "zustand": "^4.5.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "@types/react": "^18.2.67",
+    "@types/react-dom": "^18.2.22",
+    "@types/swagger-ui-react": "^5.0.4",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^9.9.0",
+    "eslint-config-next": "16.x",
+    "postcss": "^8.4.31",
+    "typescript": "^5.6.2"
+  }
+}

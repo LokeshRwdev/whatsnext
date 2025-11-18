@@ -1,0 +1,147 @@
+# Testing Supabase Edge Function
+
+## Prerequisites
+1. Function deployed: `supabase functions deploy ingest_ride_event`
+2. Environment variables set in `.env.local`
+3. Valid user access token (from Supabase auth)
+
+## Quick CURL Test (Cloud)
+
+Replace placeholders before running:
+- `$NEXT_PUBLIC_SUPABASE_URL` - Your Supabase project URL
+- `$NEXT_PUBLIC_SUPABASE_ANON_KEY` - Your anon key
+- `<USER_ACCESS_TOKEN>` - JWT from authenticated session
+
+```bash
+curl -i -X POST \
+  "$NEXT_PUBLIC_SUPABASE_URL/functions/v1/ingest_ride_event" \
+  -H "Content-Type: application/json" \
+  -H "apikey: $NEXT_PUBLIC_SUPABASE_ANON_KEY" \
+  -H "Authorization: Bearer <USER_ACCESS_TOKEN>" \
+  -d '{
+    "event_type": "booking_received",
+    "lat": 25.5853705,
+    "lon": 85.057869,
+    "battery_pct": 65,
+    "occurred_at": "2025-11-10T06:30:00.000Z"
+  }'
+```
+
+### Expected Response (Success)
+```
+HTTP/2 200 
+content-type: application/json
+
+{"success":true}
+```
+
+### Common Errors
+
+#### 404 Not Found
+```
+HTTP/2 404
+```
+**Cause**: Function not deployed or wrong URL
+**Fix**: 
+1. Deploy function: `supabase functions deploy ingest_ride_event`
+2. Verify URL matches your Supabase project
+
+#### 401 Unauthorized
+```
+HTTP/2 401
+{"message":"Invalid JWT"}
+```
+**Cause**: Missing or expired access token
+**Fix**: Get fresh token from active session
+
+#### 403 Forbidden
+```
+HTTP/2 403
+{"message":"Permission denied"}
+```
+**Cause**: RLS policy rejection or missing auth
+**Fix**: Ensure user is authenticated and has permissions
+
+## PowerShell Example
+
+```powershell
+$url = $env:NEXT_PUBLIC_SUPABASE_URL
+$key = $env:NEXT_PUBLIC_SUPABASE_ANON_KEY
+$token = "<USER_ACCESS_TOKEN>"
+
+$headers = @{
+    "Content-Type" = "application/json"
+    "apikey" = $key
+    "Authorization" = "Bearer $token"
+}
+
+$body = @{
+    event_type = "booking_received"
+    lat = 25.5853705
+    lon = 85.057869
+    battery_pct = 65
+} | ConvertTo-Json
+
+Invoke-WebRequest -Uri "$url/functions/v1/ingest_ride_event" `
+    -Method POST `
+    -Headers $headers `
+    -Body $body
+```
+
+## Local Development (Supabase CLI)
+
+If using `supabase start` locally:
+
+```bash
+# Local function URL
+export NEXT_PUBLIC_SUPABASE_URL=http://localhost:54321
+export NEXT_PUBLIC_SUPABASE_ANON_KEY=<local_anon_from_.env>
+
+curl -i -X POST \
+  "http://localhost:54321/functions/v1/ingest_ride_event" \
+  -H "Content-Type: application/json" \
+  -H "apikey: $NEXT_PUBLIC_SUPABASE_ANON_KEY" \
+  -H "Authorization: Bearer <LOCAL_TOKEN>" \
+  -d '{
+    "event_type": "booking_received",
+    "lat": 25.5853705,
+    "lon": 85.057869
+  }'
+```
+
+## Get Access Token
+
+### From Browser Console (after login)
+```javascript
+// Navigate to your app after logging in
+const { data: { session } } = await (
+  await fetch('/api/auth/session')
+).json();
+console.log(session.access_token);
+```
+
+### From Supabase Client
+```typescript
+import { supabase } from "@/lib/supabase-browser";
+
+const { data: { session } } = await supabase.auth.getSession();
+console.log("Token:", session?.access_token);
+```
+
+## Troubleshooting Checklist
+
+- ✅ Function deployed: `supabase functions list`
+- ✅ Environment variables set in `.env.local`
+- ✅ User authenticated (valid access_token)
+- ✅ Database schema applied with RLS policies
+- ✅ Network connectivity to Supabase (check firewall)
+- ✅ CORS configured if calling from different origin
+
+## Success Indicators
+
+When everything works:
+1. CURL returns HTTP 200
+2. App shows "Event recorded successfully!"
+3. Data appears in `ride_events` table
+4. No 404 errors in browser console
+5. Function logs show successful execution

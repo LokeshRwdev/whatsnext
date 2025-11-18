@@ -1,0 +1,3 @@
+module.exports=[1577,a=>{"use strict";var b=a.i(87924),c=a.i(95659),d=a.i(72131);function e(){let[a,e]=(0,d.useState)("");async function f(b){b.preventDefault(),await c.supabase.auth.signInWithOtp({email:a}),alert("Check your inbox for login link")}return(0,b.jsxs)("main",{className:"p-6 max-w-sm mx-auto",children:[(0,b.jsx)("h1",{className:"text-2xl mb-4",children:"Sign in"}),(0,b.jsxs)("form",{onSubmit:f,className:"space-y-3",children:[(0,b.jsx)("input",{className:"w-full border rounded p-2",placeholder:"you@example.com",value:a,onChange:a=>e(a.target.value)}),(0,b.jsx)("button",{className:"w-full bg-black text-white rounded p-2",children:"Send Magic Link"})]})]})}a.s(["default",()=>e])}];
+
+//# sourceMappingURL=app_%28auth%29_login_page_tsx_bf992e96._.js.map

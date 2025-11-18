@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Lokes/Desktop/projects/whatsnext/app/api/docs/page.tsx"],"sourcesContent":["\"use client\";\r\n\r\nimport SwaggerUI from \"swagger-ui-react\";\r\nimport \"swagger-ui-react/swagger-ui.css\";\r\n\r\nexport default function DocsPage() {\r\n  return (\r\n    <div style={{ height: \"100dvh\" }}>\r\n      <SwaggerUI url=\"/api/openapi\" />\r\n    </div>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;AAEA;AAFA;;;;AAKe,SAAS;IACtB,qBACE,8OAAC;QAAI,OAAO;YAAE,QAAQ;QAAS;kBAC7B,cAAA,8OAAC,2JAAS;YAAC,KAAI;;;;;;;;;;;AAGrB","debugId":null}}]
+}

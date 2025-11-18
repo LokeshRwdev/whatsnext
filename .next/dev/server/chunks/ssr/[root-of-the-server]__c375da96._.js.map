@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Lokes/Desktop/projects/whatsnext/app/layout.tsx"],"sourcesContent":["\"use client\";\r\n\r\nimport \"./globals.css\";\r\nimport { useEffect } from \"react\";\r\n\r\nexport default function RootLayout({ children }: { children: React.ReactNode }) {\r\n  useEffect(() => { \r\n    if (\"serviceWorker\" in navigator) { \r\n      navigator.serviceWorker.register(\"/api/sw\"); \r\n    } \r\n  }, []);\r\n  \r\n  return (\r\n    <html lang=\"en\">\r\n      <head>\r\n        <link rel=\"manifest\" href=\"/manifest.webmanifest\" />\r\n        <meta name=\"theme-color\" content=\"#0b1520\" />\r\n      </head>\r\n      <body>{children}</body>\r\n    </html>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;AAGA;AAHA;;;;AAKe,SAAS,WAAW,EAAE,QAAQ,EAAiC;IAC5E,IAAA,kNAAS,EAAC;QACR,IAAI,mBAAmB,WAAW;YAChC,UAAU,aAAa,CAAC,QAAQ,CAAC;QACnC;IACF,GAAG,EAAE;IAEL,qBACE,8OAAC;QAAK,MAAK;;0BACT,8OAAC;;kCACC,8OAAC;wBAAK,KAAI;wBAAW,MAAK;;;;;;kCAC1B,8OAAC;wBAAK,MAAK;wBAAc,SAAQ;;;;;;;;;;;;0BAEnC,8OAAC;0BAAM;;;;;;;;;;;;AAGb","debugId":null}}]
+}

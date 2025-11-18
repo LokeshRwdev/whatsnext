@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 40, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Lokes/Desktop/projects/whatsnext/app/api/sw/route.ts"],"sourcesContent":["export function GET() {\r\n    const sw = `\r\nself.addEventListener('install', e => self.skipWaiting());\r\nself.addEventListener('activate', e => self.clients.claim());\r\nself.addEventListener('sync', async (event) => {\r\n  if (event.tag === 'flush-ride-queue') {\r\n    const clientsArr = await self.clients.matchAll({ includeUncontrolled: true });\r\n    clientsArr.forEach(c => c.postMessage({ type: 'SYNC_REQUEST' }));\r\n  }\r\n});`;\r\n    return new Response(sw, { \r\n        headers: { \r\n            \"Content-Type\": \"application/javascript\",\r\n            \"Cache-Control\": \"public, max-age=31536000, immutable\"\r\n        } \r\n    });\r\n}\r\n"],"names":[],"mappings":";;;;AAAO,SAAS;IACZ,MAAM,KAAK,CAAC;;;;;;;;GAQb,CAAC;IACA,OAAO,IAAI,SAAS,IAAI;QACpB,SAAS;YACL,gBAAgB;YAChB,iBAAiB;QACrB;IACJ;AACJ","debugId":null}}]
+}
