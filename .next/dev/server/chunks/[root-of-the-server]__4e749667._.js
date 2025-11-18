@@ -278,7 +278,7 @@ async function GET() {
                 status: 401
             });
         }
-        const { data, error } = await supabase.from("driver_state").select("driver_id,last_ping_at,loc,snapped_zone,speed_kmh,battery_pct,accuracy_m,recommendation,updated_at").eq("driver_id", user.id).maybeSingle();
+        const { data, error } = await supabase.from("driver_state").select("driver_id,last_ping_at,loc,snapped_zone,speed_kmh,battery_pct,recommendation,updated_at").eq("driver_id", user.id).maybeSingle();
         if (error) {
             console.error("[driver-state] DB error", {
                 userId: user.id,
@@ -310,6 +310,23 @@ async function GET() {
         }
         const row = data;
         const coords = (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$server$2f$geo$2d$utils$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["latLonFromPoint"])(row.loc);
+        let lastPingAccuracy = null;
+        const { data: latestPing, error: latestPingError } = await supabase.from("pings").select("accuracy_m").eq("driver_id", user.id).order("ts", {
+            ascending: false
+        }).limit(1).maybeSingle();
+        if (latestPingError) {
+            if (latestPingError.code !== "PGRST116") {
+                console.error("[driver-state] latest ping lookup failed", {
+                    userId: user.id,
+                    error: latestPingError
+                });
+            }
+        } else if (latestPing) {
+            const ping = latestPing;
+            if (typeof ping.accuracy_m === "number" && Number.isFinite(ping.accuracy_m)) {
+                lastPingAccuracy = ping.accuracy_m;
+            }
+        }
         return Response.json({
             data: {
                 driver_id: row.driver_id,
@@ -318,10 +335,10 @@ async function GET() {
                 loc: row.loc,
                 speed_kmh: row.speed_kmh,
                 battery_pct: row.battery_pct,
-                accuracy_m: row.accuracy_m ?? null,
                 recommendation: row.recommendation,
                 updated_at: row.updated_at,
-                coords
+                coords,
+                last_ping_accuracy_m: lastPingAccuracy
             }
         }, {
             status: 200

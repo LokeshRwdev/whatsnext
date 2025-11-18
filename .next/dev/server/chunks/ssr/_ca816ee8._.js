@@ -538,6 +538,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$date$2d$fns$
 ;
 ;
 const STALE_MS = 45_000;
+const AUTO_REFRESH_MS = 180_000; // 3 minutes
 function NextZonesPanel({ trackingOn, seedRecommendation }) {
     const { data: driverState } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$hooks$2f$useDriverState$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useDriverState"])();
     const [recommendation, setRecommendation] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(seedRecommendation ?? null);
@@ -546,6 +547,7 @@ function NextZonesPanel({ trackingOn, seedRecommendation }) {
     const setTrackingRecommendation = (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$tracking$2f$store$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useTrackingStore"])((s)=>s.setRecommendation);
     const lastFix = (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$tracking$2f$store$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useTrackingStore"])((s)=>s.lastFix);
     const lastFixRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(lastFix);
+    const lastFetchAtRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(0);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         lastFixRef.current = lastFix;
     }, [
@@ -573,6 +575,7 @@ function NextZonesPanel({ trackingOn, seedRecommendation }) {
         syncRecommendation
     ]);
     const fetchLatest = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCallback"])(async ()=>{
+        lastFetchAtRef.current = Date.now();
         setLoading(true);
         const params = {
             k: 3
@@ -623,13 +626,23 @@ function NextZonesPanel({ trackingOn, seedRecommendation }) {
         recommendation,
         syncRecommendation
     ]);
+    const runAutoRefresh = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCallback"])(()=>{
+        const now = Date.now();
+        if (now - lastFetchAtRef.current < AUTO_REFRESH_MS) {
+            return;
+        }
+        void fetchLatest();
+    }, [
+        fetchLatest
+    ]);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         if (!trackingOn) return;
-        const id = setInterval(()=>fetchLatest(), 15000);
+        runAutoRefresh();
+        const id = setInterval(runAutoRefresh, AUTO_REFRESH_MS);
         return ()=>clearInterval(id);
     }, [
         trackingOn,
-        fetchLatest
+        runAutoRefresh
     ]);
     const empty = !loading && !error && (!recommendation || !recommendation.top || recommendation.top.length === 0);
     const waitingForGps = trackingOn && !lastFix;
@@ -664,7 +677,7 @@ function NextZonesPanel({ trackingOn, seedRecommendation }) {
                                 children: "Next best zones"
                             }, void 0, false, {
                                 fileName: "[project]/components/NextZonesPanel.tsx",
-                                lineNumber: 132,
+                                lineNumber: 144,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -672,13 +685,13 @@ function NextZonesPanel({ trackingOn, seedRecommendation }) {
                                 children: headerMeta
                             }, void 0, false, {
                                 fileName: "[project]/components/NextZonesPanel.tsx",
-                                lineNumber: 133,
+                                lineNumber: 145,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/NextZonesPanel.tsx",
-                        lineNumber: 131,
+                        lineNumber: 143,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -690,18 +703,18 @@ function NextZonesPanel({ trackingOn, seedRecommendation }) {
                             className: "h-4 w-4"
                         }, void 0, false, {
                             fileName: "[project]/components/NextZonesPanel.tsx",
-                            lineNumber: 136,
+                            lineNumber: 148,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/NextZonesPanel.tsx",
-                        lineNumber: 135,
+                        lineNumber: 147,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/NextZonesPanel.tsx",
-                lineNumber: 130,
+                lineNumber: 142,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -720,25 +733,25 @@ function NextZonesPanel({ trackingOn, seedRecommendation }) {
                                         className: "h-4 w-1/2 animate-pulse rounded bg-muted"
                                     }, void 0, false, {
                                         fileName: "[project]/components/NextZonesPanel.tsx",
-                                        lineNumber: 144,
+                                        lineNumber: 156,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "mt-2 h-3 w-1/3 animate-pulse rounded bg-muted"
                                     }, void 0, false, {
                                         fileName: "[project]/components/NextZonesPanel.tsx",
-                                        lineNumber: 145,
+                                        lineNumber: 157,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, idx, true, {
                                 fileName: "[project]/components/NextZonesPanel.tsx",
-                                lineNumber: 143,
+                                lineNumber: 155,
                                 columnNumber: 15
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/components/NextZonesPanel.tsx",
-                        lineNumber: 141,
+                        lineNumber: 153,
                         columnNumber: 11
                     }, this),
                     !loading && error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -753,13 +766,13 @@ function NextZonesPanel({ trackingOn, seedRecommendation }) {
                                 children: "Try again"
                             }, void 0, false, {
                                 fileName: "[project]/components/NextZonesPanel.tsx",
-                                lineNumber: 154,
+                                lineNumber: 166,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/NextZonesPanel.tsx",
-                        lineNumber: 152,
+                        lineNumber: 164,
                         columnNumber: 11
                     }, this),
                     empty && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -767,7 +780,7 @@ function NextZonesPanel({ trackingOn, seedRecommendation }) {
                         children: waitingForGps ? "Waiting for GPS fix..." : "We'll start suggesting zones once we see your location."
                     }, void 0, false, {
                         fileName: "[project]/components/NextZonesPanel.tsx",
-                        lineNumber: 161,
+                        lineNumber: 173,
                         columnNumber: 11
                     }, this),
                     !loading && !error && recommendation?.top?.length ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -776,24 +789,24 @@ function NextZonesPanel({ trackingOn, seedRecommendation }) {
                                 zone: zone
                             }, zone.zone_id, false, {
                                 fileName: "[project]/components/NextZonesPanel.tsx",
-                                lineNumber: 171,
+                                lineNumber: 183,
                                 columnNumber: 15
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/components/NextZonesPanel.tsx",
-                        lineNumber: 169,
+                        lineNumber: 181,
                         columnNumber: 11
                     }, this) : null
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/NextZonesPanel.tsx",
-                lineNumber: 139,
+                lineNumber: 151,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/NextZonesPanel.tsx",
-        lineNumber: 129,
+        lineNumber: 141,
         columnNumber: 5
     }, this);
 }
@@ -825,14 +838,14 @@ function ZoneCard({ zone }) {
                                         className: "h-4 w-4 text-primary"
                                     }, void 0, false, {
                                         fileName: "[project]/components/NextZonesPanel.tsx",
-                                        lineNumber: 204,
+                                        lineNumber: 216,
                                         columnNumber: 13
                                     }, this),
                                     zone.zone_name
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/NextZonesPanel.tsx",
-                                lineNumber: 203,
+                                lineNumber: 215,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -846,7 +859,7 @@ function ZoneCard({ zone }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/NextZonesPanel.tsx",
-                                lineNumber: 207,
+                                lineNumber: 219,
                                 columnNumber: 11
                             }, this),
                             trafficLabel && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -857,13 +870,13 @@ function ZoneCard({ zone }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/NextZonesPanel.tsx",
-                                lineNumber: 211,
+                                lineNumber: 223,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/NextZonesPanel.tsx",
-                        lineNumber: 202,
+                        lineNumber: 214,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -876,19 +889,19 @@ function ZoneCard({ zone }) {
                                 className: "ml-1 h-3 w-3"
                             }, void 0, false, {
                                 fileName: "[project]/components/NextZonesPanel.tsx",
-                                lineNumber: 216,
+                                lineNumber: 228,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/NextZonesPanel.tsx",
-                        lineNumber: 214,
+                        lineNumber: 226,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/NextZonesPanel.tsx",
-                lineNumber: 201,
+                lineNumber: 213,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -896,7 +909,7 @@ function ZoneCard({ zone }) {
                 children: zone.reason
             }, void 0, false, {
                 fileName: "[project]/components/NextZonesPanel.tsx",
-                lineNumber: 219,
+                lineNumber: 231,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -908,18 +921,18 @@ function ZoneCard({ zone }) {
                     }
                 }, void 0, false, {
                     fileName: "[project]/components/NextZonesPanel.tsx",
-                    lineNumber: 221,
+                    lineNumber: 233,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/NextZonesPanel.tsx",
-                lineNumber: 220,
+                lineNumber: 232,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/NextZonesPanel.tsx",
-        lineNumber: 200,
+        lineNumber: 212,
         columnNumber: 5
     }, this);
 }

@@ -15,6 +15,7 @@ interface NextZonesPanelProps {
 }
 
 const STALE_MS = 45_000;
+const AUTO_REFRESH_MS = 180_000; // 3 minutes
 
 export function NextZonesPanel({ trackingOn, seedRecommendation }: NextZonesPanelProps) {
   const { data: driverState } = useDriverState();
@@ -26,6 +27,7 @@ export function NextZonesPanel({ trackingOn, seedRecommendation }: NextZonesPane
   const setTrackingRecommendation = useTrackingStore((s) => s.setRecommendation);
   const lastFix = useTrackingStore((s) => s.lastFix);
   const lastFixRef = useRef(lastFix);
+  const lastFetchAtRef = useRef(0);
 
   useEffect(() => {
     lastFixRef.current = lastFix;
@@ -53,6 +55,7 @@ export function NextZonesPanel({ trackingOn, seedRecommendation }: NextZonesPane
   }, [driverState, syncRecommendation]);
 
   const fetchLatest = useCallback(async () => {
+    lastFetchAtRef.current = Date.now();
     setLoading(true);
     const params: { k: number; lat?: number; lon?: number } = { k: 3 };
     const loc = lastFixRef.current;
@@ -99,11 +102,20 @@ export function NextZonesPanel({ trackingOn, seedRecommendation }: NextZonesPane
     }
   }, [seedRecommendation, recommendation, syncRecommendation]);
 
+  const runAutoRefresh = useCallback(() => {
+    const now = Date.now();
+    if (now - lastFetchAtRef.current < AUTO_REFRESH_MS) {
+      return;
+    }
+    void fetchLatest();
+  }, [fetchLatest]);
+
   useEffect(() => {
     if (!trackingOn) return;
-    const id = setInterval(() => fetchLatest(), 15000);
+    runAutoRefresh();
+    const id = setInterval(runAutoRefresh, AUTO_REFRESH_MS);
     return () => clearInterval(id);
-  }, [trackingOn, fetchLatest]);
+  }, [trackingOn, runAutoRefresh]);
 
   const empty =
     !loading && !error && (!recommendation || !recommendation.top || recommendation.top.length === 0);

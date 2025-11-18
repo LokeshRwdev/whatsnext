@@ -344,7 +344,11 @@ async function fetchCandidateZones(
   supabase: SupabaseClient,
   currentLoc: { lat: number; lon: number }
 ): Promise<CandidateFetchResult> {
-  const { data, error } = await supabase.from("zones").select("*").limit(200);
+  const { data, error } = await supabase
+    .from("zones")
+    .select("id,name,lat,lon,center,radius_km,weight_demand,weight_airport,is_active")
+    .eq("is_active", true)
+    .limit(200);
 
   if (error || !data) {
     console.error("[recommendations] zone fetch failed", {

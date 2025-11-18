@@ -23,18 +23,18 @@ export default function DriverHomeClient() {
     <DriverShell title={greeting} subtitle={subtitle}>
       <div className="space-y-6">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <TrackingToggle
+          {/* <TrackingToggle
             trackingOn={tracking.trackingOn}
             permissionStatus={tracking.permissionStatus}
             toggleTracking={tracking.toggleTracking}
             error={tracking.error}
-          />
+          /> */}
           <div className="flex flex-col items-start gap-2 sm:items-end">
-            <LiveStatusChip
+            {/* <LiveStatusChip
               trackingOn={tracking.trackingOn}
               lastPingAt={tracking.lastPingAt}
               permissionStatus={tracking.permissionStatus}
-            />
+            /> */}
             <GpsAccuracyBadge
               trackingOn={tracking.trackingOn}
               accuracy={tracking.lastFix?.accuracy ?? null}

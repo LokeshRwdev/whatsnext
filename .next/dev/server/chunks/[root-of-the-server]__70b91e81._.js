@@ -2478,7 +2478,6 @@ async function POST(req) {
             last_ping_at: tsIso,
             loc: locPoint,
             snapped_zone: snappedZoneId,
-            accuracy_m: payload.accuracy_m ?? null,
             speed_kmh: payload.speed_kmh ?? null,
             battery_pct: payload.battery_pct ?? null,
             recommendation,

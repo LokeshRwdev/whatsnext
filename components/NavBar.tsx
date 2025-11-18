@@ -57,10 +57,12 @@ export function NavBar({ userEmail, displayName }: NavBarProps) {
                 <span className="rounded-full border border-primary/40 bg-primary/10 px-3 py-0.5 text-xs font-semibold text-primary">
                   Driver console
                 </span>
+              <ThemeToggle />
+
               </div>
               {/* <p className="text-sm text-muted-foreground">Smart assistance for O in Patna.</p> */}
             </Link>
-            <div className="flex flex-1 flex-wrap items-center  gap-4 text-sm">
+            {/* <div className="flex flex-1 flex-wrap items-center  gap-4 text-sm">
               {statHighlights.map((item) => (
                 <div
                   key={item.label}
@@ -70,7 +72,7 @@ export function NavBar({ userEmail, displayName }: NavBarProps) {
                   <p className="text-base font-semibold text-foreground">{item.value}</p>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
           <div className="flex flex-wrap items-center justify-between gap-4 border-t border-border/70 pt-3">
             {/* <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
@@ -90,10 +92,9 @@ export function NavBar({ userEmail, displayName }: NavBarProps) {
               )}
             </div> */}
             <div className="flex flex-wrap items-center gap-3">
-              <BatteryChip percentage={battery} />
+              {/* <BatteryChip percentage={battery} /> */}
               <span className="hidden h-8 w-px bg-border/70 sm:block" />
-              <ThemeToggle />
-              <LogoutButton variant="outline" size="sm" className="rounded-full px-4" />
+              {/* <LogoutButton variant="outline" size="sm" className="rounded-full px-4" /> */}
             </div>
           </div>
         </div>

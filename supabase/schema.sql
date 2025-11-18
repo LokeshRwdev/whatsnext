@@ -201,7 +201,6 @@ CREATE TABLE IF NOT EXISTS public.driver_state (
   loc GEOMETRY(POINT, 4326) NOT NULL,
   lat DOUBLE PRECISION GENERATED ALWAYS AS (ST_Y(loc)) STORED,
   lon DOUBLE PRECISION GENERATED ALWAYS AS (ST_X(loc)) STORED,
-  accuracy_m DOUBLE PRECISION,
   snapped_zone INTEGER REFERENCES public.zones(id),
   speed_kmh DOUBLE PRECISION,
   battery_pct SMALLINT CHECK (battery_pct >= 0 AND battery_pct <= 100),

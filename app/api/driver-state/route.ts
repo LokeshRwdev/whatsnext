@@ -8,9 +8,12 @@ type DriverStateRow = {
   snapped_zone: number | null;
   speed_kmh: number | null;
   battery_pct: number | null;
-  accuracy_m: number | null;
   recommendation: Record<string, unknown> | null;
   updated_at: string | null;
+};
+
+type LatestPingRow = {
+  accuracy_m: number | null;
 };
 
 export async function GET() {
@@ -32,7 +35,7 @@ export async function GET() {
     const { data, error } = await supabase
       .from("driver_state")
       .select(
-        "driver_id,last_ping_at,loc,snapped_zone,speed_kmh,battery_pct,accuracy_m,recommendation,updated_at"
+        "driver_id,last_ping_at,loc,snapped_zone,speed_kmh,battery_pct,recommendation,updated_at"
       )
       .eq("driver_id", user.id)
       .maybeSingle();
@@ -72,6 +75,32 @@ export async function GET() {
 
     const row = data as DriverStateRow;
     const coords = latLonFromPoint(row.loc);
+    let lastPingAccuracy: number | null = null;
+
+    const {
+      data: latestPing,
+      error: latestPingError,
+    } = await supabase
+      .from("pings")
+      .select("accuracy_m")
+      .eq("driver_id", user.id)
+      .order("ts", { ascending: false })
+      .limit(1)
+      .maybeSingle();
+
+    if (latestPingError) {
+      if (latestPingError.code !== "PGRST116") {
+        console.error("[driver-state] latest ping lookup failed", {
+          userId: user.id,
+          error: latestPingError,
+        });
+      }
+    } else if (latestPing) {
+      const ping = latestPing as LatestPingRow;
+      if (typeof ping.accuracy_m === "number" && Number.isFinite(ping.accuracy_m)) {
+        lastPingAccuracy = ping.accuracy_m;
+      }
+    }
 
     return Response.json(
       {
@@ -82,10 +111,10 @@ export async function GET() {
           loc: row.loc,
           speed_kmh: row.speed_kmh,
           battery_pct: row.battery_pct,
-          accuracy_m: row.accuracy_m ?? null,
           recommendation: row.recommendation,
           updated_at: row.updated_at,
           coords,
+          last_ping_accuracy_m: lastPingAccuracy,
         },
       },
       { status: 200 }

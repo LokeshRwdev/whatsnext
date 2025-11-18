@@ -95,7 +95,7 @@ export type DriverState = {
   snapped_zone: number | null;
   speed_kmh: number | null;
   battery_pct: number | null;
-  accuracy_m: number | null;
+  last_ping_accuracy_m: number | null;
   recommendation: RecommendationResponse | null;
   updated_at: string | null;
 };
