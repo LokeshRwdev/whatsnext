@@ -127,6 +127,8 @@ CREATE TABLE IF NOT EXISTS public.pings (
   created_at TIMESTAMPTZ DEFAULT NOW()
 );
 
+COMMENT ON COLUMN public.pings.accuracy_m IS 'GPS horizontal accuracy in meters for this ping';
+
 CREATE INDEX IF NOT EXISTS idx_pings_driver_ts ON public.pings(driver_id, ts DESC);
 CREATE INDEX IF NOT EXISTS idx_pings_loc ON public.pings USING GIST(loc);
 

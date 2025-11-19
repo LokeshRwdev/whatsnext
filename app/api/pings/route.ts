@@ -187,11 +187,24 @@ export async function POST(req: Request) {
       .maybeSingle();
 
     if (pingError) {
-      return respondWithDbError(
-        "Failed to save ping",
-        pingError,
-        user.id,
-        payload
+      console.error("[pings] insert error", {
+        userId: user?.id,
+        insertPayload,
+        error: pingError,
+      });
+      return Response.json(
+        {
+          error: {
+            code: "DB_ERROR",
+            message: "Failed to save ping",
+            details: {
+              code: pingError.code,
+              message: pingError.message,
+              hint: pingError.hint ?? null,
+            },
+          },
+        },
+        { status: 500 }
       );
     }
 

@@ -1765,7 +1765,7 @@ async function computeNextZonesForDriver(params) {
     };
 }
 async function fetchCandidateZones(supabase, currentLoc) {
-    const { data, error } = await supabase.from("zones").select("*").limit(200);
+    const { data, error } = await supabase.from("zones").select("id,name,lat,lon,center,radius_km,weight_demand,weight_airport,is_active").eq("is_active", true).limit(200);
     if (error || !data) {
         console.error("[recommendations] zone fetch failed", {
             error
@@ -2446,7 +2446,24 @@ async function POST(req) {
         }
         const { data: pingRow, error: pingError } = await supabase.from("pings").insert(insertPayload).select("id,driver_id,ts,loc,speed_kmh,battery_pct").maybeSingle();
         if (pingError) {
-            return respondWithDbError("Failed to save ping", pingError, user.id, payload);
+            console.error("[pings] insert error", {
+                userId: user?.id,
+                insertPayload,
+                error: pingError
+            });
+            return Response.json({
+                error: {
+                    code: "DB_ERROR",
+                    message: "Failed to save ping",
+                    details: {
+                        code: pingError.code,
+                        message: pingError.message,
+                        hint: pingError.hint ?? null
+                    }
+                }
+            }, {
+                status: 500
+            });
         }
         const { data: snappedZoneData, error: snappedZoneError } = await supabase.rpc("nearest_zone", {
             p_lon: payload.lon,

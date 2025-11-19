@@ -1,98 +1,8 @@
-[00:00:01.130] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-[00:00:01.266] Server  LOG      ✓ Ready in 824ms
-[00:02:47.178] Server  LOG      ○ Compiling / ...
-[00:02:53.684] Server  ERROR   [driver-state] DB error {}
-[00:02:53.800] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
-[00:02:53.800] Browser WARN    As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
-[00:02:53.873] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:02:54.347] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:02:54.513] Server  ERROR   [recommendations] training fetch failed {}
-[00:02:54.542] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:02:54.685] Server  ERROR   [pings] DB error {}
-[00:03:07.443] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:03:07.759] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:03:07.921] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:03:08.021] Server  ERROR   [recommendations] training fetch failed {}
-[00:03:22.484] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:03:22.883] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:03:22.944] Server  ERROR   [recommendations] training fetch failed {}
-[00:03:37.480] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:03:37.823] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:03:38.064] Server  ERROR   [recommendations] training fetch failed {}
-[00:03:52.456] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:03:52.766] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:03:52.972] Server  ERROR   [recommendations] training fetch failed {}
-[00:04:06.912] Server  ERROR   [pings] DB error {}
-[00:04:07.333] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:04:07.747] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:04:07.948] Server  ERROR   [recommendations] training fetch failed {}
-[00:04:07.951] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:04:15.102] Server  ERROR   [pings] DB error {}
-[00:04:23.211] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:04:23.541] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:04:23.664] Server  ERROR   [recommendations] training fetch failed {}
-[00:04:28.145] Server  ERROR   [pings] DB error {}
-[00:04:37.419] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:04:37.733] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:04:37.886] Server  ERROR   [recommendations] training fetch failed {}
-[00:04:52.909] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:04:53.159] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:04:53.324] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:04:53.468] Server  ERROR   [recommendations] training fetch failed {}
-[00:05:07.921] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:05:08.400] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:05:08.495] Server  ERROR   [recommendations] training fetch failed {}
-[00:05:23.195] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:05:23.701] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:05:24.455] Server  ERROR   [recommendations] training fetch failed {}
-[00:05:38.676] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:05:40.333] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:05:40.526] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:05:40.910] Server  ERROR   [recommendations] training fetch failed {}
-[00:05:53.287] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:05:53.619] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:05:53.703] Server  ERROR   [recommendations] training fetch failed {}
-[00:06:07.937] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:06:08.234] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:06:08.337] Server  ERROR   [recommendations] training fetch failed {}
-[00:06:23.445] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:06:23.781] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:06:23.869] Server  ERROR   [recommendations] training fetch failed {}
-[00:06:25.624] Server  LOG      ✓ Compiled in 370ms
-[00:06:26.274] Server  ERROR   [driver-state] DB error {}
-[00:06:26.330] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:06:26.728] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:06:26.875] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:06:26.876] Server  ERROR   [recommendations] training fetch failed {}
-[00:09:29.237] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:09:30.315] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:09:30.530] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:09:30.566] Server  ERROR   [recommendations] training fetch failed {}
-[00:15:27.549] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:15:27.909] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:15:28.156] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:15:28.268] Server  ERROR   [recommendations] training fetch failed {}
-[00:21:27.947] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:21:28.660] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:21:29.058] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:21:29.317] Server  ERROR   [recommendations] training fetch failed {}
-[00:24:27.470] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:24:27.896] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:24:28.340] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:24:28.383] Server  ERROR   [recommendations] training fetch failed {}
-[00:31:03.845] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:31:04.393] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:31:04.764] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:31:04.864] Server  ERROR   [recommendations] training fetch failed {}
-[00:34:03.380] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:34:03.685] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:34:03.891] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:34:04.239] Server  ERROR   [recommendations] training fetch failed {}
-[00:40:03.870] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:40:04.562] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:40:04.815] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:40:04.913] Server  ERROR   [recommendations] training fetch failed {}
-[00:40:18.453] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:00.989] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:01.155] Server  LOG      ✓ Ready in 814ms
+[00:00:04.650] Server  LOG      ○ Compiling / ...
+[00:00:06.884] Server  WARN    Route / is rendering with server caches disabled. For this navigation, Component Metadata in React DevTools will not accurately reflect what is statically prerenderable and runtime prefetchable. See more info here: https://nextjs.org/docs/messages/cache-bypass-in-dev
+[00:00:07.700] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -126,23 +36,26 @@ It can also happen if the client has a browser extension installed which messes 
                             <head>
                             <body
                               className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_e8e85e08-88b1-4018-aceb-71bd805b6fc3__="true"
--                             bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaW..."
+-                             __processed_69f60baa-411c-48c4-baba-7982ce443784__="true"
                             >
                   ...
 
-[00:40:19.070] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:40:19.171] Server  ERROR   [driver-state] latest ping lookup failed {}
-[00:40:19.405] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:40:19.409] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
-[00:40:19.614] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:40:19.616] Server  ERROR   [recommendations] training fetch failed {}
-[00:40:19.749] Browser WARN    As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
-[00:40:19.759] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:40:20.159] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:40:20.160] Server  ERROR   [recommendations] training fetch failed {}
-[00:41:10.332] Browser ERROR   watchPosition error {}
-[00:41:24.393] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:08.412] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[00:00:09.464] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:00:09.477] Server  ERROR   [driver-state] latest ping lookup failed {}
+[00:00:09.631] Server  ERROR   [recommendations] zone fetch failed {}
+[00:00:10.257] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:00:10.415] Server  ERROR   [recommendations] zone fetch failed {}
+[00:06:11.875] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:06:12.359] Server  ERROR   [recommendations] zone fetch failed {}
+[00:09:10.635] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:09:11.137] Server  ERROR   [recommendations] zone fetch failed {}
+[00:12:10.449] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:12:10.750] Server  ERROR   [recommendations] zone fetch failed {}
+[00:13:31.549] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:13:31.741] Server  ERROR   [recommendations] zone fetch failed {}
+[00:13:37.790] Browser ERROR   watchPosition error {}
+[00:13:47.107] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -176,40 +89,27 @@ It can also happen if the client has a browser extension installed which messes 
                             <head>
                             <body
                               className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_2945653c-0436-4a50-803c-20965dd767c7__="true"
+-                             __processed_2f260586-ebf3-4d1c-aef1-38d446e539fb__="true"
                             >
                   ...
 
-[00:41:24.659] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
-[00:41:25.121] Server  ERROR   [driver-state] latest ping lookup failed {}
-[00:41:25.151] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:41:25.456] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:41:25.634] Server  ERROR   [recommendations] training fetch failed {}
-[00:41:25.660] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:41:25.796] Browser WARN    As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
-[00:41:25.850] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:41:26.220] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:41:26.222] Server  ERROR   [recommendations] training fetch failed {}
-[00:43:39.457] Server  ERROR   [pings] DB error {}
-[00:44:03.916] Server  ERROR   [pings] DB error {}
-[00:44:31.031] Server  ERROR   [pings] DB error {}
-[00:45:25.316] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:45:25.622] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:45:25.798] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:45:25.878] Server  ERROR   [recommendations] training fetch failed {}
-[00:51:25.733] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:51:26.425] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:51:26.661] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:51:26.743] Server  ERROR   [recommendations] training fetch failed {}
-[00:54:25.768] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:54:26.196] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[00:54:26.392] Server  ERROR   [recommendations] trip fare fetch failed {}
-[00:54:26.470] Server  ERROR   [recommendations] training fetch failed {}
-[01:00:25.878] Server  ERROR   [next-spot] nearest_zone failed {}
-[01:00:26.476] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[01:00:26.883] Server  ERROR   [recommendations] trip fare fetch failed {}
-[01:00:27.091] Server  ERROR   [recommendations] training fetch failed {}
-[01:01:45.590] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:13:47.363] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[00:13:47.724] Server  ERROR   [driver-state] latest ping lookup failed {}
+[00:13:47.833] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:13:47.987] Server  ERROR   [recommendations] zone fetch failed {}
+[00:13:48.214] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:13:48.499] Server  ERROR   [recommendations] zone fetch failed {}
+[00:16:49.481] Server  ERROR   [next-spot] nearest_zone failed {}
+[00:16:49.647] Server  ERROR   [recommendations] zone fetch failed {}
+[01:54:23.106] Server  ERROR   [next-spot] nearest_zone failed {}
+[01:54:23.412] Server  ERROR   [recommendations] zone fetch failed {}
+[01:58:49.440] Server  ERROR   [next-spot] nearest_zone failed {}
+[01:58:49.713] Server  ERROR   [recommendations] zone fetch failed {}
+[02:00:25.321] Browser WARN    As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
+[02:00:27.252] Server  ERROR   [pings] insert error {}
+[02:00:54.264] Server  ERROR   [pings] insert error {}
+[02:02:04.123] Server  ERROR   [pings] insert error {}
+[02:02:49.439] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -243,21 +143,16 @@ It can also happen if the client has a browser extension installed which messes 
                             <head>
                             <body
                               className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_6145f786-9530-4b60-a010-255f3f2ad1a8__="true"
+-                             __processed_0ad0575d-5e09-4202-8759-627ad72d9a30__="true"
                             >
                   ...
 
-[01:01:45.929] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
-[01:01:46.465] Server  ERROR   [next-spot] nearest_zone failed {}
-[01:01:46.525] Server  ERROR   [driver-state] latest ping lookup failed {}
-[01:01:46.839] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[01:01:47.006] Server  ERROR   [recommendations] trip fare fetch failed {}
-[01:01:47.006] Server  ERROR   [recommendations] training fetch failed {}
-[01:01:47.130] Browser WARN    As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
-[01:01:47.193] Server  ERROR   [next-spot] nearest_zone failed {}
-[01:01:47.520] Server  ERROR   [recommendations] training fetch failed {}
-[01:01:47.536] Server  ERROR   [recommendations] trip fare fetch failed {}
-[01:02:55.458] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[02:02:49.668] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[02:02:50.130] Server  ERROR   [next-spot] nearest_zone failed {}
+[02:02:50.426] Server  ERROR   [recommendations] zone fetch failed {}
+[02:02:50.827] Server  ERROR   [next-spot] nearest_zone failed {}
+[02:02:50.969] Server  ERROR   [recommendations] zone fetch failed {}
+[02:03:12.056] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -291,24 +186,18 @@ It can also happen if the client has a browser extension installed which messes 
                             <head>
                             <body
                               className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_dc17e0ff-f3c9-4201-b795-4d7dadce672e__="true"
+-                             __processed_2d86eb4e-0e03-47b0-ac91-7fbe9acef27f__="true"
                             >
                   ...
 
-[01:02:55.763] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
-[01:02:56.094] Server  ERROR   [driver-state] latest ping lookup failed {}
-[01:02:56.098] Server  ERROR   [next-spot] nearest_zone failed {}
-[01:02:56.365] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[01:02:56.527] Server  ERROR   [recommendations] training fetch failed {}
-[01:02:56.534] Server  ERROR   [recommendations] trip fare fetch failed {}
-[01:02:56.667] Browser WARN    As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
-[01:02:56.699] Server  ERROR   [next-spot] nearest_zone failed {}
-[01:02:57.077] Server  ERROR   [recommendations] trip fare fetch failed {}
-[01:02:57.080] Server  ERROR   [recommendations] training fetch failed {}
-[01:03:42.966] Server  LOG      ✓ Compiled in 134ms
-[01:04:27.039] Browser ERROR   watchPosition error {}
-[01:05:33.937] Server  LOG      ✓ Compiled in 240ms
-[01:05:36.563] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[02:03:12.302] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[02:03:12.823] Server  ERROR   [next-spot] nearest_zone failed {}
+[02:03:12.963] Server  ERROR   [recommendations] zone fetch failed {}
+[02:03:13.037] Server  ERROR   [next-spot] nearest_zone failed {}
+[02:03:13.197] Server  ERROR   [recommendations] zone fetch failed {}
+[02:06:14.085] Server  ERROR   [next-spot] nearest_zone failed {}
+[02:06:14.246] Server  ERROR   [recommendations] zone fetch failed {}
+[02:07:37.020] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -342,326 +231,33 @@ It can also happen if the client has a browser extension installed which messes 
                             <head>
                             <body
                               className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_2abda4a6-fc05-444a-aa80-6bef9d261b7e__="true"
--                             bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaW..."
+-                             __processed_d1c2d75d-2af7-4d0f-b1f5-3f64e63dfb91__="true"
                             >
                   ...
 
-[01:05:40.204] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <ScrollAndFocusHandler segmentPath={[...]}>
-      <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
-        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
-          <LoadingBoundary name="/" loading={null}>
-            <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
-              <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
-                <RedirectBoundary>
-                  <RedirectErrorBoundary router={{...}}>
-                    <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
-                      <SegmentViewNode type="layout" pagePath="(driver)/l...">
-                        <SegmentTrieNode>
-                        <script>
-                        <script>
-                        <script>
-                        <DriverLayout>
-                          <Suspense fallback={<div>}>
-                            <DriverLayoutContent>
-                              <div
-                                className="flex flex-col h-screen"
--                               bis_skin_checked="1"
-                              >
-                                <NavBar userEmail="lokeshnand..." displayName="Lokesh Nandan">
-                                  <header className="sticky top...">
-                                    <div
-                                      className="container px-2 py-3"
--                                     bis_skin_checked="1"
-                                    >
-                                      <div
-                                        className="flex flex-col gap-4"
--                                       bis_skin_checked="1"
-                                      >
-                                        <div
-                                          className="flex flex-col flex-wrap items-start justify-between gap-4"
--                                         bis_skin_checked="1"
-                                        >
-                                          <LinkComponent href="/" className="flex flex-...">
-                                            <a className="flex flex-..." ref={function} onClick={function onClick} ...>
-                                              <p>
-                                              <div
-                                                className="flex flex-wrap items-center gap-2"
--                                               bis_skin_checked="1"
-                                              >
-                                        <div
-                                          className="flex flex-wrap items-center justify-between gap-4 border-t border..."
--                                         bis_skin_checked="1"
-                                        >
-                                          <div
-                                            className="flex flex-wrap items-center gap-3"
--                                           bis_skin_checked="1"
-                                          >
-                                <main>
-                                <BottomNav>
-                                  <nav className="fixed bott...">
-                                    <div
-                                      className="grid grid-cols-4 gap-1 px-2 py-2"
--                                     bis_skin_checked="1"
-                                    >
-                    ...
-        ...
-
-[01:05:40.204] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <ScrollAndFocusHandler segmentPath={[...]}>
-      <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
-        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
-          <LoadingBoundary name="(driver)/" loading={null}>
-            <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
-              <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
-                <RedirectBoundary>
-                  <RedirectErrorBoundary router={{...}}>
-                    <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
-                      <SegmentViewNode type="page" pagePath="(driver)/p...">
-                        <SegmentTrieNode>
-                        <DriverHomePage>
-                          <DriverHomeClient>
-                            <DriverShell title="Hi driver" subtitle="Today | 0 ...">
-                              <section className="flex h-ful...">
-                                <header className="flex flex-...">
-                                  <div
-                                    className="flex items-start justify-between gap-3"
--                                   bis_skin_checked="1"
-                                  >
-                                    <div
--                                     bis_skin_checked="1"
-                                    >
-                                <div
-                                  className="flex-1 overflow-y-auto px-4 pb-24 pt-4 md:pb-8"
--                                 bis_skin_checked="1"
-                                >
-                                  <div
-                                    className="space-y-6"
--                                   bis_skin_checked="1"
-                                  >
-                                    <div
-                                      className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between"
--                                     bis_skin_checked="1"
-                                    >
-                                      <TrackingToggle trackingOn={false} permissionStatus="prompt" ...>
-                                        <button type="button" ...>
-                                          <div
-                                            className="relative inline-flex h-5 w-10 items-center rounded-full bg-whit..."
--                                           bis_skin_checked="1"
-                                          >
-                                          <div
-                                            className="text-left"
--                                           bis_skin_checked="1"
-                                          >
-                                      <div
-                                        className="flex flex-col items-start gap-2 sm:items-end"
--                                       bis_skin_checked="1"
-                                      >
-                                        <LiveStatusChip trackingOn={false} lastPingAt={null} permissionStatus="prompt">
-                                          <div
-                                            className="inline-flex flex-col rounded-2xl px-4 py-2 text-xs font-medium ..."
--                                           bis_skin_checked="1"
-                                          >
-                                        <GpsAccuracyBadge trackingOn={false} accuracy={null}>
-                                          <div
-                                            className="inline-flex rounded-full px-3 py-1 text-xs font-semibold bg-mut..."
--                                           bis_skin_checked="1"
-                                          >
-+                                           GPS: paused
-                                    <NextZonesPanel trackingOn={false} seedRecommendation={null}>
-                                      <_c className="shadow-sm">
-                                        <div
-                                          ref={null}
-                                          className="rounded-2xl border bg-card text-card-foreground shadow-sm"
--                                         bis_skin_checked="1"
-                                        >
-                                          <_c2 className="flex flex-...">
-                                            <div
-                                              ref={null}
-                                              className="p-6 flex flex-row items-center justify-between space-y-0"
--                                             bis_skin_checked="1"
-                                            >
-                                              <div
--                                               bis_skin_checked="1"
-                                              >
-                                              ...
-                                          <_c8 className="space-y-4">
-                                            <div
-                                              ref={null}
-                                              className="p-6 pt-0 space-y-4"
--                                             bis_skin_checked="1"
-                                            >
-                                              <div
-                                                className="space-y-3"
--                                               bis_skin_checked="1"
-                                              >
-                                                <div
-                                                  className="rounded-xl border p-3"
--                                                 bis_skin_checked="1"
-                                                >
-                                                  <div
-                                                    className="h-4 w-1/2 animate-pulse rounded bg-muted"
--                                                   bis_skin_checked="1"
-                                                  >
-                                                  <div
-                                                    className="mt-2 h-3 w-1/3 animate-pulse rounded bg-muted"
--                                                   bis_skin_checked="1"
-                                                  >
-                                                <div
-                                                  className="rounded-xl border p-3"
--                                                 bis_skin_checked="1"
-                                                >
-                                                  <div
-                                                    className="h-4 w-1/2 animate-pulse rounded bg-muted"
--                                                   bis_skin_checked="1"
-                                                  >
-                                                  <div
-                                                    className="mt-2 h-3 w-1/3 animate-pulse rounded bg-muted"
--                                                   bis_skin_checked="1"
-                                                  >
-                                                <div
-                                                  className="rounded-xl border p-3"
--                                                 bis_skin_checked="1"
-                                                >
-                                                  <div
-                                                    className="h-4 w-1/2 animate-pulse rounded bg-muted"
--                                                   bis_skin_checked="1"
-                                                  >
-                                                  <div
-                                                    className="mt-2 h-3 w-1/3 animate-pulse rounded bg-muted"
--                                                   bis_skin_checked="1"
-                                                  >
-                                    <TrafficPreviewMap currentLocation={null} recommendedZones={null}>
-                                      <_c className="shadow-sm">
-                                        <div
-                                          ref={null}
-                                          className="rounded-2xl border bg-card text-card-foreground shadow-sm"
--                                         bis_skin_checked="1"
-                                        >
-                                          <_c2 className="space-y-1">
-                                            <div
-                                              ref={null}
-                                              className="flex flex-col p-6 space-y-1"
--                                             bis_skin_checked="1"
-                                            >
-                                          <_c8 className="space-y-3">
-                                            <div
-                                              ref={null}
-                                              className="p-6 pt-0 space-y-3"
--                                             bis_skin_checked="1"
-                                            >
-                                              <div
-                                                className="flex justify-end"
--                                               bis_skin_checked="1"
-                                              >
-                                              <div
-                                                className="h-64 w-full overflow-hidden rounded-2xl border"
-                                                ref={{current:null}}
--                                               bis_skin_checked="1"
-                                              >
-                                              ...
-                                          ...
-                                    <section className="space-y-3">
-                                      <h2>
-                                      <RideControls lastFix={null}>
-                                        <div
-                                          className="space-y-4"
--                                         bis_skin_checked="1"
-                                        >
-                                          <div
-                                            className="flex items-center justify-between rounded-2xl border bg-white/6..."
--                                           bis_skin_checked="1"
-                                          >
-                                            <div
--                                             bis_skin_checked="1"
-                                            >
-                                              <p>
-                                              <div
-                                                className="mt-1 inline-flex gap-2 rounded-full bg-muted p-1"
--                                               bis_skin_checked="1"
-                                              >
-                                            <div
-                                              className="text-right text-xs text-muted-foreground"
--                                             bis_skin_checked="1"
-                                            >
-                                          <div
-                                            className="grid grid-cols-2 gap-3"
--                                           bis_skin_checked="1"
-                                          >
-                                          ...
-                      ...
-                    ...
-        ...
-
-[01:05:40.204] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
-[01:05:40.336] Server  LOG      ✓ Compiled in 667ms
-[01:05:40.846] Server  ERROR   [driver-state] latest ping lookup failed {}
-[01:05:40.858] Server  ERROR   [next-spot] nearest_zone failed {}
-[01:05:41.184] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[01:05:41.416] Server  ERROR   [recommendations] trip fare fetch failed {}
-[01:05:41.852] Server  ERROR   [recommendations] training fetch failed {}
-[01:05:41.853] Server  ERROR   [next-spot] nearest_zone failed {}
-[01:05:42.186] Server  ERROR   [recommendations] trip fare fetch failed {}
-[01:05:42.206] Server  ERROR   [recommendations] training fetch failed {}
-[01:05:42.373] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
-[01:05:42.725] Server  ERROR   [next-spot] nearest_zone failed {}
-[01:05:42.760] Server  ERROR   [driver-state] latest ping lookup failed {}
-[01:05:43.054] Server  ERROR   [recommendations] trip fare fetch failed {}
-[01:05:43.065] Server  ERROR   [recommendations] training fetch failed {}
-[01:05:43.201] Browser WARN    As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
-[01:05:43.272] Server  ERROR   [next-spot] nearest_zone failed {}
-[01:05:43.625] Server  ERROR   [recommendations] trip fare fetch failed {}
-[01:05:43.628] Server  ERROR   [recommendations] training fetch failed {}
-[01:11:43.643] Server  ERROR   [next-spot] nearest_zone failed {}
-[01:11:44.166] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[01:11:44.352] Server  ERROR   [recommendations] trip fare fetch failed {}
-[01:11:44.462] Server  ERROR   [recommendations] training fetch failed {}
-[01:12:48.668] Server  LOG      ✓ Compiled in 107ms
-[01:12:51.348] Server  ERROR   [driver-state] latest ping lookup failed {}
-[01:12:51.487] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
-[01:12:51.620] Server  ERROR   [next-spot] nearest_zone failed {}
-[01:12:51.932] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[01:12:51.937] Server  ERROR   [next-spot] nearest_zone failed {}
-[01:12:52.088] Server  ERROR   [recommendations] trip fare fetch failed {}
-[01:12:52.269] Server  ERROR   [recommendations] trip fare fetch failed {}
-[01:12:52.272] Server  ERROR   [recommendations] training fetch failed {}
-[01:12:52.278] Server  ERROR   [recommendations] training fetch failed {}
-[01:12:52.396] Browser WARN    As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
-[01:18:53.319] Server  ERROR   [next-spot] nearest_zone failed {}
-[01:18:53.700] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[01:18:53.959] Server  ERROR   [recommendations] trip fare fetch failed {}
-[01:18:53.963] Server  ERROR   [recommendations] training fetch failed {}
-[01:24:52.607] Server  ERROR   [next-spot] nearest_zone failed {}
-[01:24:52.968] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[01:24:53.144] Server  ERROR   [recommendations] trip fare fetch failed {}
-[01:24:53.251] Server  ERROR   [recommendations] training fetch failed {}
-[01:26:52.870] Server  LOG      ✓ Compiled in 176ms
-[01:26:54.735] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[02:07:37.252] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[02:07:37.792] Server  ERROR   [next-spot] nearest_zone failed {}
+[02:07:37.938] Server  ERROR   [recommendations] zone fetch failed {}
+[02:07:38.096] Server  ERROR   [next-spot] nearest_zone failed {}
+[02:07:38.241] Server  ERROR   [recommendations] zone fetch failed {}
+[02:07:53.147] Browser ERROR   watchPosition error {}
+[02:13:38.706] Server  ERROR   [next-spot] nearest_zone failed {}
+[02:13:38.869] Server  ERROR   [recommendations] zone fetch failed {}
+[02:16:38.323] Server  ERROR   [next-spot] nearest_zone failed {}
+[02:16:38.870] Server  ERROR   [recommendations] zone fetch failed {}
+[02:19:38.702] Server  ERROR   [next-spot] nearest_zone failed {}
+[02:19:38.909] Server  ERROR   [recommendations] zone fetch failed {}
+[02:25:38.307] Server  ERROR   [next-spot] nearest_zone failed {}
+[02:25:38.495] Server  ERROR   [recommendations] zone fetch failed {}
+[02:29:24.938] Server  ERROR   [next-spot] nearest_zone failed {}
+[02:29:25.174] Server  ERROR   [recommendations] zone fetch failed {}
+[02:32:24.304] Server  ERROR   [next-spot] nearest_zone failed {}
+[02:32:24.483] Server  ERROR   [recommendations] zone fetch failed {}
+[02:38:24.623] Server  ERROR   [next-spot] nearest_zone failed {}
+[02:38:24.785] Server  ERROR   [recommendations] zone fetch failed {}
+[02:41:24.723] Server  ERROR   [next-spot] nearest_zone failed {}
+[02:41:25.132] Server  ERROR   [recommendations] zone fetch failed {}
+[02:55:48.863] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -695,195 +291,12 @@ It can also happen if the client has a browser extension installed which messes 
                             <head>
                             <body
                               className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_633c762f-5af6-4455-b723-141e375930f7__="true"
--                             bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaW..."
+-                             __processed_c4da8cb9-3606-4a69-a79c-3684019eec09__="true"
                             >
                   ...
 
-[01:26:55.014] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
-[01:26:55.356] Server  ERROR   [next-spot] nearest_zone failed {}
-[01:26:55.393] Server  ERROR   [driver-state] latest ping lookup failed {}
-[01:26:55.662] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[01:26:55.813] Server  ERROR   [recommendations] training fetch failed {}
-[01:26:55.822] Server  ERROR   [recommendations] trip fare fetch failed {}
-[01:26:55.950] Browser WARN    As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
-[01:26:55.986] Server  ERROR   [next-spot] nearest_zone failed {}
-[01:26:56.318] Server  ERROR   [recommendations] trip fare fetch failed {}
-[01:26:56.331] Server  ERROR   [recommendations] training fetch failed {}
-[01:28:34.091] Server  LOG      ✓ Compiled in 63ms
-[01:28:39.986] Server  LOG      ✓ Compiled in 113ms
-[01:28:54.594] Server  LOG      ✓ Compiled in 55ms
-[01:29:11.064] Server  LOG      ✓ Compiled in 54ms
-[01:29:12.920] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
-[01:29:13.427] Server  ERROR   [next-spot] nearest_zone failed {}
-[01:29:13.486] Server  ERROR   [driver-state] latest ping lookup failed {}
-[01:29:13.640] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[01:29:13.791] Server  ERROR   [recommendations] trip fare fetch failed {}
-[01:29:13.817] Server  ERROR   [recommendations] training fetch failed {}
-[01:29:14.037] Server  ERROR   [next-spot] nearest_zone failed {}
-[01:29:14.567] Browser WARN    As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
-[01:29:14.610] Server  ERROR   [recommendations] trip fare fetch failed {}
-[01:29:14.612] Server  ERROR   [recommendations] training fetch failed {}
-[01:29:20.553] Server  LOG      ✓ Compiled in 204ms
-[01:29:22.031] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} serverProvidedParams={null}>
-                        <RootLayout params={Promise}>
-                          <html lang="en" suppressHydrationWarning={true}>
-                            <head>
-                            <body
-                              className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_c35563ad-9a58-4ed7-b492-ad940fb909ac__="true"
-                            >
-                  ...
-
-[01:29:22.303] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
-[01:29:22.918] Server  ERROR   [driver-state] latest ping lookup failed {}
-[01:29:23.243] Server  ERROR   [next-spot] nearest_zone failed {}
-[01:29:23.414] Server  ERROR   [next-spot] nearest_zone failed {}
-[01:29:23.580] Server  ERROR   [recommendations] training fetch failed {}
-[01:29:23.591] Server  ERROR   [recommendations] trip fare fetch failed {}
-[01:29:23.704] Server  ERROR   [recommendations] trip fare fetch failed {}
-[01:29:23.716] Browser WARN    As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
-[01:29:23.828] Server  ERROR   [recommendations] training fetch failed {}
-[01:35:24.644] Server  ERROR   [next-spot] nearest_zone failed {}
-[01:35:25.271] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[01:35:25.515] Server  ERROR   [recommendations] trip fare fetch failed {}
-[01:35:25.531] Server  ERROR   [recommendations] training fetch failed {}
-[01:38:23.631] Server  ERROR   [next-spot] nearest_zone failed {}
-[01:38:23.967] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[01:38:24.141] Server  ERROR   [recommendations] trip fare fetch failed {}
-[01:38:24.259] Server  ERROR   [recommendations] training fetch failed {}
-[01:41:23.665] Server  ERROR   [next-spot] nearest_zone failed {}
-[01:41:23.898] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[01:41:24.063] Server  ERROR   [recommendations] trip fare fetch failed {}
-[01:41:24.147] Server  ERROR   [recommendations] training fetch failed {}
-[01:44:23.664] Server  ERROR   [next-spot] nearest_zone failed {}
-[01:44:23.871] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[01:44:24.342] Server  ERROR   [recommendations] trip fare fetch failed {}
-[01:44:24.411] Server  ERROR   [recommendations] training fetch failed {}
-[01:51:04.212] Server  ERROR   [next-spot] nearest_zone failed {}
-[01:51:04.491] Server  WARN    [recommendations] traffic matrix failed, using fallback {}
-[01:51:04.794] Server  ERROR   [recommendations] trip fare fetch failed {}
-[01:51:04.912] Server  ERROR   [recommendations] training fetch failed {}
-[01:54:03.981] Server  ERROR   [next-spot] nearest_zone failed {}
-[01:54:04.275] Server  ERROR   [recommendations] zone fetch failed {}
-[02:00:04.474] Server  ERROR   [next-spot] nearest_zone failed {}
-[02:00:04.683] Server  ERROR   [recommendations] zone fetch failed {}
-[02:03:03.971] Server  ERROR   [next-spot] nearest_zone failed {}
-[02:03:04.131] Server  ERROR   [recommendations] zone fetch failed {}
-[02:03:54.464] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} serverProvidedParams={null}>
-                        <RootLayout params={Promise}>
-                          <html lang="en" suppressHydrationWarning={true}>
-                            <head>
-                            <body
-                              className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_ab3e2011-99b3-4a4f-a219-eee558f70759__="true"
-                            >
-                  ...
-
-[02:03:54.846] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
-[02:03:55.198] Server  ERROR   [driver-state] latest ping lookup failed {}
-[02:03:55.263] Server  ERROR   [next-spot] nearest_zone failed {}
-[02:03:55.424] Server  ERROR   [recommendations] zone fetch failed {}
-[02:03:55.706] Server  ERROR   [next-spot] nearest_zone failed {}
-[02:03:55.869] Server  ERROR   [recommendations] zone fetch failed {}
-[02:04:55.499] Browser ERROR   watchPosition error {}
-[02:05:04.427] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} serverProvidedParams={null}>
-                        <RootLayout params={Promise}>
-                          <html lang="en" suppressHydrationWarning={true}>
-                            <head>
-                            <body
-                              className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_7d76b376-1b03-46f2-bb0f-4708d3f1eb66__="true"
-                            >
-                  ...
-
-[02:05:04.680] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
-[02:05:05.088] Server  ERROR   [driver-state] latest ping lookup failed {}
-[02:05:05.103] Server  ERROR   [next-spot] nearest_zone failed {}
-[02:05:05.267] Server  ERROR   [recommendations] zone fetch failed {}
-[02:05:05.677] Server  ERROR   [next-spot] nearest_zone failed {}
-[02:05:05.839] Server  ERROR   [recommendations] zone fetch failed {}
+[02:55:49.531] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[02:55:50.075] Server  ERROR   [next-spot] nearest_zone failed {}
+[02:55:50.212] Server  ERROR   [recommendations] zone fetch failed {}
+[02:55:50.673] Server  ERROR   [next-spot] nearest_zone failed {}
+[02:55:50.827] Server  ERROR   [recommendations] zone fetch failed {}
