@@ -234,6 +234,15 @@ export function useLiveTracking() {
     return () => window.removeEventListener("online", handleOnline);
   }, [setError]);
 
+  // Compute hasLocation and isFetchingLocation for gating logic
+  const hasLocation =
+    lastFix !== null &&
+    typeof lastFix.accuracy === "number" &&
+    Number.isFinite(lastFix.accuracy) &&
+    lastFix.accuracy <= 100;
+
+  const isFetchingLocation = trackingOn && !hasLocation;
+
   return {
     trackingOn,
     permissionStatus,
@@ -242,6 +251,8 @@ export function useLiveTracking() {
     lastRecommendation,
     error,
     toggleTracking,
+    hasLocation,
+    isFetchingLocation,
   };
 }
 

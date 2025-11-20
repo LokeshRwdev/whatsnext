@@ -1647,13 +1647,22 @@ async function computeNextZonesForDriver(params) {
     const normalizedContext = normalizeContext(context);
     const candidateFetch = await fetchCandidateZones(supabase, currentLoc);
     const candidates = candidateFetch.candidates;
+    console.log("[recommendations] candidate fetch result", {
+        driverId,
+        currentLoc,
+        totalZones: candidateFetch.totalZones,
+        zonesWithCoordinates: candidateFetch.zonesWithCoordinates,
+        candidateCount: candidates.length
+    });
     if (candidates.length === 0) {
-        if (candidateFetch.totalZones > 0 && candidateFetch.zonesWithCoordinates === 0) {
-            console.warn("[recommendations] zones present but none have coordinates", {
-                driverId,
-                totalZones: candidateFetch.totalZones
-            });
-        }
+        const reason = candidateFetch.totalZones === 0 ? "no_zones_in_db" : candidateFetch.zonesWithCoordinates === 0 ? "no_zones_with_coords" : "zones_too_far";
+        console.warn("[recommendations] No candidates available", {
+            driverId,
+            reason,
+            totalZones: candidateFetch.totalZones,
+            zonesWithCoordinates: candidateFetch.zonesWithCoordinates,
+            currentLoc
+        });
         return {
             computed_at: computedAt.toISOString(),
             context: {
@@ -1662,7 +1671,8 @@ async function computeNextZonesForDriver(params) {
                 snapped_zone: snappedZoneId,
                 bucket_start: bucketIso,
                 bucket_label: bucketLabel,
-                traffic_source: "fallback"
+                traffic_source: "fallback",
+                reason
             },
             top: [],
             traffic_source: "fallback"
@@ -1740,12 +1750,42 @@ async function computeNextZonesForDriver(params) {
     const trafficSpeedIdx = trafficSpeedSamples > 0 ? Number((trafficSpeedSum / trafficSpeedSamples).toFixed(2)) : normalizedContext.traffic_speed_idx ?? null;
     let trafficSource = trafficSnapshot.source;
     let topRecommendations = scored.slice(0, Math.max(1, k));
+    // CRITICAL: Always ensure we return nearest zones when candidates exist
     if (topRecommendations.length === 0 && candidates.length > 0) {
         console.warn("[recommendations] scored list empty, falling back to nearest zones", {
             driverId,
-            candidateCount: candidates.length
+            candidateCount: candidates.length,
+            currentLoc
         });
         topRecommendations = buildFallbackRecommendations(candidates, k, currentSpeedKmh ?? null);
+        trafficSource = "fallback";
+    }
+    // Additional safety: if topRecommendations is still empty but candidates exist, force nearest-by-distance
+    if (topRecommendations.length === 0 && candidates.length > 0) {
+        console.error("[recommendations] CRITICAL: topRecommendations empty despite candidates", {
+            driverId,
+            candidateCount: candidates.length,
+            scoredCount: scored.length,
+            currentLoc
+        });
+        const emergency = [
+            ...candidates
+        ].sort((a, b)=>a.distanceKm - b.distanceKm).slice(0, Math.max(1, k));
+        topRecommendations = emergency.map((c)=>({
+                zone_id: c.zone.id,
+                zone_name: c.zone.name,
+                lat: c.zone.lat,
+                lon: c.zone.lon,
+                distance_km: Number(c.distanceKm.toFixed(2)),
+                eta_min: Number((0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$server$2f$geo$2d$utils$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["estimateETA"])(c.distanceKm * 1000, currentSpeedKmh ?? undefined).toFixed(1)),
+                score: 0.5,
+                success_prob: 0.35,
+                expected_fare_inr: DEFAULT_FARE_INR,
+                normalized_fare: 0.5,
+                traffic_penalty: 0,
+                traffic_speed_idx: null,
+                reason: "Emergency fallback: nearest by distance"
+            }));
         trafficSource = "fallback";
     }
     const contextSnapshot = {

@@ -19,6 +19,9 @@ export default function DriverHomeClient() {
   const greeting = profile?.full_name ? `Hi, ${profile.full_name.split(" ")[0]}` : "Hi driver";
   const subtitle = `Today | ${stats.totalTrips} trips | ?${stats.totalEarnings.toFixed(0)}`;
 
+  const gpsReady = tracking.hasLocation;
+  const waitingForGps = tracking.isFetchingLocation;
+
   return (
     <DriverShell title={greeting} subtitle={subtitle}>
       <div className="space-y-6">
@@ -39,6 +42,11 @@ export default function DriverHomeClient() {
               trackingOn={tracking.trackingOn}
               accuracy={tracking.lastFix?.accuracy ?? null}
             />
+            {waitingForGps && (
+              <div className="text-xs text-amber-600">
+                Acquiring GPS fix...
+              </div>
+            )}
           </div>
         </div>
 

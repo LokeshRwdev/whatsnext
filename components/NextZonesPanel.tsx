@@ -55,14 +55,24 @@ export function NextZonesPanel({ trackingOn, seedRecommendation }: NextZonesPane
   }, [driverState, syncRecommendation]);
 
   const fetchLatest = useCallback(async () => {
+    const loc = lastFixRef.current;
+    
+    // GATING: Do not fetch if we don't have a valid location
+    if (!loc || typeof loc.accuracy !== "number" || loc.accuracy > 100) {
+      setError(
+        "Waiting for GPS fix (accuracy <100m). Move outdoors for better signal."
+      );
+      setLoading(false);
+      return;
+    }
+
     lastFetchAtRef.current = Date.now();
     setLoading(true);
-    const params: { k: number; lat?: number; lon?: number } = { k: 3 };
-    const loc = lastFixRef.current;
-    if (loc) {
-      params.lat = loc.lat;
-      params.lon = loc.lon;
-    }
+    const params: { k: number; lat: number; lon: number } = {
+      k: 3,
+      lat: loc.lat,
+      lon: loc.lon,
+    };
 
     const { data, error } = await fetchRecommendations(params);
     if (error) {
@@ -119,7 +129,9 @@ export function NextZonesPanel({ trackingOn, seedRecommendation }: NextZonesPane
 
   const empty =
     !loading && !error && (!recommendation || !recommendation.top || recommendation.top.length === 0);
-  const waitingForGps = trackingOn && !lastFix;
+  const waitingForGps =
+    trackingOn &&
+    (!lastFix || typeof lastFix.accuracy !== "number" || lastFix.accuracy > 100);
   const computedAgo = recommendation?.computed_at
     ? formatDistanceToNow(new Date(recommendation.computed_at), { addSuffix: true })
     : null;
@@ -171,9 +183,21 @@ export function NextZonesPanel({ trackingOn, seedRecommendation }: NextZonesPane
 
         {empty && (
           <div className="rounded-xl border border-dashed p-4 text-sm text-muted-foreground">
-            {waitingForGps
-              ? "Waiting for GPS fix..."
-              : "We'll start suggesting zones once we see your location."}
+            {waitingForGps ? (
+              <div>
+                <p className="font-medium">Waiting for GPS fix...</p>
+                <p className="mt-1 text-xs">
+                  Move outdoors for clear sky view. Accuracy must be &lt;100m.
+                </p>
+                {lastFix?.accuracy && (
+                  <p className="mt-1 text-xs text-amber-600">
+                    Current accuracy: {lastFix.accuracy.toFixed(0)}m
+                  </p>
+                )}
+              </div>
+            ) : (
+              "We'll start suggesting zones once we see your location."
+            )}
           </div>
         )}
 

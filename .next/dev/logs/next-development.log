@@ -1,8 +1,7 @@
-[00:00:00.989] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-[00:00:01.155] Server  LOG      ✓ Ready in 814ms
-[00:00:04.650] Server  LOG      ○ Compiling / ...
-[00:00:06.884] Server  WARN    Route / is rendering with server caches disabled. For this navigation, Component Metadata in React DevTools will not accurately reflect what is statically prerenderable and runtime prefetchable. See more info here: https://nextjs.org/docs/messages/cache-bypass-in-dev
-[00:00:07.700] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:01.019] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:01.177] Server  LOG      ✓ Ready in 825ms
+[00:00:05.482] Server  LOG      ○ Compiling / ...
+[00:00:07.679] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -36,26 +35,268 @@ It can also happen if the client has a browser extension installed which messes 
                             <head>
                             <body
                               className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_69f60baa-411c-48c4-baba-7982ce443784__="true"
+-                             __processed_3ed6afa8-ea60-4132-b168-ca083ce97f99__="true"
                             >
                   ...
 
-[00:00:08.412] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
-[00:00:09.464] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:00:09.477] Server  ERROR   [driver-state] latest ping lookup failed {}
-[00:00:09.631] Server  ERROR   [recommendations] zone fetch failed {}
-[00:00:10.257] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:00:10.415] Server  ERROR   [recommendations] zone fetch failed {}
-[00:06:11.875] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:06:12.359] Server  ERROR   [recommendations] zone fetch failed {}
-[00:09:10.635] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:09:11.137] Server  ERROR   [recommendations] zone fetch failed {}
-[00:12:10.449] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:12:10.750] Server  ERROR   [recommendations] zone fetch failed {}
-[00:13:31.549] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:13:31.741] Server  ERROR   [recommendations] zone fetch failed {}
-[00:13:37.790] Browser ERROR   watchPosition error {}
-[00:13:47.107] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:08.479] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <ScrollAndFocusHandler segmentPath={[...]}>
+      <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+              <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+                <RedirectBoundary>
+                  <RedirectErrorBoundary router={{...}}>
+                    <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
+                      <SegmentViewNode type="layout" pagePath="(driver)/l...">
+                        <SegmentTrieNode>
+                        <script>
+                        <script>
+                        <script>
+                        <DriverLayout>
+                          <Suspense fallback={<div>}>
+                            <DriverLayoutContent>
+                              <div
+                                className="flex flex-col h-screen"
+-                               bis_skin_checked="1"
+                              >
+                                <NavBar userEmail="lokeshnand..." displayName="Lokesh Nandan">
+                                  <header className="sticky top...">
+                                    <div
+                                      className="container px-2 py-3"
+-                                     bis_skin_checked="1"
+                                    >
+                                      <div
+                                        className="flex flex-col gap-4"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <div
+                                          className="flex flex-col flex-wrap items-start justify-between gap-4"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <LinkComponent href="/" className="flex flex-...">
+                                            <a className="flex flex-..." ref={function} onClick={function onClick} ...>
+                                              <p>
+                                              <div
+                                                className="flex flex-wrap items-center gap-2"
+-                                               bis_skin_checked="1"
+                                              >
+                                        <div
+                                          className="flex flex-wrap items-center justify-between gap-4 border-t border..."
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="flex flex-wrap items-center gap-3"
+-                                           bis_skin_checked="1"
+                                          >
+                                <main>
+                                <BottomNav>
+                                  <nav className="fixed bott...">
+                                    <div
+                                      className="grid grid-cols-4 gap-1 px-2 py-2"
+-                                     bis_skin_checked="1"
+                                    >
+                    ...
+        ...
+
+[00:00:08.479] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <ScrollAndFocusHandler segmentPath={[...]}>
+      <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="(driver)/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+              <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+                <RedirectBoundary>
+                  <RedirectErrorBoundary router={{...}}>
+                    <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
+                      <SegmentViewNode type="page" pagePath="(driver)/p...">
+                        <SegmentTrieNode>
+                        <DriverHomePage>
+                          <DriverHomeClient>
+                            <DriverShell title="Hi driver" subtitle="Today | 0 ...">
+                              <section className="flex h-ful...">
+                                <header className="flex flex-...">
+                                  <div
+                                    className="flex items-start justify-between gap-3"
+-                                   bis_skin_checked="1"
+                                  >
+                                    <div
+-                                     bis_skin_checked="1"
+                                    >
+                                <div
+                                  className="flex-1 overflow-y-auto px-4 pb-24 pt-4 md:pb-8"
+-                                 bis_skin_checked="1"
+                                >
+                                  <div
+                                    className="space-y-6"
+-                                   bis_skin_checked="1"
+                                  >
+                                    <div
+                                      className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between"
+-                                     bis_skin_checked="1"
+                                    >
+                                      <div
+                                        className="flex flex-col items-start gap-2 sm:items-end"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <GpsAccuracyBadge trackingOn={false} accuracy={null}>
+                                          <div
+                                            className="inline-flex rounded-full px-3 py-1 text-xs font-semibold bg-mut..."
+-                                           bis_skin_checked="1"
+                                          >
++                                           GPS: paused
+                                    <NextZonesPanel trackingOn={false} seedRecommendation={null}>
+                                      <_c className="shadow-sm">
+                                        <div
+                                          ref={null}
+                                          className="rounded-2xl border bg-card text-card-foreground shadow-sm"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <_c2 className="flex flex-...">
+                                            <div
+                                              ref={null}
+                                              className="p-6 flex flex-row items-center justify-between space-y-0"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+-                                               bis_skin_checked="1"
+                                              >
+                                              ...
+                                          <_c8 className="space-y-4">
+                                            <div
+                                              ref={null}
+                                              className="p-6 pt-0 space-y-4"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="space-y-3"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="rounded-xl border p-3"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className="h-4 w-1/2 animate-pulse rounded bg-muted"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                  <div
+                                                    className="mt-2 h-3 w-1/3 animate-pulse rounded bg-muted"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                <div
+                                                  className="rounded-xl border p-3"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className="h-4 w-1/2 animate-pulse rounded bg-muted"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                  <div
+                                                    className="mt-2 h-3 w-1/3 animate-pulse rounded bg-muted"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                <div
+                                                  className="rounded-xl border p-3"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className="h-4 w-1/2 animate-pulse rounded bg-muted"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                  <div
+                                                    className="mt-2 h-3 w-1/3 animate-pulse rounded bg-muted"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                    <TrafficPreviewMap currentLocation={null} recommendedZones={null}>
+                                      <_c className="shadow-sm">
+                                        <div
+                                          ref={null}
+                                          className="rounded-2xl border bg-card text-card-foreground shadow-sm"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <_c2 className="space-y-1">
+                                            <div
+                                              ref={null}
+                                              className="flex flex-col p-6 space-y-1"
+-                                             bis_skin_checked="1"
+                                            >
+                                          <_c8 className="space-y-3">
+                                            <div
+                                              ref={null}
+                                              className="p-6 pt-0 space-y-3"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="flex justify-end"
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="h-64 w-full overflow-hidden rounded-2xl border"
+                                                ref={{current:null}}
+-                                               bis_skin_checked="1"
+                                              >
+                                              ...
+                                          ...
+                                    <section className="space-y-3">
+                                      <h2>
+                                      <RideControls lastFix={null}>
+                                        <div
+                                          className="space-y-4"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="flex items-center justify-between rounded-2xl border bg-white/6..."
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+-                                             bis_skin_checked="1"
+                                            >
+                                              <p>
+                                              <div
+                                                className="mt-1 inline-flex gap-2 rounded-full bg-muted p-1"
+-                                               bis_skin_checked="1"
+                                              >
+                                            <div
+                                              className="text-right text-xs text-muted-foreground"
+-                                             bis_skin_checked="1"
+                                            >
+                                          <div
+                                            className="grid grid-cols-2 gap-3"
+-                                           bis_skin_checked="1"
+                                          >
+                                          ...
+                      ...
+                    ...
+        ...
+
+[00:00:08.479] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[00:01:25.740] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -89,214 +330,8 @@ It can also happen if the client has a browser extension installed which messes 
                             <head>
                             <body
                               className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_2f260586-ebf3-4d1c-aef1-38d446e539fb__="true"
+-                             __processed_8d97e914-8f30-4212-8e72-18fea8bf8975__="true"
                             >
                   ...
 
-[00:13:47.363] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
-[00:13:47.724] Server  ERROR   [driver-state] latest ping lookup failed {}
-[00:13:47.833] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:13:47.987] Server  ERROR   [recommendations] zone fetch failed {}
-[00:13:48.214] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:13:48.499] Server  ERROR   [recommendations] zone fetch failed {}
-[00:16:49.481] Server  ERROR   [next-spot] nearest_zone failed {}
-[00:16:49.647] Server  ERROR   [recommendations] zone fetch failed {}
-[01:54:23.106] Server  ERROR   [next-spot] nearest_zone failed {}
-[01:54:23.412] Server  ERROR   [recommendations] zone fetch failed {}
-[01:58:49.440] Server  ERROR   [next-spot] nearest_zone failed {}
-[01:58:49.713] Server  ERROR   [recommendations] zone fetch failed {}
-[02:00:25.321] Browser WARN    As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
-[02:00:27.252] Server  ERROR   [pings] insert error {}
-[02:00:54.264] Server  ERROR   [pings] insert error {}
-[02:02:04.123] Server  ERROR   [pings] insert error {}
-[02:02:49.439] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} serverProvidedParams={null}>
-                        <RootLayout params={Promise}>
-                          <html lang="en" suppressHydrationWarning={true}>
-                            <head>
-                            <body
-                              className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_0ad0575d-5e09-4202-8759-627ad72d9a30__="true"
-                            >
-                  ...
-
-[02:02:49.668] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
-[02:02:50.130] Server  ERROR   [next-spot] nearest_zone failed {}
-[02:02:50.426] Server  ERROR   [recommendations] zone fetch failed {}
-[02:02:50.827] Server  ERROR   [next-spot] nearest_zone failed {}
-[02:02:50.969] Server  ERROR   [recommendations] zone fetch failed {}
-[02:03:12.056] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} serverProvidedParams={null}>
-                        <RootLayout params={Promise}>
-                          <html lang="en" suppressHydrationWarning={true}>
-                            <head>
-                            <body
-                              className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_2d86eb4e-0e03-47b0-ac91-7fbe9acef27f__="true"
-                            >
-                  ...
-
-[02:03:12.302] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
-[02:03:12.823] Server  ERROR   [next-spot] nearest_zone failed {}
-[02:03:12.963] Server  ERROR   [recommendations] zone fetch failed {}
-[02:03:13.037] Server  ERROR   [next-spot] nearest_zone failed {}
-[02:03:13.197] Server  ERROR   [recommendations] zone fetch failed {}
-[02:06:14.085] Server  ERROR   [next-spot] nearest_zone failed {}
-[02:06:14.246] Server  ERROR   [recommendations] zone fetch failed {}
-[02:07:37.020] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} serverProvidedParams={null}>
-                        <RootLayout params={Promise}>
-                          <html lang="en" suppressHydrationWarning={true}>
-                            <head>
-                            <body
-                              className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_d1c2d75d-2af7-4d0f-b1f5-3f64e63dfb91__="true"
-                            >
-                  ...
-
-[02:07:37.252] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
-[02:07:37.792] Server  ERROR   [next-spot] nearest_zone failed {}
-[02:07:37.938] Server  ERROR   [recommendations] zone fetch failed {}
-[02:07:38.096] Server  ERROR   [next-spot] nearest_zone failed {}
-[02:07:38.241] Server  ERROR   [recommendations] zone fetch failed {}
-[02:07:53.147] Browser ERROR   watchPosition error {}
-[02:13:38.706] Server  ERROR   [next-spot] nearest_zone failed {}
-[02:13:38.869] Server  ERROR   [recommendations] zone fetch failed {}
-[02:16:38.323] Server  ERROR   [next-spot] nearest_zone failed {}
-[02:16:38.870] Server  ERROR   [recommendations] zone fetch failed {}
-[02:19:38.702] Server  ERROR   [next-spot] nearest_zone failed {}
-[02:19:38.909] Server  ERROR   [recommendations] zone fetch failed {}
-[02:25:38.307] Server  ERROR   [next-spot] nearest_zone failed {}
-[02:25:38.495] Server  ERROR   [recommendations] zone fetch failed {}
-[02:29:24.938] Server  ERROR   [next-spot] nearest_zone failed {}
-[02:29:25.174] Server  ERROR   [recommendations] zone fetch failed {}
-[02:32:24.304] Server  ERROR   [next-spot] nearest_zone failed {}
-[02:32:24.483] Server  ERROR   [recommendations] zone fetch failed {}
-[02:38:24.623] Server  ERROR   [next-spot] nearest_zone failed {}
-[02:38:24.785] Server  ERROR   [recommendations] zone fetch failed {}
-[02:41:24.723] Server  ERROR   [next-spot] nearest_zone failed {}
-[02:41:25.132] Server  ERROR   [recommendations] zone fetch failed {}
-[02:55:48.863] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} serverProvidedParams={null}>
-                        <RootLayout params={Promise}>
-                          <html lang="en" suppressHydrationWarning={true}>
-                            <head>
-                            <body
-                              className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_c4da8cb9-3606-4a69-a79c-3684019eec09__="true"
-                            >
-                  ...
-
-[02:55:49.531] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
-[02:55:50.075] Server  ERROR   [next-spot] nearest_zone failed {}
-[02:55:50.212] Server  ERROR   [recommendations] zone fetch failed {}
-[02:55:50.673] Server  ERROR   [next-spot] nearest_zone failed {}
-[02:55:50.827] Server  ERROR   [recommendations] zone fetch failed {}
+[00:01:26.005] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
