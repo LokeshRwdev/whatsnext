@@ -4,10 +4,13 @@ import "./globals.css";
 import { useEffect } from "react";
 import { Inter } from "next/font/google";
 import { Providers } from "./providers";
+import { useZones } from "@/hooks/useZones";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  useZones();
+
   useEffect(() => { 
     if ("serviceWorker" in navigator) { 
       navigator.serviceWorker.register("/api/sw"); 

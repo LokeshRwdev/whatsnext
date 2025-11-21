@@ -2,18 +2,31 @@
 
 import { useCallback, useEffect, useRef } from "react";
 import { postPing, RecommendationResponse } from "@/lib/api-client";
-import { useTrackingStore } from "@/lib/tracking/store";
+import { useTrackingStore, type TrackingFix } from "@/lib/tracking/store";
 import { enqueue } from "@/lib/offline-queue";
 import { toast } from "sonner";
 
 const MIN_DISTANCE_DELTA = 30; // meters
 const MIN_INTERVAL_MS = 5000;
-const MAX_ACCURACY_METERS = 200;
+const GOOD_ACCURACY_THRESHOLD = 150;
+const RELAXED_ACCURACY_THRESHOLD = 300;
+const MAX_ACCURACY_METERS = 250;
 const ACCURACY_IMPROVEMENT_FACTOR = 0.5;
+
+export type CurrentLocation = {
+  lat: number;
+  lon: number;
+  accuracy_m: number | null;
+  ts: number;
+};
 
 type GeoPermissionDescriptor = { name: "geolocation" };
 
-export function useLiveTracking() {
+type UseLiveTrackingOptions = {
+  onFirstFix?: (loc: CurrentLocation) => void;
+};
+
+export function useLiveTracking(opts?: UseLiveTrackingOptions) {
   const trackingOn = useTrackingStore((s) => s.trackingOn);
   const permissionStatus = useTrackingStore((s) => s.permissionStatus);
   const lastFix = useTrackingStore((s) => s.lastFix);
@@ -21,6 +34,7 @@ export function useLiveTracking() {
   const lastRecommendation = useTrackingStore((s) => s.lastRecommendation);
   const error = useTrackingStore((s) => s.error);
   const autoStartPending = useTrackingStore((s) => s.autoStartPending);
+  const allowLowAccuracy = useTrackingStore((s) => s.allowLowAccuracy);
   const setTrackingOn = useTrackingStore((s) => s.setTrackingOn);
   const setPermissionStatus = useTrackingStore((s) => s.setPermissionStatus);
   const setLastFix = useTrackingStore((s) => s.setLastFix);
@@ -28,9 +42,12 @@ export function useLiveTracking() {
   const setRecommendation = useTrackingStore((s) => s.setRecommendation);
   const setError = useTrackingStore((s) => s.setError);
   const setAutoStartPending = useTrackingStore((s) => s.setAutoStartPending);
+  const setAllowLowAccuracy = useTrackingStore((s) => s.setAllowLowAccuracy);
   const watchId = useRef<number | null>(null);
   const lastSentTimestamp = useRef<number>(0);
   const lastBroadcastPosition = useRef<GeolocationPosition | null>(null);
+  const lastGoodFixRef = useRef<TrackingFix | null>(null);
+  const onFirstFix = opts?.onFirstFix;
 
   const updatePermissionFromNavigator = useCallback(async () => {
     try {
@@ -74,24 +91,33 @@ export function useLiveTracking() {
   const sendPing = useCallback(
     async (position: GeolocationPosition) => {
       const accuracy =
-        typeof position.coords.accuracy === "number" ? position.coords.accuracy : null;
-      if (!Number.isFinite(accuracy) || accuracy === null || accuracy > MAX_ACCURACY_METERS) {
-        setError("GPS accuracy is weak (>200m). Move outdoors for a clear fix.");
-        return;
-      }
+        typeof position.coords.accuracy === "number" && Number.isFinite(position.coords.accuracy)
+          ? position.coords.accuracy
+          : null;
 
       const speedKmh =
         typeof position.coords.speed === "number" && Number.isFinite(position.coords.speed)
           ? position.coords.speed * 3.6
           : null;
 
-      setLastFix({
+      const fix: TrackingFix = {
         lat: position.coords.latitude,
         lon: position.coords.longitude,
         accuracy,
         speed: speedKmh,
         timestamp: position.timestamp,
-      });
+      };
+
+      setLastFix(fix);
+
+      const accuracyAcceptable =
+        accuracy !== null && accuracy <= MAX_ACCURACY_METERS;
+
+      if (!accuracyAcceptable) {
+        setError("GPS accuracy is weak (>250m). Move outdoors for a clear fix.");
+        return;
+      }
+
       setError(null);
 
       const now = Date.now();
@@ -102,7 +128,9 @@ export function useLiveTracking() {
         typeof last.coords.accuracy === "number" &&
         Number.isFinite(last.coords.accuracy)
       ) {
-        accuracyImproved = accuracy <= last.coords.accuracy * ACCURACY_IMPROVEMENT_FACTOR;
+        accuracyImproved =
+          typeof accuracy === "number" &&
+          accuracy <= last.coords.accuracy * ACCURACY_IMPROVEMENT_FACTOR;
       }
 
       if (
@@ -166,28 +194,36 @@ export function useLiveTracking() {
     }
   }, [setPermissionStatus]);
 
-  const toggleTracking = useCallback(async () => {
-    if (trackingOn) {
-      stopWatch();
-      setTrackingOn(false);
-      return;
-    }
+  const stopTracking = useCallback(() => {
+    stopWatch();
+    setTrackingOn(false);
+  }, [stopWatch, setTrackingOn]);
 
+  const startTracking = useCallback(async () => {
+    if (trackingOn) return true;
     const granted = await requestPermission();
     if (!granted) {
       setError("Location permission required for live tracking");
+      return false;
+    }
+    setTrackingOn(true);
+    return true;
+  }, [trackingOn, requestPermission, setTrackingOn, setError]);
+
+  const toggleTracking = useCallback(async () => {
+    if (trackingOn) {
+      stopTracking();
       return;
     }
-
-    setTrackingOn(true);
-  }, [trackingOn, requestPermission, stopWatch, setTrackingOn, setError]);
+    await startTracking();
+  }, [trackingOn, startTracking, stopTracking]);
 
   useEffect(() => {
     if (!trackingOn && autoStartPending) {
-      void toggleTracking();
+      void startTracking();
       setAutoStartPending(false);
     }
-  }, [trackingOn, autoStartPending, toggleTracking, setAutoStartPending]);
+  }, [trackingOn, autoStartPending, startTracking, setAutoStartPending]);
 
   useEffect(() => {
     if (!trackingOn) {
@@ -234,14 +270,60 @@ export function useLiveTracking() {
     return () => window.removeEventListener("online", handleOnline);
   }, [setError]);
 
-  // Compute hasLocation and isFetchingLocation for gating logic
-  const hasLocation =
-    lastFix !== null &&
-    typeof lastFix.accuracy === "number" &&
-    Number.isFinite(lastFix.accuracy) &&
-    lastFix.accuracy <= 100;
+  const accuracyThreshold = allowLowAccuracy
+    ? RELAXED_ACCURACY_THRESHOLD
+    : GOOD_ACCURACY_THRESHOLD;
 
+  if (!trackingOn) {
+    lastGoodFixRef.current = null;
+  } else {
+    const fixAccuracy =
+      lastFix && typeof lastFix.accuracy === "number" && Number.isFinite(lastFix.accuracy)
+        ? lastFix.accuracy
+        : null;
+    if (lastFix && fixAccuracy !== null && fixAccuracy <= accuracyThreshold) {
+      lastGoodFixRef.current = lastFix;
+    } else if (
+      lastGoodFixRef.current &&
+      typeof lastGoodFixRef.current.accuracy === "number" &&
+      lastGoodFixRef.current.accuracy > accuracyThreshold
+    ) {
+      lastGoodFixRef.current = null;
+    }
+  }
+
+  const currentLocSource = lastGoodFixRef.current ?? lastFix;
+  const currentLoc: CurrentLocation | null = currentLocSource
+    ? {
+        lat: currentLocSource.lat,
+        lon: currentLocSource.lon,
+        accuracy_m:
+          typeof currentLocSource.accuracy === "number" &&
+          Number.isFinite(currentLocSource.accuracy)
+            ? currentLocSource.accuracy
+            : null,
+        ts: currentLocSource.timestamp,
+      }
+    : null;
+
+  const hasLocation = Boolean(lastGoodFixRef.current);
+  const lastGoodFixAt = lastGoodFixRef.current?.timestamp ?? null;
   const isFetchingLocation = trackingOn && !hasLocation;
+
+  const prevHasLocationRef = useRef(false);
+
+  useEffect(() => {
+    const prev = prevHasLocationRef.current;
+    if (!prev && hasLocation && currentLoc) {
+      onFirstFix?.(currentLoc);
+      try {
+        window.dispatchEvent(new CustomEvent("liveTracking:firstFix", { detail: currentLoc }));
+      } catch {
+        // no-op if CustomEvent unavailable
+      }
+    }
+    prevHasLocationRef.current = hasLocation;
+  }, [hasLocation, currentLoc, onFirstFix]);
 
   return {
     trackingOn,
@@ -250,9 +332,15 @@ export function useLiveTracking() {
     lastPingAt,
     lastRecommendation,
     error,
+    currentLoc,
+    lastGoodFixAt,
     toggleTracking,
+    startTracking,
+    stopTracking,
     hasLocation,
     isFetchingLocation,
+    allowLowAccuracy,
+    setAllowLowAccuracy,
   };
 }
 

@@ -53,7 +53,7 @@ export async function apiPost<T, B = unknown>(url: string, body: B) {
 }
 
 export type RecommendationZone = {
-  zone_id: number;
+  zone_id: string | number;
   zone_name: string;
   lat: number;
   lon: number;
@@ -86,10 +86,6 @@ export type DriverState = {
   driver_id: string;
   last_ping_at: string | null;
   loc: GeoPoint | null;
-  /**
-   * Convenience lat/lon derived from loc.coordinates (lon, lat).
-   * These fields are not stored directly in the database.
-   */
   lat: number | null;
   lon: number | null;
   snapped_zone: number | null;
@@ -98,9 +94,14 @@ export type DriverState = {
   last_ping_accuracy_m: number | null;
   recommendation: RecommendationResponse | null;
   updated_at: string | null;
+  coords?: { lat: number; lon: number } | null;
 };
 
-export type DriverStateResponse = DriverState | null;
+export type DriverStateResponse = {
+  data: DriverState | null;
+  status?: string;
+  message?: string;
+} | null;
 
 export type PingPayload = {
   lat: number;

@@ -22,6 +22,7 @@ interface TrackingState {
   error: string | null;
   isDriving: boolean;
   autoStartPending: boolean;
+  allowLowAccuracy: boolean;
   setTrackingOn: (next: boolean) => void;
   setPermissionStatus: (status: PermissionStateMaybe) => void;
   setLastFix: (fix: TrackingFix | null) => void;
@@ -30,6 +31,7 @@ interface TrackingState {
   setError: (message: string | null) => void;
   setIsDriving: (next: boolean) => void;
   setAutoStartPending: (pending: boolean) => void;
+  setAllowLowAccuracy: (next: boolean) => void;
 }
 
 export const useTrackingStore = create<TrackingState>((set) => ({
@@ -41,6 +43,7 @@ export const useTrackingStore = create<TrackingState>((set) => ({
   error: null,
   isDriving: false,
   autoStartPending: true,
+  allowLowAccuracy: false,
   setTrackingOn: (trackingOn) => set({ trackingOn }),
   setPermissionStatus: (permissionStatus) => set({ permissionStatus }),
   setLastFix: (lastFix) => set({ lastFix }),
@@ -53,4 +56,5 @@ export const useTrackingStore = create<TrackingState>((set) => ({
       autoStartPending: isDriving ? false : true,
     })),
   setAutoStartPending: (autoStartPending) => set({ autoStartPending }),
+  setAllowLowAccuracy: (allowLowAccuracy) => set({ allowLowAccuracy }),
 }));

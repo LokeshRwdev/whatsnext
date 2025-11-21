@@ -100,6 +100,7 @@ type CandidateFetchResult = {
   candidates: CandidateZone[];
   totalZones: number;
   zonesWithCoordinates: number;
+  reason?: "no_zones_in_db" | "no_zones_with_coords" | "zones_too_far" | "zone_query_failed";
 };
 
 type TrainingRow = {
@@ -171,6 +172,7 @@ export async function computeNextZonesForDriver(
   const bucketLabel = bucketLabelForDate(bucketStart);
 
   const normalizedContext = normalizeContext(context);
+  let contextReason: RecommendationContextSnapshot["reason"];
 
   const candidateFetch = await fetchCandidateZones(supabase, currentLoc);
   const candidates = candidateFetch.candidates;
@@ -181,6 +183,7 @@ export async function computeNextZonesForDriver(
     totalZones: candidateFetch.totalZones,
     zonesWithCoordinates: candidateFetch.zonesWithCoordinates,
     candidateCount: candidates.length,
+    reason: candidateFetch.reason ?? null,
   });
 
   if (candidates.length === 0) {
@@ -190,6 +193,8 @@ export async function computeNextZonesForDriver(
         : candidateFetch.zonesWithCoordinates === 0
         ? "no_zones_with_coords"
         : "zones_too_far";
+
+    contextReason = candidateFetch.reason ?? reason;
 
     console.warn("[recommendations] No candidates available", {
       driverId,
@@ -335,13 +340,19 @@ export async function computeNextZonesForDriver(
 
   // CRITICAL: Always ensure we return nearest zones when candidates exist
   if (topRecommendations.length === 0 && candidates.length > 0) {
+    const sample = candidates.slice(0, Math.min(3, candidates.length)).map((c) => ({
+      id: c.zone.id,
+      distanceKm: Number(c.distanceKm.toFixed(2)),
+    }));
     console.warn("[recommendations] scored list empty, falling back to nearest zones", {
       driverId,
       candidateCount: candidates.length,
       currentLoc,
+      sample,
     });
     topRecommendations = buildFallbackRecommendations(candidates, k, currentSpeedKmh ?? null);
     trafficSource = "fallback";
+    contextReason = "nearest_distance_fallback";
   }
 
   // Additional safety: if topRecommendations is still empty but candidates exist, force nearest-by-distance
@@ -371,6 +382,7 @@ export async function computeNextZonesForDriver(
       reason: "Emergency fallback: nearest by distance",
     }));
     trafficSource = "fallback";
+    contextReason = "nearest_distance_fallback";
   }
 
   const contextSnapshot: RecommendationContextSnapshot = {
@@ -381,6 +393,7 @@ export async function computeNextZonesForDriver(
     bucket_start: bucketIso,
     bucket_label: bucketLabel,
     traffic_source: trafficSource,
+    ...(contextReason ? { reason: contextReason } : {}),
   };
 
   return {
@@ -397,22 +410,21 @@ async function fetchCandidateZones(
 ): Promise<CandidateFetchResult> {
   const { data, error } = await supabase
     .from("zones")
-    .select("id,name,lat,lon,center,radius_km,weight_demand,weight_airport,is_active")
-    .eq("is_active", true)
+    .select("id,slug,name,lat,lon,center,geom,radius_km,weight_demand,weight_airport,is_active")
     .limit(200);
 
   if (error || !data) {
     console.error("[recommendations] zone fetch failed", {
       error,
     });
-    return { candidates: [], totalZones: 0, zonesWithCoordinates: 0 };
+    return { candidates: [], totalZones: 0, zonesWithCoordinates: 0, reason: "zone_query_failed" };
   }
 
   const rows = data as ZoneRow[];
   const totalZones = rows.length;
   if (totalZones === 0) {
     console.warn("[recommendations] No zones found in DB when building candidates");
-    return { candidates: [], totalZones: 0, zonesWithCoordinates: 0 };
+    return { candidates: [], totalZones: 0, zonesWithCoordinates: 0, reason: "no_zones_in_db" };
   }
 
   const activeRows = rows.filter((row) => row.is_active !== false);
@@ -427,8 +439,17 @@ async function fetchCandidateZones(
 
   let candidates = defaultCollection.candidates;
   let zonesWithCoordinates = defaultCollection.totalResolved;
+  let reason: CandidateFetchResult["reason"];
+
+  if (zonesWithCoordinates === 0) {
+    reason = "no_zones_with_coords";
+    console.warn("[recommendations] Zones exist but none contain usable coordinates", {
+      totalZones,
+    });
+  }
 
   if (candidates.length === 0 && zonesWithCoordinates > 0) {
+    reason = "zones_too_far";
     const relaxedRadius = DEFAULT_MAX_DISTANCE_KM * 3;
     const relaxed = collectCandidateZones(prioritizedRows, currentLoc, relaxedRadius);
     if (relaxed.candidates.length > 0) {
@@ -447,16 +468,14 @@ async function fetchCandidateZones(
       candidates = allCandidates.candidates;
       zonesWithCoordinates = allCandidates.totalResolved;
     }
-  } else if (candidates.length === 0 && zonesWithCoordinates === 0) {
-    console.warn("[recommendations] Zones exist but none contain usable coordinates", {
-      totalZones,
-    });
   }
 
+  const trimmed = candidates.slice(0, hardCap);
   return {
-    candidates: candidates.slice(0, hardCap),
+    candidates: trimmed,
     totalZones,
     zonesWithCoordinates,
+    reason: trimmed.length === 0 ? reason ?? "zones_too_far" : undefined,
   };
 }
 

@@ -1,20 +1,25 @@
-import { requireUser } from "@/lib/auth-guard";
 import { ok, bad } from "@/lib/api-respond";
+import { createServerSupabaseClient } from "@/lib/supabase/server";
 
-export async function GET(req: Request) {
-  try {
-    const { supabase } = await requireUser(req);
-
-    const { data, error } = await supabase
-      .from("zones")
-      .select("id,name,geohash6,is_airport,is_charger")
-      .order("name");
-
-    if (error) return bad("DB error", error, 500);
-
-    return ok(data);
-  } catch (e: any) {
-    if (e.message === "Unauthorized") return bad("Unauthorized", null, 401);
-    return bad("Unexpected error", e?.message ?? e, 500);
+export async function GET() {
+  const { supabase, user } = await createServerSupabaseClient();
+  if (!user) {
+    return bad("Please sign in", null, 401, "UNAUTHENTICATED");
   }
+
+  const { data, error } = await supabase
+    .from("zones")
+    .select("id,name,lat,lon,center,radius_km,weight_demand,is_active")
+    .eq("is_active", true)
+    .order("name", { ascending: true });
+
+  if (error) {
+    console.error("[zones] fetch failed", {
+      driverId: user.id,
+      error,
+    });
+    return bad("Failed to load zones", error, 500, "DB_ERROR");
+  }
+
+  return ok({ data: data ?? [] });
 }

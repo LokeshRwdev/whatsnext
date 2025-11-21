@@ -50,12 +50,20 @@ export default function DriverHomeClient() {
           </div>
         </div>
 
-        <NextZonesPanel trackingOn={tracking.trackingOn} seedRecommendation={tracking.lastRecommendation} />
+        <NextZonesPanel
+          trackingOn={tracking.trackingOn}
+          hasLocation={tracking.hasLocation}
+          isFetchingLocation={tracking.isFetchingLocation}
+          currentLoc={tracking.currentLoc}
+          seedRecommendation={tracking.lastRecommendation}
+          allowLowAccuracy={tracking.allowLowAccuracy}
+          onAllowLowAccuracy={() => tracking.setAllowLowAccuracy(true)}
+        />
 
-        <TrafficPreviewMap
+        {/* <TrafficPreviewMap
           currentLocation={tracking.lastFix}
           recommendedZones={tracking.lastRecommendation?.top ?? null}
-        />
+        /> */}
 
         <section className="space-y-3">
           <h2 className="text-lg font-semibold">Ride actions</h2>

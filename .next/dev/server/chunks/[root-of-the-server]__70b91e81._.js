@@ -1645,6 +1645,7 @@ async function computeNextZonesForDriver(params) {
     const bucketIso = bucketStart.toISOString();
     const bucketLabel = (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$server$2f$time$2d$utils$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["bucketLabel"])(bucketStart);
     const normalizedContext = normalizeContext(context);
+    let contextReason;
     const candidateFetch = await fetchCandidateZones(supabase, currentLoc);
     const candidates = candidateFetch.candidates;
     console.log("[recommendations] candidate fetch result", {
@@ -1652,10 +1653,12 @@ async function computeNextZonesForDriver(params) {
         currentLoc,
         totalZones: candidateFetch.totalZones,
         zonesWithCoordinates: candidateFetch.zonesWithCoordinates,
-        candidateCount: candidates.length
+        candidateCount: candidates.length,
+        reason: candidateFetch.reason ?? null
     });
     if (candidates.length === 0) {
         const reason = candidateFetch.totalZones === 0 ? "no_zones_in_db" : candidateFetch.zonesWithCoordinates === 0 ? "no_zones_with_coords" : "zones_too_far";
+        contextReason = candidateFetch.reason ?? reason;
         console.warn("[recommendations] No candidates available", {
             driverId,
             reason,
@@ -1752,13 +1755,19 @@ async function computeNextZonesForDriver(params) {
     let topRecommendations = scored.slice(0, Math.max(1, k));
     // CRITICAL: Always ensure we return nearest zones when candidates exist
     if (topRecommendations.length === 0 && candidates.length > 0) {
+        const sample = candidates.slice(0, Math.min(3, candidates.length)).map((c)=>({
+                id: c.zone.id,
+                distanceKm: Number(c.distanceKm.toFixed(2))
+            }));
         console.warn("[recommendations] scored list empty, falling back to nearest zones", {
             driverId,
             candidateCount: candidates.length,
-            currentLoc
+            currentLoc,
+            sample
         });
         topRecommendations = buildFallbackRecommendations(candidates, k, currentSpeedKmh ?? null);
         trafficSource = "fallback";
+        contextReason = "nearest_distance_fallback";
     }
     // Additional safety: if topRecommendations is still empty but candidates exist, force nearest-by-distance
     if (topRecommendations.length === 0 && candidates.length > 0) {
@@ -1787,6 +1796,7 @@ async function computeNextZonesForDriver(params) {
                 reason: "Emergency fallback: nearest by distance"
             }));
         trafficSource = "fallback";
+        contextReason = "nearest_distance_fallback";
     }
     const contextSnapshot = {
         ...normalizedContext,
@@ -1795,7 +1805,10 @@ async function computeNextZonesForDriver(params) {
         snapped_zone: snappedZoneId,
         bucket_start: bucketIso,
         bucket_label: bucketLabel,
-        traffic_source: trafficSource
+        traffic_source: trafficSource,
+        ...contextReason ? {
+            reason: contextReason
+        } : {}
     };
     return {
         computed_at: computedAt.toISOString(),
@@ -1805,7 +1818,7 @@ async function computeNextZonesForDriver(params) {
     };
 }
 async function fetchCandidateZones(supabase, currentLoc) {
-    const { data, error } = await supabase.from("zones").select("id,name,lat,lon,center,radius_km,weight_demand,weight_airport,is_active").eq("is_active", true).limit(200);
+    const { data, error } = await supabase.from("zones").select("id,slug,name,lat,lon,center,geom,radius_km,weight_demand,weight_airport,is_active").limit(200);
     if (error || !data) {
         console.error("[recommendations] zone fetch failed", {
             error
@@ -1813,7 +1826,8 @@ async function fetchCandidateZones(supabase, currentLoc) {
         return {
             candidates: [],
             totalZones: 0,
-            zonesWithCoordinates: 0
+            zonesWithCoordinates: 0,
+            reason: "zone_query_failed"
         };
     }
     const rows = data;
@@ -1823,7 +1837,8 @@ async function fetchCandidateZones(supabase, currentLoc) {
         return {
             candidates: [],
             totalZones: 0,
-            zonesWithCoordinates: 0
+            zonesWithCoordinates: 0,
+            reason: "no_zones_in_db"
         };
     }
     const activeRows = rows.filter((row)=>row.is_active !== false);
@@ -1832,7 +1847,15 @@ async function fetchCandidateZones(supabase, currentLoc) {
     const defaultCollection = collectCandidateZones(prioritizedRows, currentLoc, DEFAULT_MAX_DISTANCE_KM * 1.5);
     let candidates = defaultCollection.candidates;
     let zonesWithCoordinates = defaultCollection.totalResolved;
+    let reason;
+    if (zonesWithCoordinates === 0) {
+        reason = "no_zones_with_coords";
+        console.warn("[recommendations] Zones exist but none contain usable coordinates", {
+            totalZones
+        });
+    }
     if (candidates.length === 0 && zonesWithCoordinates > 0) {
+        reason = "zones_too_far";
         const relaxedRadius = DEFAULT_MAX_DISTANCE_KM * 3;
         const relaxed = collectCandidateZones(prioritizedRows, currentLoc, relaxedRadius);
         if (relaxed.candidates.length > 0) {
@@ -1851,15 +1874,13 @@ async function fetchCandidateZones(supabase, currentLoc) {
             candidates = allCandidates.candidates;
             zonesWithCoordinates = allCandidates.totalResolved;
         }
-    } else if (candidates.length === 0 && zonesWithCoordinates === 0) {
-        console.warn("[recommendations] Zones exist but none contain usable coordinates", {
-            totalZones
-        });
     }
+    const trimmed = candidates.slice(0, hardCap);
     return {
-        candidates: candidates.slice(0, hardCap),
+        candidates: trimmed,
         totalZones,
-        zonesWithCoordinates
+        zonesWithCoordinates,
+        reason: trimmed.length === 0 ? reason ?? "zones_too_far" : undefined
     };
 }
 function collectCandidateZones(rows, currentLoc, maxDistanceKm) {

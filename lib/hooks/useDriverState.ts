@@ -1,7 +1,15 @@
 ﻿"use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { DriverState, fetchDriverState } from "@/lib/api-client";
+import { DriverState, type DriverStateResponse, fetchDriverState } from "@/lib/api-client";
+
+function unwrapDriverState(payload: DriverStateResponse | DriverState | null): DriverState | null {
+  if (!payload) return null;
+  if (typeof (payload as DriverStateResponse)?.data !== "undefined") {
+    return (payload as DriverStateResponse)?.data ?? null;
+  }
+  return payload as DriverState;
+}
 
 export function useDriverState(pollMs: number = 0) {
   const [data, setData] = useState<DriverState | null>(null);
@@ -14,7 +22,7 @@ export function useDriverState(pollMs: number = 0) {
       setError(error.message);
     } else {
       setError(null);
-      setData(data);
+      setData(unwrapDriverState(data ?? null));
     }
     setLoading(false);
   }, []);

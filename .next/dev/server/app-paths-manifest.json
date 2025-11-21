@@ -1,4 +1,7 @@
 {
   "/(driver)/page": "app/(driver)/page.js",
-  "/api/driver-state/route": "app/api/driver-state/route.js"
+  "/api/driver-state/route": "app/api/driver-state/route.js",
+  "/api/pings/route": "app/api/pings/route.js",
+  "/api/recommendations/next-spot/route": "app/api/recommendations/next-spot/route.js",
+  "/api/zones/route": "app/api/zones/route.js"
 }
