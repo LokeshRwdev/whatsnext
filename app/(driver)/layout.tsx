@@ -13,7 +13,7 @@ async function DriverLayoutContent({ children }: { children: ReactNode }) {
 
   return (
     <div className="flex flex-col h-screen">
-      <NavBar userEmail={user.email} displayName={profile?.full_name ?? user.fullName} />
+      {/* <NavBar userEmail={user.email} displayName={profile?.full_name ?? user.fullName} /> */}
       <main className="flex-1 overflow-hidden pb-16 md:pb-0">{children}</main>
       {/* <BottomNav /> */}
     </div>

@@ -140,14 +140,7 @@ export const RideEventIngestSchema = z
       path: ["drop_lat"],
     }
   )
-  .refine(
-    (data) =>
-      data.event_type !== "booking_cancelled" || data.cancel_reason !== undefined,
-    {
-      message: "cancel_reason required for booking_cancelled events",
-      path: ["cancel_reason"],
-    }
-  );
+  ;
 
 export const TripSyncReq = z.object({
   booking_at: z.string().datetime().optional(),

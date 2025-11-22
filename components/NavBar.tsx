@@ -60,7 +60,7 @@ export function NavBar({ userEmail, displayName }: NavBarProps) {
               <ThemeToggle />
 
               </div>
-              {/* <p className="text-sm text-muted-foreground">Smart assistance for O in Patna.</p> */}
+              <p className="text-sm text-muted-foreground">Smart assistance for O in Patna.</p>
             </Link>
             {/* <div className="flex flex-1 flex-wrap items-center  gap-4 text-sm">
               {statHighlights.map((item) => (
@@ -72,7 +72,7 @@ export function NavBar({ userEmail, displayName }: NavBarProps) {
                   <p className="text-base font-semibold text-foreground">{item.value}</p>
                 </div>
               ))}
-            </div> */}
+            </div>
           </div>
           <div className="flex flex-wrap items-center justify-between gap-4 border-t border-border/70 pt-3">
             {/* <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">

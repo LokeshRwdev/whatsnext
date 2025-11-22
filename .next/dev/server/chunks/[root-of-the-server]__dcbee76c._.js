@@ -269,11 +269,6 @@ const RideEventIngestSchema = __TURBOPACK__imported__module__$5b$project$5d2f$no
     path: [
         "drop_lat"
     ]
-}).refine((data)=>data.event_type !== "booking_cancelled" || data.cancel_reason !== undefined, {
-    message: "cancel_reason required for booking_cancelled events",
-    path: [
-        "cancel_reason"
-    ]
 });
 const TripSyncReq = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v3$2f$external$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].object({
     booking_at: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v3$2f$external$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].string().datetime().optional(),

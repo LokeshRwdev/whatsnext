@@ -1,7 +1,7 @@
-[00:00:01.090] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-[00:00:01.304] Server  LOG      ✓ Ready in 935ms
-[00:02:41.497] Server  LOG      ○ Compiling / ...
-[00:02:57.491] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:00.880] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:00.979] Server  LOG      ✓ Ready in 720ms
+[00:00:16.531] Server  LOG      ○ Compiling / ...
+[00:00:19.614] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -35,13 +35,142 @@ It can also happen if the client has a browser extension installed which messes 
                             <head>
                             <body
                               className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_1b645fc8-e6f5-476c-8ce3-11925eefbb14__="true"
+-                             __processed_9feb29e5-9286-409a-9e6b-60e5f2902217__="true"
                             >
                   ...
 
-[00:02:57.491] Browser LOG     [useZones] cache_hit {"count":11}
-[00:03:01.507] Browser LOG     [useZones] zones_fetched {"count":11}
-[00:03:07.891] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:20.952] Browser ERROR   permission request failed {"code":1,"message":"User denied Geolocation"}
+[00:00:21.072] Browser LOG     [useZones] zones_fetched {"count":28}
+[00:00:21.670] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":153740,"origin":"driver_state_coords"}
+[00:00:21.670] Browser LOG     [useZones] zones_fetched {"count":28}
+[00:00:44.212] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} serverProvidedParams={null}>
+                        <RootLayout params={Promise}>
+                          <html lang="en" suppressHydrationWarning={true}>
+                            <head>
+                            <body
+                              className="inter_5972bc34-module__OU16Qa__className"
+-                             __processed_e3b54d56-6dd3-437e-a84f-a9fdf1506dae__="true"
+                            >
+                  ...
+
+[00:00:44.212] Browser LOG     [useZones] cache_hit {"count":28}
+[00:00:44.476] Browser LOG     [useZones] cache_hit {"count":28}
+[00:00:44.476] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1094,"origin":"live_fix"}
+[00:00:44.477] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1094,"origin":"live_fix"}
+[00:00:44.477] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1094,"origin":"live_fix"}
+[00:00:44.753] Browser LOG     [useZones] zones_fetched {"count":28}
+[00:00:45.259] Server  ERROR   [pings] nearest_zone failed {}
+[00:00:45.289] Browser LOG     [useZones] zones_fetched {"count":28}
+[00:00:45.422] Server  ERROR   [recommendations] zone fetch failed {}
+[00:00:45.424] Server  LOG     [recommendations] candidate fetch result {}
+[00:00:45.425] Server  WARN    [recommendations] No candidates available {}
+[00:00:45.929] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1094,"origin":"live_fix"}
+[00:00:50.366] Server  ERROR   [pings] nearest_zone failed {}
+[00:00:50.517] Server  ERROR   [recommendations] zone fetch failed {}
+[00:00:50.518] Server  LOG     [recommendations] candidate fetch result {}
+[00:00:50.519] Server  WARN    [recommendations] No candidates available {}
+[00:00:50.997] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1094,"origin":"live_fix"}
+[00:01:03.872] Server  ERROR   [pings] nearest_zone failed {}
+[00:01:04.000] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1094,"origin":"live_fix"}
+[00:01:04.023] Server  ERROR   [recommendations] zone fetch failed {}
+[00:01:04.070] Server  LOG     [recommendations] candidate fetch result {}
+[00:01:04.086] Server  WARN    [recommendations] No candidates available {}
+[00:01:04.539] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1094,"origin":"live_fix"}
+[00:01:20.585] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1078,"origin":"live_fix"}
+[00:01:20.589] Server  ERROR   [pings] nearest_zone failed {}
+[00:01:20.728] Server  ERROR   [recommendations] zone fetch failed {}
+[00:01:20.729] Server  LOG     [recommendations] candidate fetch result {}
+[00:01:20.730] Server  WARN    [recommendations] No candidates available {}
+[00:01:21.189] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1078,"origin":"live_fix"}
+[00:01:52.074] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1098,"origin":"live_fix"}
+[00:01:52.155] Server  ERROR   [pings] nearest_zone failed {}
+[00:01:52.302] Server  ERROR   [recommendations] zone fetch failed {}
+[00:01:52.305] Server  LOG     [recommendations] candidate fetch result {}
+[00:01:52.306] Server  WARN    [recommendations] No candidates available {}
+[00:01:52.771] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1098,"origin":"live_fix"}
+[00:02:05.265] Server  ERROR   [pings] nearest_zone failed {}
+[00:02:05.801] Server  ERROR   [recommendations] zone fetch failed {}
+[00:02:05.806] Server  LOG     [recommendations] candidate fetch result {}
+[00:02:05.808] Server  WARN    [recommendations] No candidates available {}
+[00:02:06.288] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1106,"origin":"live_fix"}
+[00:02:18.628] Server  ERROR   [pings] nearest_zone failed {}
+[00:02:18.791] Server  ERROR   [recommendations] zone fetch failed {}
+[00:02:18.792] Server  LOG     [recommendations] candidate fetch result {}
+[00:02:18.793] Server  WARN    [recommendations] No candidates available {}
+[00:02:19.722] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1092,"origin":"live_fix"}
+[00:02:19.722] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1092,"origin":"live_fix"}
+[00:02:34.322] Server  LOG      ✓ Compiled in 98ms
+[00:02:43.162] Server  LOG      ✓ Compiled in 189ms
+[00:02:46.825] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} serverProvidedParams={null}>
+                        <RootLayout params={Promise}>
+                          <html lang="en" suppressHydrationWarning={true}>
+                            <head>
+                            <body
+                              className="inter_5972bc34-module__OU16Qa__className"
+-                             __processed_6d3fcb74-0daa-4dd6-b0a5-34b675eaec7e__="true"
+-                             bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaW..."
+                            >
+                  ...
+
+[00:02:46.825] Browser LOG     [useZones] cache_hit {"count":28}
+[00:02:46.825] Browser LOG     [useZones] zones_fetched {"count":28}
+[00:03:16.028] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -89,13 +218,6 @@ It can also happen if the client has a browser extension installed which messes 
                                           className="flex flex-col flex-wrap items-start justify-between gap-4"
 -                                         bis_skin_checked="1"
                                         >
-                                          <LinkComponent href="/" className="flex flex-...">
-                                            <a className="flex flex-..." ref={function} onClick={function onClick} ...>
-                                              <p>
-                                              <div
-                                                className="flex flex-wrap items-center gap-2"
--                                               bis_skin_checked="1"
-                                              >
                                         <div
                                           className="flex flex-wrap items-center justify-between gap-4 border-t border..."
 -                                         bis_skin_checked="1"
@@ -108,7 +230,7 @@ It can also happen if the client has a browser extension installed which messes 
                     ...
         ...
 
-[00:03:07.891] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:03:16.028] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -256,20 +378,34 @@ It can also happen if the client has a browser extension installed which messes 
                     ...
         ...
 
-[00:03:07.891] Browser LOG     [useZones] cache_hit {"count":11}
-[00:03:08.660] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur","considered":11,"distance_m":1076,"origin":"live_fix"}
-[00:03:08.660] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur","considered":11,"distance_m":1076,"origin":"live_fix"}
-[00:03:08.660] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur","considered":11,"distance_m":1076,"origin":"live_fix"}
-[00:03:08.996] Browser LOG     [useZones] zones_fetched {"count":11}
-[00:03:09.845] Server  ERROR   [pings] nearest_zone failed {}
-[00:03:10.016] Server  ERROR   [recommendations] zone fetch failed {}
-[00:03:10.019] Server  LOG     [recommendations] candidate fetch result {}
-[00:03:10.026] Server  WARN    [recommendations] No candidates available {}
-[00:03:10.458] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur","considered":11,"distance_m":1076,"origin":"live_fix"}
-[00:06:10.492] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur","considered":11,"distance_m":1076,"origin":"live_fix"}
-[00:11:26.862] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur","considered":11,"distance_m":1076,"origin":"live_fix"}
-[00:13:54.889] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur","considered":11,"distance_m":1076,"origin":"live_fix"}
-[00:13:58.812] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:03:16.028] Browser LOG     [useZones] cache_hit {"count":28}
+[00:03:16.567] Browser LOG     [useZones] zones_fetched {"count":28}
+[00:03:16.671] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1092,"origin":"driver_state_coords"}
+[00:03:31.821] Browser ERROR   watchPosition error {}
+[00:03:39.122] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1109,"origin":"live_fix"}
+[00:03:39.773] Server  ERROR   [pings] nearest_zone failed {}
+[00:03:39.939] Server  ERROR   [recommendations] zone fetch failed {}
+[00:03:39.941] Server  LOG     [recommendations] candidate fetch result {}
+[00:03:39.941] Server  WARN    [recommendations] No candidates available {}
+[00:03:40.404] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1109,"origin":"live_fix"}
+[00:04:58.123] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1097,"origin":"live_fix"}
+[00:04:58.411] Server  ERROR   [pings] nearest_zone failed {}
+[00:04:58.570] Server  ERROR   [recommendations] zone fetch failed {}
+[00:04:58.572] Server  LOG     [recommendations] candidate fetch result {}
+[00:04:58.573] Server  WARN    [recommendations] No candidates available {}
+[00:04:59.080] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1097,"origin":"live_fix"}
+[00:05:26.662] Server  ERROR   [pings] nearest_zone failed {}
+[00:05:26.805] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1093,"origin":"live_fix"}
+[00:05:26.815] Server  ERROR   [recommendations] zone fetch failed {}
+[00:05:26.817] Server  LOG     [recommendations] candidate fetch result {}
+[00:05:26.818] Server  WARN    [recommendations] No candidates available {}
+[00:05:27.235] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1093,"origin":"live_fix"}
+[00:05:37.411] Server  LOG      ✓ Compiled in 243ms
+[00:05:38.942] Server  ERROR   [pings] nearest_zone failed {}
+[00:05:39.122] Server  ERROR   [recommendations] zone fetch failed {}
+[00:05:39.123] Server  LOG     [recommendations] candidate fetch result {}
+[00:05:39.123] Server  WARN    [recommendations] No candidates available {}
+[00:05:39.216] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -303,235 +439,31 @@ It can also happen if the client has a browser extension installed which messes 
                             <head>
                             <body
                               className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_5e8ea745-4e79-4e2b-ad3e-625e9d5af313__="true"
-                            >
-                  ...
-
-[00:13:58.812] Browser LOG     [useZones] cache_hit {"count":11}
-[00:13:59.493] Browser LOG     [useZones] cache_hit {"count":11}
-[00:13:59.493] Browser LOG     [nearest-zones] computed {"best_zone":"Dak Bungalow","considered":11,"distance_m":1457,"origin":"live_fix"}
-[00:13:59.493] Browser LOG     [useZones] zones_fetched {"count":11}
-[00:14:00.121] Browser LOG     [useZones] zones_fetched {"count":11}
-[00:15:21.557] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} serverProvidedParams={null}>
-                        <RootLayout params={Promise}>
-                          <html lang="en" suppressHydrationWarning={true}>
-                            <head>
-                            <body
-                              className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_33915ab4-1e46-46de-9d7f-d5ede6eb4f5c__="true"
-                            >
-                  ...
-
-[00:15:21.557] Browser LOG     [useZones] cache_hit {"count":11}
-[00:15:21.729] Browser LOG     [useZones] cache_hit {"count":11}
-[00:15:21.729] Browser LOG     [nearest-zones] computed {"best_zone":"Dak Bungalow","considered":11,"distance_m":1457,"origin":"live_fix"}
-[00:15:21.918] Browser LOG     [useZones] zones_fetched {"count":11}
-[00:15:22.222] Browser LOG     [nearest-zones] computed {"best_zone":"Dak Bungalow","considered":11,"distance_m":1457,"origin":"live_fix"}
-[00:15:22.222] Browser LOG     [useZones] zones_fetched {"count":11}
-[00:20:54.913] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} serverProvidedParams={null}>
-                        <RootLayout params={Promise}>
-                          <html lang="en" suppressHydrationWarning={true}>
-                            <head>
-                            <body
-                              className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_39029940-29d6-4826-a88c-303a9fc660a1__="true"
-                            >
-                  ...
-
-[00:20:54.913] Browser LOG     [useZones] cache_hit {"count":11}
-[00:20:55.171] Browser LOG     [useZones] cache_hit {"count":11}
-[00:20:55.172] Browser LOG     [nearest-zones] computed {"best_zone":"Dak Bungalow","considered":11,"distance_m":1457,"origin":"live_fix"}
-[00:20:55.274] Browser LOG     [useZones] zones_fetched {"count":11}
-[00:20:55.661] Browser LOG     [useZones] zones_fetched {"count":11}
-[00:35:28.023] Browser LOG     [useZones] zones_fetched {"count":11}
-[00:35:28.023] Browser LOG     [useZones] cache_hit {"count":11}
-[00:35:28.023] Browser ERROR   permission request failed {"code":1,"message":"User denied Geolocation"}
-[00:35:28.712] Browser LOG     [useZones] zones_fetched {"count":11}
-[00:35:28.999] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1084,"origin":"driver_state_coords"}
-[11:57:51.341] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} serverProvidedParams={null}>
-                        <RootLayout params={Promise}>
-                          <html lang="en" suppressHydrationWarning={true}>
-                            <head>
-                            <body
-                              className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_f025f4e6-247b-4775-bbb0-ac7fbe151dad__="true"
-                            >
-                  ...
-
-[11:57:51.341] Browser LOG     [useZones] cache_hit {"count":11}
-[11:57:51.790] Browser LOG     [useZones] cache_hit {"count":11}
-[11:57:52.190] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
-[11:57:52.190] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
-[11:57:52.190] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
-[11:57:52.190] Browser LOG     [useZones] zones_fetched {"count":11}
-[11:57:52.585] Browser LOG     [useZones] zones_fetched {"count":11}
-[11:57:53.113] Server  ERROR   [pings] nearest_zone failed {}
-[11:57:53.260] Server  ERROR   [recommendations] zone fetch failed {}
-[11:57:53.262] Server  LOG     [recommendations] candidate fetch result {}
-[11:57:53.264] Server  WARN    [recommendations] No candidates available {}
-[11:57:53.708] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
-[11:58:26.364] Server  ERROR   [pings] nearest_zone failed {}
-[11:58:26.374] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
-[11:58:26.497] Server  ERROR   [recommendations] zone fetch failed {}
-[11:58:26.498] Server  LOG     [recommendations] candidate fetch result {}
-[11:58:26.499] Server  WARN    [recommendations] No candidates available {}
-[11:58:26.925] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
-[11:58:32.453] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} serverProvidedParams={null}>
-                        <RootLayout params={Promise}>
-                          <html lang="en" suppressHydrationWarning={true}>
-                            <head>
-                            <body
-                              className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_caf23558-5fe0-447b-ad18-2bc190b37bd0__="true"
+-                             __processed_257a7963-6856-4fef-becb-f9b249d624fc__="true"
 -                             bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaW..."
                             >
                   ...
 
-[11:58:32.453] Browser LOG     [useZones] cache_hit {"count":11}
-[11:58:32.584] Browser LOG     [useZones] cache_hit {"count":11}
-[11:58:32.584] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
-[11:58:32.584] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
-[11:58:32.584] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
-[11:58:32.903] Browser LOG     [useZones] zones_fetched {"count":11}
-[11:58:33.043] Server  ERROR   [pings] nearest_zone failed {}
-[11:58:33.177] Server  ERROR   [recommendations] zone fetch failed {}
-[11:58:33.178] Server  LOG     [recommendations] candidate fetch result {}
-[11:58:33.179] Server  WARN    [recommendations] No candidates available {}
-[11:58:33.220] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
-[11:58:33.220] Browser LOG     [useZones] zones_fetched {"count":11}
-[11:58:33.653] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
-[12:00:02.960] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
-[12:00:20.504] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
-[12:00:22.949] Server  LOG      ✓ Compiled in 348ms
-[12:00:23.140] Browser LOG     [useZones] cache_hit {"count":11}
-[12:00:24.786] Server  LOG      ✓ Compiled in 74ms
-[12:00:25.027] Browser LOG     [useZones] zones_fetched {"count":11}
-[12:00:25.027] Browser LOG     [useZones] cache_hit {"count":11}
-[12:00:25.444] Browser LOG     [useZones] zones_fetched {"count":11}
-[12:00:41.101] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
-[12:01:05.200] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
-[12:01:40.158] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
-[12:02:05.595] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
-[12:06:08.320] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
-[12:07:05.601] Server  LOG      ✓ Compiled in 69ms
-[12:07:06.497] Browser LOG     [useZones] cache_hit {"count":11}
-[12:07:07.495] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
-[12:07:07.495] Browser LOG     [useZones] zones_fetched {"count":11}
-[12:07:40.289] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
-[12:08:19.982] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
-[12:08:28.800] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:05:39.216] Browser LOG     [useZones] cache_hit {"count":28}
+[00:05:39.216] Browser LOG     [useZones] cache_hit {"count":28}
+[00:05:39.465] Browser LOG     [useZones] zones_fetched {"count":28}
+[00:05:40.167] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1093,"origin":"driver_state_coords"}
+[00:05:40.167] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1093,"origin":"driver_state_coords"}
+[00:05:40.167] Browser LOG     [useZones] zones_fetched {"count":28}
+[00:05:42.599] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1100,"origin":"live_fix"}
+[00:05:43.062] Server  ERROR   [pings] nearest_zone failed {}
+[00:05:43.208] Server  ERROR   [recommendations] zone fetch failed {}
+[00:05:43.210] Server  LOG     [recommendations] candidate fetch result {}
+[00:05:43.210] Server  WARN    [recommendations] No candidates available {}
+[00:05:43.634] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1100,"origin":"live_fix"}
+[00:05:56.757] Server  ERROR   [pings] nearest_zone failed {}
+[00:05:56.893] Server  ERROR   [recommendations] zone fetch failed {}
+[00:05:56.894] Server  LOG     [recommendations] candidate fetch result {}
+[00:05:56.894] Server  WARN    [recommendations] No candidates available {}
+[00:05:57.331] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1093,"origin":"live_fix"}
+[00:06:25.995] Server  LOG      ✓ Compiled in 212ms
+[00:06:27.176] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1098,"origin":"live_fix"}
+[00:06:27.716] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -565,19 +497,231 @@ It can also happen if the client has a browser extension installed which messes 
                             <head>
                             <body
                               className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_d6fa0c54-f080-405d-acc9-d62236d53bee__="true"
+-                             __processed_8edf5e85-9dfa-4b6b-b6e0-7a0f368dd4d5__="true"
+-                             bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaW..."
                             >
                   ...
 
-[12:08:28.800] Browser LOG     [useZones] cache_hit {"count":11}
-[12:08:28.968] Browser LOG     [useZones] cache_hit {"count":11}
-[12:08:29.140] Browser LOG     [useZones] zones_fetched {"count":11}
-[12:08:29.524] Browser LOG     [useZones] zones_fetched {"count":11}
-[12:08:29.524] Browser ERROR   permission request failed {"code":1,"message":"User denied Geolocation"}
-[12:08:30.145] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1107,"origin":"driver_state_coords"}
-[12:12:37.788] Server  ERROR   [pings] nearest_zone failed {}
-[12:12:37.933] Server  ERROR   [recommendations] zone fetch failed {}
-[12:12:37.934] Server  LOG     [recommendations] candidate fetch result {}
-[12:12:37.934] Server  WARN    [recommendations] No candidates available {}
-[12:12:38.496] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1095,"origin":"live_fix"}
-[12:12:38.496] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1095,"origin":"live_fix"}
+[00:06:27.716] Browser LOG     [useZones] cache_hit {"count":28}
+[00:06:27.920] Browser LOG     [useZones] cache_hit {"count":28}
+[00:06:27.920] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1098,"origin":"live_fix"}
+[00:06:27.920] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1098,"origin":"live_fix"}
+[00:06:27.920] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1098,"origin":"live_fix"}
+[00:06:27.997] Server  ERROR   [pings] nearest_zone failed {}
+[00:06:28.097] Browser LOG     [useZones] zones_fetched {"count":28}
+[00:06:28.128] Server  ERROR   [recommendations] zone fetch failed {}
+[00:06:28.129] Server  LOG     [recommendations] candidate fetch result {}
+[00:06:28.129] Server  WARN    [recommendations] No candidates available {}
+[00:06:28.303] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1098,"origin":"live_fix"}
+[00:06:28.654] Browser LOG     [useZones] zones_fetched {"count":28}
+[00:06:41.024] Server  ERROR   [pings] nearest_zone failed {}
+[00:06:41.183] Server  ERROR   [recommendations] zone fetch failed {}
+[00:06:41.185] Server  LOG     [recommendations] candidate fetch result {}
+[00:06:41.185] Server  WARN    [recommendations] No candidates available {}
+[00:06:41.772] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1102,"origin":"live_fix"}
+[00:06:54.279] Server  ERROR   [pings] nearest_zone failed {}
+[00:06:54.422] Server  ERROR   [recommendations] zone fetch failed {}
+[00:06:54.422] Server  LOG     [recommendations] candidate fetch result {}
+[00:06:54.423] Server  WARN    [recommendations] No candidates available {}
+[00:06:54.493] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1111,"origin":"live_fix"}
+[00:06:54.872] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1111,"origin":"live_fix"}
+[00:07:07.687] Server  ERROR   [pings] nearest_zone failed {}
+[00:07:07.833] Server  ERROR   [recommendations] zone fetch failed {}
+[00:07:07.835] Server  LOG     [recommendations] candidate fetch result {}
+[00:07:07.836] Server  WARN    [recommendations] No candidates available {}
+[00:07:08.286] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1093,"origin":"live_fix"}
+[00:07:20.992] Server  ERROR   [pings] nearest_zone failed {}
+[00:07:21.173] Server  ERROR   [recommendations] zone fetch failed {}
+[00:07:21.174] Server  LOG     [recommendations] candidate fetch result {}
+[00:07:21.174] Server  WARN    [recommendations] No candidates available {}
+[00:07:21.205] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1105,"origin":"live_fix"}
+[00:07:21.586] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1105,"origin":"live_fix"}
+[00:07:32.758] Server  ERROR   [ride-events] nearest_zone failed {}
+[00:07:34.415] Server  ERROR   [pings] nearest_zone failed {}
+[00:07:34.556] Server  ERROR   [recommendations] zone fetch failed {}
+[00:07:34.557] Server  LOG     [recommendations] candidate fetch result {}
+[00:07:34.558] Server  WARN    [recommendations] No candidates available {}
+[00:07:35.056] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1113,"origin":"live_fix"}
+[00:07:39.679] Server  ERROR   [ride-events] nearest_zone failed {}
+[00:07:40.765] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1113,"origin":"live_fix"}
+[00:07:47.849] Server  ERROR   [pings] nearest_zone failed {}
+[00:07:48.006] Server  ERROR   [recommendations] zone fetch failed {}
+[00:07:48.007] Server  LOG     [recommendations] candidate fetch result {}
+[00:07:48.008] Server  WARN    [recommendations] No candidates available {}
+[00:07:48.447] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1098,"origin":"live_fix"}
+[00:08:01.242] Server  ERROR   [pings] nearest_zone failed {}
+[00:08:01.382] Server  ERROR   [recommendations] zone fetch failed {}
+[00:08:01.385] Server  LOG     [recommendations] candidate fetch result {}
+[00:08:01.386] Server  WARN    [recommendations] No candidates available {}
+[00:08:01.435] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1092,"origin":"live_fix"}
+[00:08:01.833] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1092,"origin":"live_fix"}
+[00:08:14.708] Server  ERROR   [pings] nearest_zone failed {}
+[00:08:14.861] Server  ERROR   [recommendations] zone fetch failed {}
+[00:08:14.862] Server  LOG     [recommendations] candidate fetch result {}
+[00:08:14.863] Server  WARN    [recommendations] No candidates available {}
+[00:08:15.335] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1093,"origin":"live_fix"}
+[00:09:01.393] Server  LOG      ✓ Compiled in 87ms
+[00:09:02.338] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1093,"origin":"live_fix"}
+[00:09:05.595] Server  ERROR   [pings] nearest_zone failed {}
+[00:09:05.737] Server  ERROR   [recommendations] zone fetch failed {}
+[00:09:05.739] Server  LOG     [recommendations] candidate fetch result {}
+[00:09:05.740] Server  WARN    [recommendations] No candidates available {}
+[00:09:06.282] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1110,"origin":"live_fix"}
+[00:09:18.792] Server  ERROR   [pings] nearest_zone failed {}
+[00:09:18.988] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1098,"origin":"live_fix"}
+[00:09:19.044] Server  ERROR   [recommendations] zone fetch failed {}
+[00:09:19.049] Server  LOG     [recommendations] candidate fetch result {}
+[00:09:19.055] Server  WARN    [recommendations] No candidates available {}
+[00:09:19.516] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1098,"origin":"live_fix"}
+[00:09:32.259] Server  ERROR   [pings] nearest_zone failed {}
+[00:09:32.405] Server  ERROR   [recommendations] zone fetch failed {}
+[00:09:32.407] Server  LOG     [recommendations] candidate fetch result {}
+[00:09:32.408] Server  WARN    [recommendations] No candidates available {}
+[00:09:32.862] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1118,"origin":"live_fix"}
+[00:09:45.629] Server  ERROR   [pings] nearest_zone failed {}
+[00:09:45.771] Server  ERROR   [recommendations] zone fetch failed {}
+[00:09:45.773] Server  LOG     [recommendations] candidate fetch result {}
+[00:09:45.774] Server  WARN    [recommendations] No candidates available {}
+[00:09:45.838] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1118,"origin":"live_fix"}
+[00:09:46.238] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1118,"origin":"live_fix"}
+[00:10:18.201] Server  LOG      ✓ Compiled in 59ms
+[00:10:19.136] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1118,"origin":"live_fix"}
+[00:10:22.384] Server  ERROR   [pings] nearest_zone failed {}
+[00:10:22.530] Server  ERROR   [recommendations] zone fetch failed {}
+[00:10:22.531] Server  LOG     [recommendations] candidate fetch result {}
+[00:10:22.532] Server  WARN    [recommendations] No candidates available {}
+[00:10:23.014] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1087,"origin":"live_fix"}
+[00:10:35.896] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1097,"origin":"live_fix"}
+[00:10:36.511] Server  ERROR   [pings] nearest_zone failed {}
+[00:10:36.888] Server  ERROR   [recommendations] zone fetch failed {}
+[00:10:36.890] Server  LOG     [recommendations] candidate fetch result {}
+[00:10:36.892] Server  WARN    [recommendations] No candidates available {}
+[00:10:37.646] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1097,"origin":"live_fix"}
+[00:10:43.780] Server  LOG      ✓ Compiled in 103ms
+[00:10:44.999] Server  ERROR   [pings] nearest_zone failed {}
+[00:10:45.205] Server  ERROR   [recommendations] zone fetch failed {}
+[00:10:45.206] Server  LOG     [recommendations] candidate fetch result {}
+[00:10:45.208] Server  WARN    [recommendations] No candidates available {}
+[00:10:45.830] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1097,"origin":"live_fix"}
+[00:10:48.426] Server  LOG      ✓ Compiled in 92ms
+[00:10:52.567] Server  ERROR   [pings] nearest_zone failed {}
+[00:10:52.663] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1098,"origin":"live_fix"}
+[00:10:52.838] Server  ERROR   [recommendations] zone fetch failed {}
+[00:10:52.840] Server  LOG     [recommendations] candidate fetch result {}
+[00:10:52.842] Server  WARN    [recommendations] No candidates available {}
+[00:10:53.323] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1098,"origin":"live_fix"}
+[00:11:05.898] Server  ERROR   [pings] nearest_zone failed {}
+[00:11:06.037] Server  ERROR   [recommendations] zone fetch failed {}
+[00:11:06.039] Server  LOG     [recommendations] candidate fetch result {}
+[00:11:06.040] Server  WARN    [recommendations] No candidates available {}
+[00:11:06.493] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1112,"origin":"live_fix"}
+[00:11:19.450] Server  ERROR   [pings] nearest_zone failed {}
+[00:11:19.517] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1099,"origin":"live_fix"}
+[00:11:19.590] Server  ERROR   [recommendations] zone fetch failed {}
+[00:11:19.591] Server  LOG     [recommendations] candidate fetch result {}
+[00:11:19.591] Server  WARN    [recommendations] No candidates available {}
+[00:11:20.038] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1099,"origin":"live_fix"}
+[00:11:32.753] Server  ERROR   [pings] nearest_zone failed {}
+[00:11:32.907] Server  ERROR   [recommendations] zone fetch failed {}
+[00:11:32.909] Server  LOG     [recommendations] candidate fetch result {}
+[00:11:32.910] Server  WARN    [recommendations] No candidates available {}
+[00:11:33.362] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1092,"origin":"live_fix"}
+[00:11:59.704] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1105,"origin":"live_fix"}
+[00:11:59.809] Server  ERROR   [pings] nearest_zone failed {}
+[00:11:59.992] Server  ERROR   [recommendations] zone fetch failed {}
+[00:11:59.994] Server  LOG     [recommendations] candidate fetch result {}
+[00:11:59.997] Server  WARN    [recommendations] No candidates available {}
+[00:12:00.823] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1105,"origin":"live_fix"}
+[00:12:57.505] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1091,"origin":"live_fix"}
+[00:12:58.933] Server  ERROR   [pings] nearest_zone failed {}
+[00:12:59.432] Server  ERROR   [recommendations] zone fetch failed {}
+[00:12:59.434] Server  LOG     [recommendations] candidate fetch result {}
+[00:12:59.436] Server  WARN    [recommendations] No candidates available {}
+[00:13:00.965] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1091,"origin":"live_fix"}
+[00:13:11.960] Server  ERROR   [pings] nearest_zone failed {}
+[00:13:12.272] Server  ERROR   [recommendations] zone fetch failed {}
+[00:13:12.276] Server  LOG     [recommendations] candidate fetch result {}
+[00:13:12.276] Server  WARN    [recommendations] No candidates available {}
+[00:13:13.230] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1095,"origin":"live_fix"}
+[00:13:14.064] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1095,"origin":"live_fix"}
+[00:13:24.192] Server  ERROR   [pings] nearest_zone failed {}
+[00:13:24.352] Server  ERROR   [recommendations] zone fetch failed {}
+[00:13:24.353] Server  LOG     [recommendations] candidate fetch result {}
+[00:13:24.355] Server  WARN    [recommendations] No candidates available {}
+[00:13:24.855] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1100,"origin":"live_fix"}
+[00:13:40.869] Server  ERROR   [pings] nearest_zone failed {}
+[00:13:40.953] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1066,"origin":"live_fix"}
+[00:13:41.059] Server  ERROR   [recommendations] zone fetch failed {}
+[00:13:41.060] Server  LOG     [recommendations] candidate fetch result {}
+[00:13:41.061] Server  WARN    [recommendations] No candidates available {}
+[00:13:41.516] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1066,"origin":"live_fix"}
+[00:13:57.597] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1114,"origin":"live_fix"}
+[00:13:58.653] Server  ERROR   [pings] nearest_zone failed {}
+[00:13:58.824] Server  ERROR   [recommendations] zone fetch failed {}
+[00:13:58.826] Server  LOG     [recommendations] candidate fetch result {}
+[00:13:58.827] Server  WARN    [recommendations] No candidates available {}
+[00:13:59.337] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1114,"origin":"live_fix"}
+[00:18:29.834] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1114,"origin":"live_fix"}
+[00:21:29.824] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1114,"origin":"live_fix"}
+[00:24:58.427] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1092,"origin":"live_fix"}
+[00:24:59.211] Server  ERROR   [pings] nearest_zone failed {}
+[00:24:59.546] Server  ERROR   [recommendations] zone fetch failed {}
+[00:24:59.546] Server  LOG     [recommendations] candidate fetch result {}
+[00:24:59.547] Server  WARN    [recommendations] No candidates available {}
+[00:25:00.183] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1092,"origin":"live_fix"}
+[00:25:13.319] Server  ERROR   [ride-events] nearest_zone failed {}
+[00:25:14.479] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1092,"origin":"live_fix"}
+[00:25:32.770] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1093,"origin":"live_fix"}
+[00:25:32.788] Server  ERROR   [pings] nearest_zone failed {}
+[00:25:33.023] Server  ERROR   [recommendations] zone fetch failed {}
+[00:25:33.024] Server  LOG     [recommendations] candidate fetch result {}
+[00:25:33.025] Server  WARN    [recommendations] No candidates available {}
+[00:25:33.501] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1093,"origin":"live_fix"}
+[00:30:38.167] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1093,"origin":"live_fix"}
+[00:30:43.116] Server  ERROR   [pings] nearest_zone failed {}
+[00:30:43.321] Server  ERROR   [recommendations] zone fetch failed {}
+[00:30:43.324] Server  LOG     [recommendations] candidate fetch result {}
+[00:30:43.325] Server  WARN    [recommendations] No candidates available {}
+[00:30:43.898] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1093,"origin":"live_fix"}
+[00:32:16.621] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1092,"origin":"live_fix"}
+[00:32:17.023] Server  ERROR   [pings] nearest_zone failed {}
+[00:32:17.176] Server  ERROR   [recommendations] zone fetch failed {}
+[00:32:17.177] Server  LOG     [recommendations] candidate fetch result {}
+[00:32:17.178] Server  WARN    [recommendations] No candidates available {}
+[00:32:17.833] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1092,"origin":"live_fix"}
+[00:34:14.632] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1092,"origin":"live_fix"}
+[00:34:15.265] Server  ERROR   [pings] nearest_zone failed {}
+[00:34:15.567] Server  ERROR   [recommendations] zone fetch failed {}
+[00:34:15.569] Server  LOG     [recommendations] candidate fetch result {}
+[00:34:15.570] Server  WARN    [recommendations] No candidates available {}
+[00:34:15.883] Server  ERROR   [ride-events] nearest_zone failed {}
+[00:34:16.139] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1092,"origin":"live_fix"}
+[00:40:46.828] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1092,"origin":"live_fix"}
+[00:42:39.656] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1093,"origin":"live_fix"}
+[00:42:42.301] Server  ERROR   [pings] nearest_zone failed {}
+[00:42:42.868] Server  ERROR   [recommendations] zone fetch failed {}
+[00:42:42.870] Server  LOG     [recommendations] candidate fetch result {}
+[00:42:42.871] Server  WARN    [recommendations] No candidates available {}
+[00:42:43.507] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1093,"origin":"live_fix"}
+[00:42:53.936] Server  ERROR   [pings] nearest_zone failed {}
+[00:42:54.326] Server  ERROR   [recommendations] zone fetch failed {}
+[00:42:54.329] Server  LOG     [recommendations] candidate fetch result {}
+[00:42:54.330] Server  WARN    [recommendations] No candidates available {}
+[00:42:55.170] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1092,"origin":"live_fix"}
+[00:42:56.000] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1092,"origin":"live_fix"}
+[00:43:06.271] Server  ERROR   [pings] nearest_zone failed {}
+[00:43:06.416] Server  ERROR   [recommendations] zone fetch failed {}
+[00:43:06.417] Server  LOG     [recommendations] candidate fetch result {}
+[00:43:06.418] Server  WARN    [recommendations] No candidates available {}
+[00:43:06.921] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1093,"origin":"live_fix"}
+[00:43:19.818] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1094,"origin":"live_fix"}
+[00:43:20.035] Server  ERROR   [pings] nearest_zone failed {}
+[00:43:20.205] Server  ERROR   [recommendations] zone fetch failed {}
+[00:43:20.207] Server  LOG     [recommendations] candidate fetch result {}
+[00:43:20.208] Server  WARN    [recommendations] No candidates available {}
+[00:43:20.705] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1094,"origin":"live_fix"}
+[00:43:33.451] Server  ERROR   [pings] nearest_zone failed {}
+[00:43:33.595] Server  ERROR   [recommendations] zone fetch failed {}
+[00:43:33.598] Server  LOG     [recommendations] candidate fetch result {}
+[00:43:33.599] Server  WARN    [recommendations] No candidates available {}
+[00:43:34.825] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":28,"distance_m":1092,"origin":"live_fix"}

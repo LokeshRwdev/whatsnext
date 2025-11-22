@@ -38,10 +38,10 @@ export default function DriverHomeClient() {
               lastPingAt={tracking.lastPingAt}
               permissionStatus={tracking.permissionStatus}
             /> */}
-            <GpsAccuracyBadge
+            {/* <GpsAccuracyBadge
               trackingOn={tracking.trackingOn}
               accuracy={tracking.lastFix?.accuracy ?? null}
-            />
+            /> */}
             {waitingForGps && (
               <div className="text-xs text-amber-600">
                 Acquiring GPS fix...
@@ -66,7 +66,7 @@ export default function DriverHomeClient() {
         /> */}
 
         <section className="space-y-3">
-          <h2 className="text-lg font-semibold">Ride actions</h2>
+          {/* <h2 className="text-lg font-semibold">Ride actions</h2> */}
           <RideControls lastFix={tracking.lastFix} />
         </section>
       </div>
