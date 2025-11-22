@@ -851,10 +851,6 @@ body {
   border-color: rgb(254 202 202 / var(--tw-border-opacity, 1));
 }
 
-.border-emerald-200\/80 {
-  border-color: #a7f3d0cc;
-}
-
 .bg-amber-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(254 243 199 / var(--tw-bg-opacity, 1));
@@ -973,10 +969,6 @@ body {
 
 .bg-white\/90 {
   background-color: #ffffffe6;
-}
-
-.bg-emerald-50\/60 {
-  background-color: #ecfdf599;
 }
 
 .fill-primary\/20 {
@@ -1279,11 +1271,6 @@ body {
 
 .text-white\/80 {
   color: #fffc;
-}
-
-.text-emerald-700 {
-  --tw-text-opacity: 1;
-  color: rgb(4 120 87 / var(--tw-text-opacity, 1));
 }
 
 .underline-offset-4 {

@@ -1,7 +1,7 @@
-[00:00:00.805] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-[00:00:00.899] Server  LOG      ✓ Ready in 641ms
-[00:00:04.382] Server  LOG      ○ Compiling / ...
-[00:00:06.076] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:01.090] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:01.304] Server  LOG      ✓ Ready in 935ms
+[00:02:41.497] Server  LOG      ○ Compiling / ...
+[00:02:57.491] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -35,11 +35,13 @@ It can also happen if the client has a browser extension installed which messes 
                             <head>
                             <body
                               className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_c58401c2-1c49-40f6-ac00-661a9ad77582__="true"
+-                             __processed_1b645fc8-e6f5-476c-8ce3-11925eefbb14__="true"
                             >
                   ...
 
-[00:00:08.857] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:02:57.491] Browser LOG     [useZones] cache_hit {"count":11}
+[00:03:01.507] Browser LOG     [useZones] zones_fetched {"count":11}
+[00:03:07.891] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -106,7 +108,7 @@ It can also happen if the client has a browser extension installed which messes 
                     ...
         ...
 
-[00:00:08.858] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:03:07.891] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -254,31 +256,20 @@ It can also happen if the client has a browser extension installed which messes 
                     ...
         ...
 
-[00:05:14.123] Server  LOG     [next-spot] incoming request {}
-[00:05:14.149] Server  LOG     [next-spot] incoming request {}
-[00:05:14.487] Server  WARN    [next-spot] nearest_zone failed {}
-[00:05:14.504] Server  WARN    [next-spot] nearest_zone failed {}
-[00:05:14.707] Server  ERROR   [recommendations] zone fetch failed {}
-[00:05:14.711] Server  LOG     [recommendations] candidate fetch result {}
-[00:05:14.713] Server  WARN    [recommendations] No candidates available {}
-[00:05:14.780] Server  ERROR   [recommendations] zone fetch failed {}
-[00:05:14.781] Server  LOG     [recommendations] candidate fetch result {}
-[00:05:14.782] Server  WARN    [recommendations] No candidates available {}
-[00:05:15.139] Server  ERROR   [pings] nearest_zone failed {}
-[00:05:15.302] Server  ERROR   [recommendations] zone fetch failed {}
-[00:05:15.306] Server  LOG     [recommendations] candidate fetch result {}
-[00:05:15.309] Server  WARN    [recommendations] No candidates available {}
-[00:08:15.376] Server  LOG     [next-spot] incoming request {}
-[00:08:15.629] Server  WARN    [next-spot] nearest_zone failed {}
-[00:08:15.879] Server  ERROR   [recommendations] zone fetch failed {}
-[00:08:15.880] Server  LOG     [recommendations] candidate fetch result {}
-[00:08:15.881] Server  WARN    [recommendations] No candidates available {}
-[00:10:01.163] Server  LOG     [next-spot] incoming request {}
-[00:10:01.574] Server  WARN    [next-spot] nearest_zone failed {}
-[00:10:02.090] Server  ERROR   [recommendations] zone fetch failed {}
-[00:10:02.092] Server  LOG     [recommendations] candidate fetch result {}
-[00:10:02.093] Server  WARN    [recommendations] No candidates available {}
-[00:10:12.273] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:03:07.891] Browser LOG     [useZones] cache_hit {"count":11}
+[00:03:08.660] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur","considered":11,"distance_m":1076,"origin":"live_fix"}
+[00:03:08.660] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur","considered":11,"distance_m":1076,"origin":"live_fix"}
+[00:03:08.660] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur","considered":11,"distance_m":1076,"origin":"live_fix"}
+[00:03:08.996] Browser LOG     [useZones] zones_fetched {"count":11}
+[00:03:09.845] Server  ERROR   [pings] nearest_zone failed {}
+[00:03:10.016] Server  ERROR   [recommendations] zone fetch failed {}
+[00:03:10.019] Server  LOG     [recommendations] candidate fetch result {}
+[00:03:10.026] Server  WARN    [recommendations] No candidates available {}
+[00:03:10.458] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur","considered":11,"distance_m":1076,"origin":"live_fix"}
+[00:06:10.492] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur","considered":11,"distance_m":1076,"origin":"live_fix"}
+[00:11:26.862] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur","considered":11,"distance_m":1076,"origin":"live_fix"}
+[00:13:54.889] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur","considered":11,"distance_m":1076,"origin":"live_fix"}
+[00:13:58.812] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -312,12 +303,16 @@ It can also happen if the client has a browser extension installed which messes 
                             <head>
                             <body
                               className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_fb71b501-104b-4d36-84a9-f204a55b3ea7__="true"
+-                             __processed_5e8ea745-4e79-4e2b-ad3e-625e9d5af313__="true"
                             >
                   ...
 
-[00:11:51.516] Server  LOG      ✓ Compiled in 350ms
-[00:11:53.215] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:13:58.812] Browser LOG     [useZones] cache_hit {"count":11}
+[00:13:59.493] Browser LOG     [useZones] cache_hit {"count":11}
+[00:13:59.493] Browser LOG     [nearest-zones] computed {"best_zone":"Dak Bungalow","considered":11,"distance_m":1457,"origin":"live_fix"}
+[00:13:59.493] Browser LOG     [useZones] zones_fetched {"count":11}
+[00:14:00.121] Browser LOG     [useZones] zones_fetched {"count":11}
+[00:15:21.557] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -351,47 +346,192 @@ It can also happen if the client has a browser extension installed which messes 
                             <head>
                             <body
                               className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_6b6d804d-20c0-4d87-bc74-0557e42e16ef__="true"
+-                             __processed_33915ab4-1e46-46de-9d7f-d5ede6eb4f5c__="true"
+                            >
+                  ...
+
+[00:15:21.557] Browser LOG     [useZones] cache_hit {"count":11}
+[00:15:21.729] Browser LOG     [useZones] cache_hit {"count":11}
+[00:15:21.729] Browser LOG     [nearest-zones] computed {"best_zone":"Dak Bungalow","considered":11,"distance_m":1457,"origin":"live_fix"}
+[00:15:21.918] Browser LOG     [useZones] zones_fetched {"count":11}
+[00:15:22.222] Browser LOG     [nearest-zones] computed {"best_zone":"Dak Bungalow","considered":11,"distance_m":1457,"origin":"live_fix"}
+[00:15:22.222] Browser LOG     [useZones] zones_fetched {"count":11}
+[00:20:54.913] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} serverProvidedParams={null}>
+                        <RootLayout params={Promise}>
+                          <html lang="en" suppressHydrationWarning={true}>
+                            <head>
+                            <body
+                              className="inter_5972bc34-module__OU16Qa__className"
+-                             __processed_39029940-29d6-4826-a88c-303a9fc660a1__="true"
+                            >
+                  ...
+
+[00:20:54.913] Browser LOG     [useZones] cache_hit {"count":11}
+[00:20:55.171] Browser LOG     [useZones] cache_hit {"count":11}
+[00:20:55.172] Browser LOG     [nearest-zones] computed {"best_zone":"Dak Bungalow","considered":11,"distance_m":1457,"origin":"live_fix"}
+[00:20:55.274] Browser LOG     [useZones] zones_fetched {"count":11}
+[00:20:55.661] Browser LOG     [useZones] zones_fetched {"count":11}
+[00:35:28.023] Browser LOG     [useZones] zones_fetched {"count":11}
+[00:35:28.023] Browser LOG     [useZones] cache_hit {"count":11}
+[00:35:28.023] Browser ERROR   permission request failed {"code":1,"message":"User denied Geolocation"}
+[00:35:28.712] Browser LOG     [useZones] zones_fetched {"count":11}
+[00:35:28.999] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1084,"origin":"driver_state_coords"}
+[11:57:51.341] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} serverProvidedParams={null}>
+                        <RootLayout params={Promise}>
+                          <html lang="en" suppressHydrationWarning={true}>
+                            <head>
+                            <body
+                              className="inter_5972bc34-module__OU16Qa__className"
+-                             __processed_f025f4e6-247b-4775-bbb0-ac7fbe151dad__="true"
+                            >
+                  ...
+
+[11:57:51.341] Browser LOG     [useZones] cache_hit {"count":11}
+[11:57:51.790] Browser LOG     [useZones] cache_hit {"count":11}
+[11:57:52.190] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
+[11:57:52.190] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
+[11:57:52.190] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
+[11:57:52.190] Browser LOG     [useZones] zones_fetched {"count":11}
+[11:57:52.585] Browser LOG     [useZones] zones_fetched {"count":11}
+[11:57:53.113] Server  ERROR   [pings] nearest_zone failed {}
+[11:57:53.260] Server  ERROR   [recommendations] zone fetch failed {}
+[11:57:53.262] Server  LOG     [recommendations] candidate fetch result {}
+[11:57:53.264] Server  WARN    [recommendations] No candidates available {}
+[11:57:53.708] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
+[11:58:26.364] Server  ERROR   [pings] nearest_zone failed {}
+[11:58:26.374] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
+[11:58:26.497] Server  ERROR   [recommendations] zone fetch failed {}
+[11:58:26.498] Server  LOG     [recommendations] candidate fetch result {}
+[11:58:26.499] Server  WARN    [recommendations] No candidates available {}
+[11:58:26.925] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
+[11:58:32.453] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} serverProvidedParams={null}>
+                        <RootLayout params={Promise}>
+                          <html lang="en" suppressHydrationWarning={true}>
+                            <head>
+                            <body
+                              className="inter_5972bc34-module__OU16Qa__className"
+-                             __processed_caf23558-5fe0-447b-ad18-2bc190b37bd0__="true"
 -                             bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaW..."
                             >
                   ...
 
-[00:11:54.332] Browser LOG     [useZones] zones_fetched {"count":11}
-[00:30:59.351] Server  LOG      ✓ Compiled in 5ms
-[00:31:10.307] Server  LOG     [next-spot] incoming request {}
-[00:31:10.459] Server  LOG     [next-spot] incoming request {}
-[00:31:10.500] Server  WARN    [next-spot] nearest_zone failed {}
-[00:31:10.655] Server  WARN    [next-spot] nearest_zone failed {}
-[00:31:10.747] Server  ERROR   [recommendations] zone fetch failed {}
-[00:31:10.750] Server  LOG     [recommendations] candidate fetch result {}
-[00:31:10.751] Server  WARN    [recommendations] No candidates available {}
-[00:31:11.215] Server  ERROR   [recommendations] zone fetch failed {}
-[00:31:11.216] Server  LOG     [recommendations] candidate fetch result {}
-[00:31:11.218] Server  WARN    [recommendations] No candidates available {}
-[00:31:11.523] Server  ERROR   [pings] nearest_zone failed {}
-[00:31:11.679] Server  ERROR   [recommendations] zone fetch failed {}
-[00:31:11.679] Server  LOG     [recommendations] candidate fetch result {}
-[00:31:11.680] Server  WARN    [recommendations] No candidates available {}
-[00:31:13.797] Server  LOG      ✓ Compiled in 216ms
-[00:31:26.700] Server  LOG      ✓ Compiled in 245ms
-[00:31:27.038] Server  LOG     [next-spot] incoming request {}
-[00:31:27.070] Browser LOG     [useZones] cache_hit {"count":11}
-[00:31:27.195] Server  WARN    [next-spot] nearest_zone failed {}
-[00:31:27.354] Server  ERROR   [recommendations] zone fetch failed {}
-[00:31:27.354] Server  LOG     [recommendations] candidate fetch result {}
-[00:31:27.356] Server  WARN    [recommendations] No candidates available {}
-[00:31:28.069] Browser LOG     [useZones] zones_fetched {"count":11}
-[00:31:31.067] Server  ERROR   [pings] nearest_zone failed {}
-[00:31:31.280] Server  ERROR   [recommendations] zone fetch failed {}
-[00:31:31.282] Server  LOG     [recommendations] candidate fetch result {}
-[00:31:31.284] Server  WARN    [recommendations] No candidates available {}
-[00:32:01.383] Server  LOG      ✓ Compiled in 327ms
-[00:32:02.131] Browser ERROR   uncaughtError: ReferenceError: selectBestLocation is not defined
-[00:32:13.758] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:32:13.802] Server  LOG      ✓ Compiled in 60ms
-[00:32:14.069] Browser ERROR   uncaughtError: ReferenceError: selectBestLocation is not defined
-[00:32:15.709] Server  ERROR    ⨯ ReferenceError: selectBestLocation is not defined
-[00:32:16.078] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[11:58:32.453] Browser LOG     [useZones] cache_hit {"count":11}
+[11:58:32.584] Browser LOG     [useZones] cache_hit {"count":11}
+[11:58:32.584] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
+[11:58:32.584] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
+[11:58:32.584] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
+[11:58:32.903] Browser LOG     [useZones] zones_fetched {"count":11}
+[11:58:33.043] Server  ERROR   [pings] nearest_zone failed {}
+[11:58:33.177] Server  ERROR   [recommendations] zone fetch failed {}
+[11:58:33.178] Server  LOG     [recommendations] candidate fetch result {}
+[11:58:33.179] Server  WARN    [recommendations] No candidates available {}
+[11:58:33.220] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
+[11:58:33.220] Browser LOG     [useZones] zones_fetched {"count":11}
+[11:58:33.653] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
+[12:00:02.960] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
+[12:00:20.504] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
+[12:00:22.949] Server  LOG      ✓ Compiled in 348ms
+[12:00:23.140] Browser LOG     [useZones] cache_hit {"count":11}
+[12:00:24.786] Server  LOG      ✓ Compiled in 74ms
+[12:00:25.027] Browser LOG     [useZones] zones_fetched {"count":11}
+[12:00:25.027] Browser LOG     [useZones] cache_hit {"count":11}
+[12:00:25.444] Browser LOG     [useZones] zones_fetched {"count":11}
+[12:00:41.101] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
+[12:01:05.200] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
+[12:01:40.158] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
+[12:02:05.595] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
+[12:06:08.320] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
+[12:07:05.601] Server  LOG      ✓ Compiled in 69ms
+[12:07:06.497] Browser LOG     [useZones] cache_hit {"count":11}
+[12:07:07.495] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
+[12:07:07.495] Browser LOG     [useZones] zones_fetched {"count":11}
+[12:07:40.289] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
+[12:08:19.982] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1102,"origin":"live_fix"}
+[12:08:28.800] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -425,741 +565,19 @@ It can also happen if the client has a browser extension installed which messes 
                             <head>
                             <body
                               className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_c8a46523-9c72-4ab1-8f68-41e48e374cd8__="true"
+-                             __processed_d6fa0c54-f080-405d-acc9-d62236d53bee__="true"
                             >
                   ...
 
-[00:32:16.078] Browser LOG     [useZones] cache_hit {"count":11}
-[00:32:16.078] Browser LOG     [useZones] zones_fetched {"count":11}
-[00:32:16.078] Browser ERROR   uncaughtError: ReferenceError: selectBestLocation is not defined
-[00:32:29.409] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:32:29.434] Server  LOG      ✓ Compiled in 185ms
-[00:32:30.969] Server  ERROR    ⨯ ReferenceError: selectBestLocation is not defined
-[00:32:32.093] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} serverProvidedParams={null}>
-                        <RootLayout params={Promise}>
-                          <html lang="en" suppressHydrationWarning={true}>
-                            <head>
-                            <body
-                              className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_fc0c324b-7fe0-440f-a74e-007bca9b7e5b__="true"
--                             bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaW..."
-                            >
-                  ...
-
-[00:32:32.093] Browser LOG     [useZones] cache_hit {"count":11}
-[00:32:32.093] Browser ERROR   uncaughtError: ReferenceError: selectBestLocation is not defined
-[00:32:33.086] Browser LOG     [useZones] zones_fetched {"count":11}
-[00:32:41.551] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:32:41.567] Server  LOG      ✓ Compiled in 405ms
-[00:32:43.264] Server  ERROR    ⨯ ReferenceError: selectBestLocation is not defined
-[00:32:44.094] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} serverProvidedParams={null}>
-                        <RootLayout params={Promise}>
-                          <html lang="en" suppressHydrationWarning={true}>
-                            <head>
-                            <body
-                              className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_18fb38df-e547-4e1a-876c-33b6eef7257d__="true"
--                             bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaW..."
-                            >
-                  ...
-
-[00:32:44.094] Browser LOG     [useZones] cache_hit {"count":11}
-[00:32:44.094] Browser ERROR   uncaughtError: ReferenceError: selectBestLocation is not defined
-[00:32:45.078] Browser LOG     [useZones] zones_fetched {"count":11}
-[00:32:59.511] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:32:59.530] Server  LOG      ✓ Compiled in 175ms
-[00:33:02.086] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} serverProvidedParams={null}>
-                        <RootLayout params={Promise}>
-                          <html lang="en" suppressHydrationWarning={true}>
-                            <head>
-                            <body
-                              className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_f46661d2-2622-4160-ac28-c9e0baf0b5b2__="true"
--                             bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaW..."
-                            >
-                  ...
-
-[00:33:02.086] Browser LOG     [useZones] cache_hit {"count":11}
-[00:33:02.086] Browser LOG     [useZones] zones_fetched {"count":11}
-[00:33:25.666] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <ScrollAndFocusHandler segmentPath={[...]}>
-      <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
-        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
-          <LoadingBoundary name="/" loading={null}>
-            <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
-              <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
-                <RedirectBoundary>
-                  <RedirectErrorBoundary router={{...}}>
-                    <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
-                      <SegmentViewNode type="layout" pagePath="(driver)/l...">
-                        <SegmentTrieNode>
-                        <script>
-                        <script>
-                        <script>
-                        <DriverLayout>
-                          <Suspense fallback={<div>}>
-                            <DriverLayoutContent>
-                              <div
-                                className="flex flex-col h-screen"
--                               bis_skin_checked="1"
-                              >
-                                <NavBar userEmail="lokeshnand..." displayName="Lokesh Nandan">
-                                  <header className="sticky top...">
-                                    <div
-                                      className="container px-2 py-3"
--                                     bis_skin_checked="1"
-                                    >
-                                      <div
-                                        className="flex flex-col gap-4"
--                                       bis_skin_checked="1"
-                                      >
-                                        <div
-                                          className="flex flex-col flex-wrap items-start justify-between gap-4"
--                                         bis_skin_checked="1"
-                                        >
-                                          <LinkComponent href="/" className="flex flex-...">
-                                            <a className="flex flex-..." ref={function} onClick={function onClick} ...>
-                                              <p>
-                                              <div
-                                                className="flex flex-wrap items-center gap-2"
--                                               bis_skin_checked="1"
-                                              >
-                                        <div
-                                          className="flex flex-wrap items-center justify-between gap-4 border-t border..."
--                                         bis_skin_checked="1"
-                                        >
-                                          <div
-                                            className="flex flex-wrap items-center gap-3"
--                                           bis_skin_checked="1"
-                                          >
-                                ...
-                    ...
-        ...
-
-[00:33:25.666] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <ScrollAndFocusHandler segmentPath={[...]}>
-      <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
-        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
-          <LoadingBoundary name="(driver)/" loading={null}>
-            <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
-              <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
-                <RedirectBoundary>
-                  <RedirectErrorBoundary router={{...}}>
-                    <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
-                      <SegmentViewNode type="page" pagePath="(driver)/p...">
-                        <SegmentTrieNode>
-                        <DriverHomePage>
-                          <DriverHomeClient>
-                            <DriverShell title="Hi driver" subtitle="Today | 0 ...">
-                              <section className="flex h-ful...">
-                                <header className="flex flex-...">
-                                  <div
-                                    className="flex items-start justify-between gap-3"
--                                   bis_skin_checked="1"
-                                  >
-                                    <div
--                                     bis_skin_checked="1"
-                                    >
-                                <div
-                                  className="flex-1 overflow-y-auto px-4 pb-24 pt-4 md:pb-8"
--                                 bis_skin_checked="1"
-                                >
-                                  <div
-                                    className="space-y-6"
--                                   bis_skin_checked="1"
-                                  >
-                                    <div
-                                      className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between"
--                                     bis_skin_checked="1"
-                                    >
-                                      <div
-                                        className="flex flex-col items-start gap-2 sm:items-end"
--                                       bis_skin_checked="1"
-                                      >
-                                        <GpsAccuracyBadge trackingOn={false} accuracy={null}>
-                                          <div
-                                            className="inline-flex rounded-full px-3 py-1 text-xs font-semibold bg-mut..."
--                                           bis_skin_checked="1"
-                                          >
-+                                           GPS: paused
-                                    <NextZonesPanel trackingOn={false} hasLocation={false} isFetchingLocation={false} ...>
-                                      <_c className="shadow-sm">
-                                        <div
-                                          ref={null}
-                                          className="rounded-2xl border bg-card text-card-foreground shadow-sm"
--                                         bis_skin_checked="1"
-                                        >
-                                          <_c2 className="flex flex-...">
-                                            <div
-                                              ref={null}
-                                              className="p-6 flex flex-row items-center justify-between space-y-0"
--                                             bis_skin_checked="1"
-                                            >
-                                              <div
--                                               bis_skin_checked="1"
-                                              >
-                                              ...
-                                          <_c8 className="space-y-4">
-                                            <div
-                                              ref={null}
-                                              className="p-6 pt-0 space-y-4"
--                                             bis_skin_checked="1"
-                                            >
-                                              <div
-                                                className="space-y-3"
--                                               bis_skin_checked="1"
-                                              >
-                                                <div
-                                                  className="rounded-xl border p-3"
--                                                 bis_skin_checked="1"
-                                                >
-                                                  <div
-                                                    className="h-4 w-1/2 animate-pulse rounded bg-muted"
--                                                   bis_skin_checked="1"
-                                                  >
-                                                  <div
-                                                    className="mt-2 h-3 w-1/3 animate-pulse rounded bg-muted"
--                                                   bis_skin_checked="1"
-                                                  >
-                                                <div
-                                                  className="rounded-xl border p-3"
--                                                 bis_skin_checked="1"
-                                                >
-                                                  <div
-                                                    className="h-4 w-1/2 animate-pulse rounded bg-muted"
--                                                   bis_skin_checked="1"
-                                                  >
-                                                  <div
-                                                    className="mt-2 h-3 w-1/3 animate-pulse rounded bg-muted"
--                                                   bis_skin_checked="1"
-                                                  >
-                                                <div
-                                                  className="rounded-xl border p-3"
--                                                 bis_skin_checked="1"
-                                                >
-                                                  <div
-                                                    className="h-4 w-1/2 animate-pulse rounded bg-muted"
--                                                   bis_skin_checked="1"
-                                                  >
-                                                  <div
-                                                    className="mt-2 h-3 w-1/3 animate-pulse rounded bg-muted"
--                                                   bis_skin_checked="1"
-                                                  >
-                                    <section className="space-y-3">
-                                      <h2>
-                                      <RideControls lastFix={null}>
-                                        <div
-                                          className="space-y-4"
--                                         bis_skin_checked="1"
-                                        >
-                                          <div
-                                            className="flex items-center justify-between rounded-2xl border bg-white/6..."
--                                           bis_skin_checked="1"
-                                          >
-                                            <div
--                                             bis_skin_checked="1"
-                                            >
-                                              <p>
-                                              <div
-                                                className="mt-1 inline-flex gap-2 rounded-full bg-muted p-1"
--                                               bis_skin_checked="1"
-                                              >
-                                          <div
-                                            className="flex flex-col gap-3"
--                                           bis_skin_checked="1"
-                                          >
-                      ...
-                    ...
-        ...
-
-[00:33:25.666] Browser LOG     [useZones] cache_hit {"count":11}
-[00:33:25.666] Browser LOG     [nearest-zones] computed {"best_zone":"Dak Bungalow","considered":11,"distance_m":1396,"origin":"live_fix"}
-[00:33:25.666] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Dak Bungalow","considered":11,"distance_m":1396,"origin":"live_fix"}
-[00:33:27.641] Browser LOG     [nearest-zones] computed {"best_zone":"Dak Bungalow","considered":11,"distance_m":1396,"origin":"live_fix"}
-[00:33:27.641] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Dak Bungalow","considered":11,"distance_m":1396,"origin":"live_fix"}
-[00:33:28.608] Browser LOG     [nearest-zones] computed {"best_zone":"Dak Bungalow","considered":11,"distance_m":1396,"origin":"live_fix"}
-[00:33:28.608] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Dak Bungalow","considered":11,"distance_m":1396,"origin":"live_fix"}
-[00:33:28.608] Browser LOG     [useZones] zones_fetched {"count":11}
-[00:33:28.886] Browser LOG     [nearest-zones] computed {"best_zone":"Dak Bungalow","considered":11,"distance_m":1396,"origin":"live_fix"}
-[00:33:28.886] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Dak Bungalow","considered":11,"distance_m":1396,"origin":"live_fix"}
-[00:33:30.223] Browser LOG     [nearest-zones] computed {"best_zone":"Dak Bungalow","considered":11,"distance_m":1396,"origin":"live_fix"}
-[00:33:30.223] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Dak Bungalow","considered":11,"distance_m":1396,"origin":"live_fix"}
-[00:33:30.473] Browser LOG     [nearest-zones] computed {"best_zone":"Dak Bungalow","considered":11,"distance_m":1396,"origin":"live_fix"}
-[00:33:30.473] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Dak Bungalow","considered":11,"distance_m":1396,"origin":"live_fix"}
-[00:33:54.218] Browser LOG     [nearest-zones] computed {"best_zone":"Dak Bungalow","considered":11,"distance_m":1396,"origin":"live_fix"}
-[00:33:54.218] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Dak Bungalow","considered":11,"distance_m":1396,"origin":"live_fix"}
-[00:33:56.224] Browser LOG     [nearest-zones] computed {"best_zone":"Dak Bungalow","considered":11,"distance_m":1396,"origin":"live_fix"}
-[00:33:56.224] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Dak Bungalow","considered":11,"distance_m":1396,"origin":"live_fix"}
-[00:37:03.658] Browser LOG     [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:37:03.658] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:37:04.284] Server  LOG     [next-spot] incoming request {}
-[00:37:04.301] Server  LOG     [next-spot] incoming request {}
-[00:37:04.459] Server  WARN    [next-spot] nearest_zone failed {}
-[00:37:04.507] Server  WARN    [next-spot] nearest_zone failed {}
-[00:37:04.637] Server  ERROR   [recommendations] zone fetch failed {}
-[00:37:04.637] Server  LOG     [recommendations] candidate fetch result {}
-[00:37:04.638] Server  WARN    [recommendations] No candidates available {}
-[00:37:04.696] Server  ERROR   [recommendations] zone fetch failed {}
-[00:37:04.697] Server  LOG     [recommendations] candidate fetch result {}
-[00:37:04.697] Server  WARN    [recommendations] No candidates available {}
-[00:37:04.806] Browser LOG     [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:37:04.806] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:37:04.806] Browser LOG     [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:37:04.806] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:37:05.176] Server  ERROR   [pings] nearest_zone failed {}
-[00:37:05.323] Browser LOG     [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:37:05.323] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:37:05.371] Server  ERROR   [recommendations] zone fetch failed {}
-[00:37:05.372] Server  LOG     [recommendations] candidate fetch result {}
-[00:37:05.373] Server  WARN    [recommendations] No candidates available {}
-[00:37:05.913] Browser LOG     [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:37:05.913] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:37:46.885] Browser LOG     [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:37:46.885] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:37:47.793] Server  LOG     [next-spot] incoming request {}
-[00:37:47.814] Server  ERROR   [pings] nearest_zone failed {}
-[00:37:47.997] Server  ERROR   [recommendations] zone fetch failed {}
-[00:37:47.997] Server  LOG     [recommendations] candidate fetch result {}
-[00:37:47.997] Server  WARN    [recommendations] No candidates available {}
-[00:37:48.007] Server  WARN    [next-spot] nearest_zone failed {}
-[00:37:48.183] Server  ERROR   [recommendations] zone fetch failed {}
-[00:37:48.185] Server  LOG     [recommendations] candidate fetch result {}
-[00:37:48.187] Server  WARN    [recommendations] No candidates available {}
-[00:37:49.084] Browser LOG     [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:37:49.084] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:37:49.084] Browser LOG     [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:37:49.084] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:37:49.466] Browser LOG     [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:37:49.467] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:37:51.471] Browser LOG     [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:37:51.471] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:38:27.273] Server  LOG      ✓ Compiled in 60ms
-[00:38:27.702] Browser LOG     [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:38:27.703] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:38:28.618] Server  LOG     [next-spot] incoming request {}
-[00:38:28.793] Server  WARN    [next-spot] nearest_zone failed {}
-[00:38:28.864] Server  ERROR   [pings] nearest_zone failed {}
-[00:38:28.994] Server  ERROR   [recommendations] zone fetch failed {}
-[00:38:28.996] Server  LOG     [recommendations] candidate fetch result {}
-[00:38:28.998] Server  WARN    [recommendations] No candidates available {}
-[00:38:29.080] Server  ERROR   [recommendations] zone fetch failed {}
-[00:38:29.080] Server  LOG     [recommendations] candidate fetch result {}
-[00:38:29.081] Server  WARN    [recommendations] No candidates available {}
-[00:38:29.120] Browser LOG     [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:38:29.120] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:38:29.809] Browser LOG     [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:38:29.810] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:38:29.810] Browser LOG     [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:38:29.810] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:39:15.205] Browser LOG     [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:39:15.206] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:39:17.146] Server  LOG     [next-spot] incoming request {}
-[00:39:17.166] Browser LOG     [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:39:17.166] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:39:17.365] Server  WARN    [next-spot] nearest_zone failed {}
-[00:39:17.558] Server  ERROR   [recommendations] zone fetch failed {}
-[00:39:17.559] Server  LOG     [recommendations] candidate fetch result {}
-[00:39:17.560] Server  WARN    [recommendations] No candidates available {}
-[00:39:17.683] Browser LOG     [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:39:17.683] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:39:25.747] Server  LOG     [next-spot] incoming request {}
-[00:39:25.915] Server  WARN    [next-spot] nearest_zone failed {}
-[00:39:26.472] Server  ERROR   [recommendations] zone fetch failed {}
-[00:39:26.476] Server  LOG     [recommendations] candidate fetch result {}
-[00:39:26.477] Server  WARN    [recommendations] No candidates available {}
-[00:39:26.590] Browser LOG     [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:39:26.590] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:40:58.948] Browser LOG     [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:40:58.948] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:41:00.576] Server  LOG     [next-spot] incoming request {}
-[00:41:00.960] Browser LOG     [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:41:00.960] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:41:01.251] Server  WARN    [next-spot] nearest_zone failed {}
-[00:41:01.849] Server  ERROR   [recommendations] zone fetch failed {}
-[00:41:01.851] Server  LOG     [recommendations] candidate fetch result {}
-[00:41:01.852] Server  WARN    [recommendations] No candidates available {}
-[00:41:01.976] Browser LOG     [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:41:01.976] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:41:05.199] Browser LOG     [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:41:05.199] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:42:27.261] Server  LOG      ✓ Compiled in 62ms
-[00:42:29.074] Browser LOG     [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:42:29.075] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:42:29.075] Browser LOG     [useZones] cache_hit {"count":11}
-[00:42:29.075] Browser LOG     [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:42:29.075] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:42:29.075] Browser LOG     [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:42:29.075] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:42:29.075] Browser LOG     [useZones] zones_fetched {"count":11}
-[00:42:29.075] Browser LOG     [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:42:29.075] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:42:29.075] Browser LOG     [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:42:29.075] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:42:30.073] Browser ERROR   unhandledRejection: ReferenceError: fetchRecommendations is not defined
-[00:42:42.800] Browser LOG     [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:42:42.800] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:42:44.769] Browser LOG     [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:42:44.770] Browser LOG     [2;38;2;124;124;124m%s[0m [nearest-zones] computed {"best_zone":"Saguna More","considered":11,"distance_m":489,"origin":"live_fix"}
-[00:42:45.600] Browser ERROR   unhandledRejection: ReferenceError: fetchRecommendations is not defined
-[00:42:53.969] Server  LOG      ✓ Compiled in 473ms
-[00:42:54.474] Browser ERROR   uncaughtError: ReferenceError: instantRecommendationZones is not defined
-[00:43:15.142] Server  LOG      ✓ Compiled in 359ms
-[00:43:15.201] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:43:16.329] Browser ERROR   uncaughtError: ReferenceError: instantRecommendationZones is not defined
-[00:43:16.966] Server  ERROR    ⨯ ReferenceError: instantRecommendationZones is not defined
-[00:43:19.071] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} serverProvidedParams={null}>
-                        <RootLayout params={Promise}>
-                          <html lang="en" suppressHydrationWarning={true}>
-                            <head>
-                            <body
-                              className="inter_5972bc34-module__OU16Qa__className"
--                             bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaW..."
--                             __processed_0e6dbadb-b27f-4469-90f9-ef36e5d2e1fe__="true"
-                            >
-                  ...
-
-[00:43:19.071] Browser LOG     [useZones] cache_hit {"count":11}
-[00:43:19.071] Browser ERROR   uncaughtError: ReferenceError: instantRecommendationZones is not defined
-[00:43:19.071] Browser LOG     [useZones] zones_fetched {"count":11}
-[00:43:27.768] Server  LOG      ✓ Compiled in 271ms
-[00:43:27.820] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:43:29.121] Server  ERROR    ⨯ ReferenceError: instantRecommendationZones is not defined
-[00:43:32.072] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} serverProvidedParams={null}>
-                        <RootLayout params={Promise}>
-                          <html lang="en" suppressHydrationWarning={true}>
-                            <head>
-                            <body
-                              className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_e00ae603-ff7d-464f-b4f4-a847969952de__="true"
-                            >
-                  ...
-
-[00:43:32.072] Browser LOG     [useZones] cache_hit {"count":11}
-[00:43:32.072] Browser ERROR   uncaughtError: Error: Switched to client rendering because the server rendering errored:
-
-instantRecommendationZones is not defined
-[00:43:32.072] Browser ERROR   uncaughtError: ReferenceError: instantRecommendationZones is not defined
-[00:43:32.072] Browser LOG     [useZones] zones_fetched {"count":11}
-[00:43:36.590] Server  LOG      ✓ Compiled in 504ms
-[00:43:36.632] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:43:37.997] Server  ERROR    ⨯ ReferenceError: showInstantRecommendations is not defined
-[00:43:38.168] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} serverProvidedParams={null}>
-                        <RootLayout params={Promise}>
-                          <html lang="en" suppressHydrationWarning={true}>
-                            <head>
-                            <body
-                              className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_6429b814-adbb-4105-a082-eafc5590e067__="true"
-                            >
-                  ...
-
-[00:43:38.168] Browser LOG     [useZones] cache_hit {"count":11}
-[00:43:39.078] Browser ERROR   uncaughtError: ReferenceError: showInstantRecommendations is not defined
-[00:43:39.078] Browser LOG     [useZones] zones_fetched {"count":11}
-[00:43:45.652] Server  LOG      ✓ Compiled in 206ms
-[00:43:45.695] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:43:48.086] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} serverProvidedParams={null}>
-                        <RootLayout params={Promise}>
-                          <html lang="en" suppressHydrationWarning={true}>
-                            <head>
-                            <body
-                              className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_4951d48f-1fab-4279-80c0-518e6f718664__="true"
--                             bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaW..."
-                            >
-                  ...
-
-[00:43:48.086] Browser LOG     [useZones] cache_hit {"count":11}
-[00:43:48.086] Browser LOG     [useZones] zones_fetched {"count":11}
-[00:44:51.149] Server  LOG      ✓ Compiled in 366ms
-[00:44:52.084] Browser ERROR   ./components/NextZonesPanel.tsx:104:13
-Parsing ecmascript source code failed
-  102 |         context: {
-  103 |           reason: top.length ? "local_inference" : "no_zones_in_db",
-> 104 |   useEffect(() => {
-      |             ^
-  105 |     if (!fallbackLocation) return;
-  106 |     if (recommendation?.top?.length) return;
-  107 |     const seeded = buildLocalRecommendation(fallbackLocation.coords, {
-
-Unexpected token `(`. Expected yield, an identifier, [ or {
-
-Import traces:
-  Client Component Browser:
-    ./components/NextZonesPanel.tsx [Client Component Browser]
-    ./app/(driver)/DriverHomeClient.tsx [Client Component Browser]
-    ./app/(driver)/DriverHomeClient.tsx [Server Component]
-    ./app/(driver)/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./components/NextZonesPanel.tsx [Client Component SSR]
-    ./app/(driver)/DriverHomeClient.tsx [Client Component SSR]
-    ./app/(driver)/DriverHomeClient.tsx [Server Component]
-    ./app/(driver)/page.tsx [Server Component]
-[00:45:13.479] Server  LOG      ✓ Compiled in 477ms
-[00:45:16.076] Browser LOG     [useZones] cache_hit {"count":11}
-[00:45:16.076] Browser LOG     [nearest-zones] computed {"best_zone":"Dak Bungalow","considered":11,"distance_m":1396,"origin":"live_fix"}
-[00:45:16.076] Browser LOG     [useZones] zones_fetched {"count":11}
-[00:45:41.458] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} serverProvidedParams={null}>
-                        <RootLayout params={Promise}>
-                          <html lang="en" suppressHydrationWarning={true}>
-                            <head>
-                            <body
-                              className="inter_5972bc34-module__OU16Qa__className"
--                             __processed_994f63c0-bfa0-432c-b17e-072cb05765c6__="true"
-                            >
-                  ...
-
-[00:45:41.458] Browser LOG     [useZones] cache_hit {"count":11}
-[00:45:41.635] Browser LOG     [useZones] cache_hit {"count":11}
-[00:45:41.635] Browser LOG     [nearest-zones] computed {"best_zone":"Dak Bungalow","considered":11,"distance_m":1396,"origin":"live_fix"}
-[00:45:41.929] Browser LOG     [useZones] zones_fetched {"count":11}
-[00:45:42.294] Browser LOG     [useZones] zones_fetched {"count":11}
+[12:08:28.800] Browser LOG     [useZones] cache_hit {"count":11}
+[12:08:28.968] Browser LOG     [useZones] cache_hit {"count":11}
+[12:08:29.140] Browser LOG     [useZones] zones_fetched {"count":11}
+[12:08:29.524] Browser LOG     [useZones] zones_fetched {"count":11}
+[12:08:29.524] Browser ERROR   permission request failed {"code":1,"message":"User denied Geolocation"}
+[12:08:30.145] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1107,"origin":"driver_state_coords"}
+[12:12:37.788] Server  ERROR   [pings] nearest_zone failed {}
+[12:12:37.933] Server  ERROR   [recommendations] zone fetch failed {}
+[12:12:37.934] Server  LOG     [recommendations] candidate fetch result {}
+[12:12:37.934] Server  WARN    [recommendations] No candidates available {}
+[12:12:38.496] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1095,"origin":"live_fix"}
+[12:12:38.496] Browser LOG     [nearest-zones] computed {"best_zone":"Danapur station","considered":11,"distance_m":1095,"origin":"live_fix"}

@@ -1064,8 +1064,12 @@ function ZoneCard({ zone }) {
     const scoreLabel = hasScore ? zone.score.toFixed(2) : "Score n/a";
     const barWidth = hasScore ? `${Math.min(100, Math.round(zone.score * 100))}%` : "0%";
     const handleNavigate = ()=>{
-        const q = encodeURIComponent(`${zone.zone_name} Patna`);
-        window.open(`https://www.google.com/maps/search/?api=1&query=${q}`, "_blank");
+        if (typeof zone.lat === "number" && typeof zone.lon === "number") {
+            window.open(`https://www.google.com/maps/search/?api=1&query=${zone.lat},${zone.lon}`, "_blank");
+            return;
+        }
+        const fallbackQuery = encodeURIComponent(`${zone.zone_name} Patna`);
+        window.open(`https://www.google.com/maps/search/?api=1&query=${fallbackQuery}`, "_blank");
     };
     const trafficLabel = typeof zone.traffic_speed_idx === "number" ? describeTrafficLevel(zone.traffic_speed_idx) : null;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1083,14 +1087,14 @@ function ZoneCard({ zone }) {
                                         className: "h-4 w-4 text-primary"
                                     }, void 0, false, {
                                         fileName: "[project]/components/NextZonesPanel.tsx",
-                                        lineNumber: 442,
+                                        lineNumber: 447,
                                         columnNumber: 13
                                     }, this),
                                     zone.zone_name
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/NextZonesPanel.tsx",
-                                lineNumber: 441,
+                                lineNumber: 446,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1104,7 +1108,7 @@ function ZoneCard({ zone }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/NextZonesPanel.tsx",
-                                lineNumber: 445,
+                                lineNumber: 450,
                                 columnNumber: 11
                             }, this),
                             trafficLabel && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1115,13 +1119,13 @@ function ZoneCard({ zone }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/NextZonesPanel.tsx",
-                                lineNumber: 449,
+                                lineNumber: 454,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/NextZonesPanel.tsx",
-                        lineNumber: 440,
+                        lineNumber: 445,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -1134,19 +1138,19 @@ function ZoneCard({ zone }) {
                                 className: "ml-1 h-3 w-3"
                             }, void 0, false, {
                                 fileName: "[project]/components/NextZonesPanel.tsx",
-                                lineNumber: 454,
+                                lineNumber: 459,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/NextZonesPanel.tsx",
-                        lineNumber: 452,
+                        lineNumber: 457,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/NextZonesPanel.tsx",
-                lineNumber: 439,
+                lineNumber: 444,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1154,7 +1158,7 @@ function ZoneCard({ zone }) {
                 children: zone.reason
             }, void 0, false, {
                 fileName: "[project]/components/NextZonesPanel.tsx",
-                lineNumber: 457,
+                lineNumber: 462,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1166,18 +1170,18 @@ function ZoneCard({ zone }) {
                     }
                 }, void 0, false, {
                     fileName: "[project]/components/NextZonesPanel.tsx",
-                    lineNumber: 459,
+                    lineNumber: 464,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/NextZonesPanel.tsx",
-                lineNumber: 458,
+                lineNumber: 463,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/NextZonesPanel.tsx",
-        lineNumber: 438,
+        lineNumber: 443,
         columnNumber: 5
     }, this);
 }

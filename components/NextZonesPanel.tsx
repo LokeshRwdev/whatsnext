@@ -425,8 +425,13 @@ function ZoneCard({ zone }: { zone: RecommendationResponse["top"][number] }) {
   const barWidth = hasScore ? `${Math.min(100, Math.round(zone.score! * 100))}%` : "0%";
 
   const handleNavigate = () => {
-    const q = encodeURIComponent(`${zone.zone_name} Patna`);
-    window.open(`https://www.google.com/maps/search/?api=1&query=${q}`, "_blank");
+    if (typeof zone.lat === "number" && typeof zone.lon === "number") {
+      window.open(`https://www.google.com/maps/search/?api=1&query=${zone.lat},${zone.lon}`, "_blank");
+      return;
+    }
+
+    const fallbackQuery = encodeURIComponent(`${zone.zone_name} Patna`);
+    window.open(`https://www.google.com/maps/search/?api=1&query=${fallbackQuery}`, "_blank");
   };
 
   const trafficLabel =
